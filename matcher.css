@@ -42,7 +42,7 @@
 
 .text-match {
   display: inline;
-  text-decoration: underline;
+  font-weight: bold;
 }
 .text-nomatch {
   display: inline;
