@@ -383,6 +383,131 @@
       </ul>
     </div>
     <p>
+      Du kannst Leerzeilen herausfiltern, indem du "^" und "$" zusammen benutzt.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">Inhalt</li>
+        <li class="ok"></li>
+        <li class="fail">x</li>
+      </ul>
+    </div>
+    <p>
+      Oder alle Zeilen, in denen das "a" zweimal oder viermal vorkommt.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">a</li>
+        <li class="ok">aa</li>
+        <li class="fail">aaa</li>
+        <li class="ok">aaaa</li>
+        <li class="fail">aaaaa</li>
+      </ul>
+    </div>
+    <p class="hint">
+      "^aa|aaaa$" funktioniert nicht, weil "^aa" auch auf "aaa" passt.
+      "aaa" fängt auch mit "aa" an.
+      Deswegen muss "^" und "$" zweimal verwendet werden.
+    </p>
+    <h2>Endlose Wiederholungen</h2>
+    <p>
+      Eine Wiederholung von vielen "a"s kann kurz geschrieben werden.
+      Dafür gibt es das Sternchen "*".
+      Ein Ausdruck vor dem Sternchen kann 0 bis unendlich of wiederholt werden.
+      Setze das "*" hinter das "a", um alle zu "a"s markieren.
+    </p>
+    <div class="playfield">
+      <input type="text" value="^a$" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok"></li>
+        <li class="ok">a</li>
+        <li class="ok">aa</li>
+        <li class="ok">aaa</li>
+        <li class="ok">aaaa</li>
+        <li class="ok">aaaaa</li>
+      </ul>
+    </div>
+    <p>
+      Im folgenden Beispiel kannst du alle Zehnerpotenzen markieren, indem du
+      das Sternchen einsetzt, um die 0 zu vervielfachen.
+    </p>
+    <div class="playfield">
+      <input type="text" value="^10$" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">1</li>
+        <li class="fail">11</li>
+        <li class="ok">10</li>
+        <li class="fail">9999</li>
+        <li class="ok">100000000000000000</li>
+        <li class="fail">100010000</li>
+      </ul>
+    </div>
+    <p>
+      Das Sternchen kann man auf Ausdrücke anwenden.
+      Ausdrücke sind auch auf Mengen.
+      Eine solche Menge kann z.B. die Menge "[a-z]" aller kleinen Buchstaben sein.
+      Markiere alle Wörter, die nur aus kleinen Buchstaben bestehen.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">Ich</li>
+        <li class="ok">baue</li>
+        <li class="ok">einen</li>
+        <li class="ok">regulären</li>
+        <li class="fail">Ausdruck</li>
+        <li class="fail">laLaLa</li>
+      </ul>
+    </div>
+    <p class="hint">
+      Ich muss das "ä" mit in die Menge nehmen. "[a-zä]"
+      Das ist nicht im Alphabet vorhanden.
+    </p>
+    <p>
+      Du kannst statt dem "*" das "+" verwenden, um mindestens einmal zu matchen. 
+    </p>
+    <div class="playfield">
+      <input type="text" value="^a*$" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail"></li>
+        <li class="ok">a</li>
+        <li class="ok">aa</li>
+        <li class="ok">aaa</li>
+        <li class="ok">aaaa</li>
+        <li class="ok">aaaaa</li>
+      </ul>
+    </div>
+    <h2>Gruppen</h2>
+    <p>
+      Es gab das Beispiel, in dem das "a" zweimal oder viermal vorkommt.
+      Durch eine Klammerung kannst du dafür sorgen, dass alle geraden
+      Vorkommnissen von "a" gefunden werden.
+    </p>
+    <div class="playfield">
+      <input type="text" value="^aa+$" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">a</li>
+        <li class="ok">aa</li>
+        <li class="fail">aaa</li>
+        <li class="ok">aaaa</li>
+        <li class="fail">aaaaa</li>
+        <li class="ok">aaaaaa</li>
+        <li class="fail">aaaaaaaaaaaaaaaaaaaaa</li>
+        <li class="ok">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+      </ul>
+    </div>
+    <p>
+      Wenn du die Klammern um die das "aa" machst, dann wird nicht "a" wiederholt
+      sondern "aa". Somit müssen alle Zeilen eine gerade Anzahl an "a"s haben.
     </p>
     <p>
     </p>
@@ -392,7 +517,32 @@
     </p>
     <p>
     </p>
+    <h2>Müllhalde</h2>
     <p>
+      Das Zeug hier ist einfach am Ende, weil es nicht reinpasst.
+    </p>
+    <p>
+      Ich möchte ein Programm schreiben, das Bilder aus Webseiten holt.
+      So ein Bild hat den folgenden Text:
+      &lt;img src="cc-by-sa.png"&gt; <img src="cc-by-sa.png">
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail"></li>
+        <li class="ok">&lt;img src="cc-by-sa.png"&gt;</li>
+        <li class="ok">&lt;img src='cc-by-sa.png'&gt;</li>
+        <li class="fail">&lt;script src="matcher.js"&gt;</li>
+        <li class="ok">&lt;img src="https://wiki.python.org/wiki/europython/img/python-logo.gif" /&gt;</li>
+        <li class="fail">Leimglanz</li>
+        <li class="fail">&lt;img &gt;</li>
+      </ul>
+    </div>
+    <p>
+      Dabei möchte ich nicht den ganzen Teil des Ausdurcks erhalten sondern nur den Namen des Bildes, z.B.
+      "cc-by-sa.png".
+      Dafür kannst du Klammernverwenden.
     </p>
     <footer>
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="cc-by-sa.png" /></a><br />
