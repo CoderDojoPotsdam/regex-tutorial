@@ -303,19 +303,71 @@
       <input type="text" value=" [C-G]" class="regex">
       <div class="message"></div>
       <ul class="examples">
-        <li class="ok">ein Apfel</li>
-        <li class="ok">eine Banane</li>
-        <li class="fail">viele Chiasamen</li>
-        <li class="fail">und Datteln</li>
+        <li class="ok">Ein Apfel,</li>
+        <li class="ok">eine Banane,</li>
+        <li class="fail">viele Chiasamen,</li>
+        <li class="fail">und Datteln,</li>
         <li class="fail">keine Ekelfrucht</li>
         <li class="fail">aber Erdbeeren</li>
-        <li class="fail">und Fruchtfrucht</li>
+        <li class="fail">und Fruchtfrucht,</li>
         <li class="fail">ohne Gammelfrucht</li>
         <li class="ok">bei Hopfen</li>
         <li class="ok">und Inger</li>
-        <li class="ok">sind Jasmintee</li>
+        <li class="ok">sind Jasmintee.</li>
       </ul>
     </div>
+    <h2>Anfang und Ende</h2>
+    <p>
+      Das mit den Leerzeichen ist ziemlich umständlich (für mich).
+      Deswegen kannst du das Hütchen "^" auch außerhalb von Klammern verwenden,
+      um den Anfang der Zeile zu treffen.
+      Setze das Hütchen an den Anfang.
+    </p>
+    <div class="playfield">
+      <input type="text" value="[^C-G]" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Apfel</li>
+        <li class="ok">Banane</li>
+        <li class="fail">Chiasamen</li>
+        <li class="fail">Datteln</li>
+        <li class="fail">Ekelfrucht</li>
+        <li class="fail">Erdbeeren</li>
+        <li class="fail">Fruchtfrucht</li>
+        <li class="fail">Gammelfrucht</li>
+        <li class="ok">Hopfen</li>
+        <li class="ok">Inger</li>
+        <li class="ok">Jasmintee</li>
+      </ul>
+    </div>
+    <p>
+      Mit "^[^C-G]" suchen wir alle Zeilen, die kein "C", "D", "E", "F" oder "G" am Anfang haben.
+    </p>
+    <p>
+      Das Beispiel mit der 20-29 sollte jetzt kürzer zu lösen sein.
+    </p>
+    <div class="playfield">
+      <input type="text" value="^" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">12</li>
+        <li class="fail">16</li>
+        <li class="ok">20</li>
+        <li class="ok">24</li>
+        <li class="ok">28</li>
+        <li class="fail">32</li>
+        <li class="fail">36</li>
+      </ul>
+    </div>
+    <p class="hint">
+      Der Hut "^" matcht den Anfang. Was kommt nach dem Anfang?
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
     <p>
     </p>
     <p>
