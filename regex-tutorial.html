@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <script type="text/javascript" async="" src="matcher.js"></script>
+    <link type="text/css" rel="stylesheet" href="matcher.css" media="screen"/>
+    <meta charset="utf-8">
+    <title>Interaktive Einführung in Reguläre Ausdrücke</title>
+  </head>
+  <body>
+    <h1>Interaktive Einführung in Reguläre Ausdrücke</h1>
+    <p>
+      Mit regulären Ausdrücken kannst du Texte durchsuchen.
+      Ein "regulärer Ausdruck" ist ein Muster, das in einem Text gefunden werden soll.
+    </p>
+    <h2>Buchstaben</h2>
+    <p>
+      Du kannst Wörter nach durchsuchen, ob sie einen Buchstaben enthalten.
+      Schreibe den Buchstaben "a" in das Feld unten drunter, 
+      um alleWörter mit dem Buchstaben "a" zu finden.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">apfel</li>
+        <li class="fail">birne</li>
+        <li class="fail">erdbeere</li>
+        <li class="ok">ananas</li>
+        <li class="ok">plaume</li>
+      </ul>
+    </div>
+    <p>
+      Wenn du es richtig gemacht hast, erscheint ein Haken neben deinem
+      regulären Ausdruck.
+    </p>
+    <p>
+      Nun versuche, den Vokal zu finden, der in allen rot markierten Wörten vorkommt.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Apfelsaft</li>
+        <li class="ok">Industrie</li>
+        <li class="fail">Wurmfortsatz</li>
+        <li class="fail">nanananana Batman!</li>
+        <li class="ok">Monologe</li>
+      </ul>
+    </div>
+    <p class="hint">
+      Das ist der Vokal "e".
+    </p>
+    <h2>Buchstabenfolgen</h2>
+    <p>
+      Buchstabenfolgen sind auch reguläre Audrücke.
+      In den folgenden Zeilen sind Worte mit der Zeichenfolge "nan".
+      Markiere die Zeilen.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">An der Ananas</li>
+        <li class="ok">und der Banane</li>
+        <li class="fail">nagt der Hannes</li>
+        <li class="fail">mit dem Zahne.</li>
+      </ul>
+    </div>
+    <p>
+      Ja, "ana" geht auch :)
+    </p>
+    <p>
+      Du kannst also auch ganze Worte finden, indem du sie mit Leerzeichen umgibst.
+      Versuche, nur das Wort "geben" zu treffen, nicht "umgeben" oder 
+      "vergebens", indem du das Wort und Leerzeichen benutzt.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">Wir sind umgeben von</li>
+        <li class="ok">Leuten, die gerne was geben,</li>
+        <li class="fail">wenn es nicht vergebens ist.</li>
+      </ul>
+    </div>
+    <h2>Oder |</h2>
+    <p>
+      Du kannst verschiedene Wörter matchen.
+      In der folgenden Liste kannst du alle Dörfer rausfiltern,
+      die "hausen" oder "roda" drin haben, indem du "hausen|roda" eingibst.
+      "hausen|roda" lese ich wie "hausen oder roda".
+      Um "|" zu schreiben, brauchst du die Taste "AltGr" und die Taste unten links.
+      Auf der englischen Tastatur ist das Zeichen auf der "#"-Taste, groß geschrieben.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Waltershausen</li>
+        <li class="ok">Friedrichroda</li>
+        <li class="fail">Tabarz</li>
+        <li class="fail">Fischbach</li>
+        <li class="ok">Zeulenroda</li>
+        <li class="fail">Vieselbach</li>
+        <li class="ok">Sondershausen</li>
+        <li class="fail">Sömmerda</li>
+      </ul>
+    </div>
+    <p>
+      Und jetzt versuche, auch noch die Orte, die "bach" drin haben, zu finden.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Waltershausen</li>
+        <li class="ok">Friedrichroda</li>
+        <li class="fail">Tabarz</li>
+        <li class="ok">Fischbach</li>
+        <li class="ok">Zeulenroda</li>
+        <li class="ok">Vieselbach</li>
+        <li class="ok">Sondershausen</li>
+        <li class="fail">Sömmerda</li>
+      </ul>
+    </div>
+    <p>
+      Dazu kannst du wieder ein "|" verwenden.
+    </p>
+    <p>
+      Das folgende Gedicht "Ottos Mops" ist von Ernst Jandl.
+      Finde alle Worte, die mit einem "f" oder "k" anfangen.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">ottos mops trotzt</li>
+        <li class="ok">otto: fort mops fort</li>
+        <li class="ok">ottos mops hopst fort</li>
+        <li class="fail">otto: soso</li>
+        <li class="fail"></li>
+        <li class="ok">otto holt koks</li>
+        <li class="fail">otto holt obst</li>
+        <li class="fail">otto horcht</li>
+        <li class="fail">otto: mops mops</li>
+        <li class="fail">otto hofft</li>
+        <li class="fail">
+        <li class="ok">ottos mops klopft</li>
+        <li class="ok">otto: komm mops komm</li>
+        <li class="ok">ottos mops kommt</li>
+        <li class="ok">ottos mops kotzt</li>
+        <li class="fail">otto: ogottogott</li>
+      </ul>
+    </div>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+  </body>
+</html>

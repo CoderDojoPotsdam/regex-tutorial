@@ -1,0 +1,48 @@
+
+
+/* ----- playfield ----- */
+.playfield { 
+}
+.regex {
+}
+.message {
+}
+.examples {
+}
+.ok {
+}
+.fail {
+}
+
+/* ----- matcher ----- */
+.match{
+}
+.match::before {
+  content: "✓";
+  padding-right: 1em;
+}
+.nomatch {
+}
+.nomatch.ok {
+  background-color: #ffcccc;
+}
+.match.fail {
+  background-color: #ffcccc;
+}
+.error {
+}
+.success {
+  background-color: #ddffdd;
+}
+.success::before {
+  content: "✓";
+  padding-right: 1em;
+}
+
+.text-match {
+  display: inline;
+  text-decoration: underline;
+}
+.text-nomatch {
+  display: inline;
+}
