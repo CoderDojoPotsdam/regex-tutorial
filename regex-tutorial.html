@@ -609,12 +609,60 @@
     <p class="hint">
       Ich muss das Fragezeichen hinter "[BSLTDK]" schreiben.
     </p>
+    <h2>Spezielle Zeichen Verwenden</h2>
     <p>
+      Es gibt spezielle Zeichen wie "?", "+", "*", "(", ".", "}" und "\".
+      Diese Zeichen haben eine besondere Bedeutung im regulären Ausdruck.
+      Um Text mit diesen Zeichen zu finden, muss vorher ein "\" geschrieben werden.
+      Dieser ist auf "AltGr" und "ß".
+      Du kannst das ausprobieren, indem du den "\" vor das "*" setzt.
     </p>
+    <div class="playfield">
+      <input type="text" value="a*" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail"></li>
+        <li class="fail">a</li>
+        <li class="fail">aa</li>
+        <li class="ok">a*</li>
+      </ul>
+    </div>
     <p>
+      Ungeschlossene Klammern geben Fehler.
+      Wenn du Emojis finden magst, brauchst du den "\".
+      Lass dich nicht von der Fehlermeldung beirren. Diese weiß nicht, was du vorhast.
     </p>
+    <div class="playfield">
+      <input type="text" value=":)+|:(+" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">:((((</li>
+        <li class="ok">:))))</li>
+        <li class="ok">:(</li>
+        <li class="fail">:P</li>
+        <li class="fail"></li>
+      </ul>
+    </div>
     <p>
+      Bei der <a href="https://de.wikipedia.org/wiki/Schachnotation#Ausf.C3.BChrliche_Notation">ausführlichen Schachnotation</a> gibt es noch viel mehr Randfälle, die du bearbeiten kannst.
+      Hier sind ein paar Beispiele:
     </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Ta1-a4</li>
+        <li class="ok">b3-b4</li>
+        <li class="ok">b3-b4+</li>
+        <li class="ok">Lb3-b4†</li>
+        <li class="ok">Lb3-b4#</li>
+        <li class="ok">0–0</li>
+        <li class="ok">0–0–0</li>
+        <li class="ok">f5xg6 e.p.</li>
+        <li class="ok">Sb1xc3+</li>
+      </ul>
+      <div class="experiment">Eigene Züge zum Test:</div>
+    </div>
     <p>
     </p>
     <p>

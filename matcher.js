@@ -6,7 +6,7 @@ var errorMessages = {
 
 function translateErrorMessage(message) {
   var translation = (errorMessages[message] || "Bitte übersetzen.");
-  return "\"" + message + "\": " + translation;
+  return "Fehlermeldung: \"" + message + "\": " + translation;
 }
 
 function matchTextElement(string) {
