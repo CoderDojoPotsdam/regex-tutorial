@@ -1,3 +1,11 @@
+var errorMessages = {
+  "unterminated character class" : "Unverständlicher regulärer Ausdruck: eine Klammer wurde nicht geschlossen! Bitte schließe die Klammer wieder, damit der reguläre Ausdruck verarbeitet werden kann."
+}
+
+function translateErrorMessage(message) {
+  return errorMessages[message] || message;
+}
+
 function matchTextElement(string) {
   var div = document.createElement('div');
   div.innerText = string;
@@ -42,7 +50,7 @@ function watchExpression(playfield, examples, regex, message) {
     try {
       exp = RegExp(regex.value);
     } catch (err){
-      message.innerHTML = err.message;
+      message.innerHTML = translateErrorMessage(err.message);
       regex.classList.add("error");
       message.classList.add("error");
       return;
