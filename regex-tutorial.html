@@ -2,6 +2,7 @@
   <head>
     <script type="text/javascript" async="" src="matcher.js"></script>
     <link type="text/css" rel="stylesheet" href="matcher.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="colors.css" media="screen"/>
     <meta charset="utf-8">
     <title>Interaktive Einführung in Reguläre Ausdrücke</title>
   </head>
@@ -510,6 +511,113 @@
       sondern "aa". Somit müssen alle Zeilen eine gerade Anzahl an "a"s haben.
     </p>
     <p>
+      Im Schachspielern bei der fehlerfreien Mitschrift ihrer Spiele zu helfen,
+      kannst du einen regulären Ausdruck entwickeln.
+      Die <a href="https://de.wikipedia.org/wiki/Schachnotation">Schachnotation</a>
+      entsteht aus der Nummerierung des Brettes.<br/>
+      <a href="extern/schachbrett/README.md">
+        <img src="extern/schachbrett/SCD_algebraic_notation.svg" />
+      </a>
+      <br/>
+      Schreibe einen regulären Ausdruck, um den Ort einzugrenzen:
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">a1</li>
+        <li class="ok">b3</li>
+        <li class="ok">c8</li>
+        <li class="fail">C8</li>
+        <li class="fail">a0</li>
+        <li class="ok">f7</li>
+        <li class="fail">x</li>
+        <li class="fail"></li>
+        <li class="fail">a10</li>
+        <li class="fail">a10</li>
+        <li class="fail">ba1</li>
+        <li class="fail">a9</li>
+        <li class="ok">h6</li>
+      </ul>
+      <div class="experiment">Eigene Schachfelder zum Test:</div>
+    </div>
+    <p>
+      Ein Zug besteht aus zwei Orten mit einem Bindestrich dazwischen und einem
+      Figurenzeichen: „B“ = Bauer, „S“ = Springer, „L“ = Läufer, „T“ = Turm, „D“ = Dame, „K“ = König.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Ta1-a4</li>
+        <li class="ok">Bb3-b4</li>
+        <li class="ok">Dc8-d8</li>
+        <li class="ok">Ke1-f2</li>
+        <li class="ok">Sa1-b3</li>
+        <li class="fail">f7</li>
+        <li class="fail">x</li>
+        <li class="fail"></li>
+        <li class="fail">KA1-b2</li>
+        <li class="fail">Db2-c</li>
+        <li class="fail">Db2c5</li>
+      </ul>
+      <div class="experiment">Eigene Züge zum Test:</div>
+    </div>
+    <p class="hint">
+      Ich habe "[BSLTDK][a-h][1-8]-[a-h][1-8]" verwendet.
+      Am Anfang stehen die Figuren, danach kommen die Felder, verbunden mit "-".
+    </p>
+    <h2>Auslassungen</h2>
+    <p>
+      Um einen Ausdruck wegzulassen, kannst du das "?" verwenden.
+      Wenn du ein "?" and Ende schreibst, wird sowohl die leere Zeichenkette als
+      auch der ganze Satz erkannt.
+    </p>
+    <div class="playfield">
+      <input type="text" value="(Ist das Kunst oder kann das weg)" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok"></li>
+        <li class="ok">Ist das Kunst oder kann das weg</li>
+      </ul>
+      <div class="experiment">Eigene Züge zum Test:</div>
+    </div>
+    <p>
+      Da die Schachspieler nicht immer so viel schreiben wollen, lassen sie
+      gerne ein paar Buchstaben weg, wenn das immernoch eindeutig bleibt.
+      So kann z.B. das "B" bei den Bauern weggelassen werden.
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Ta1-a4</li>
+        <li class="ok">Bb3-b4</li>
+        <li class="ok">b3-b4</li>
+        <li class="ok">Dc8-d8</li>
+        <li class="ok">Ke1-f2</li>
+        <li class="ok">Sa1-b3</li>
+        <li class="fail">f7</li>
+        <li class="fail">x</li>
+        <li class="fail"></li>
+        <li class="fail">KA1-b2</li>
+        <li class="fail">Db2-c</li>
+        <li class="fail">Db2c5</li>
+      </ul>
+      <div class="experiment">Eigene Züge zum Test:</div>
+    </div>
+    <p class="hint">
+      Ich muss das Fragezeichen hinter "[BSLTDK]" schreiben.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
     </p>
     <p>
     </p>
@@ -542,11 +650,11 @@
     <p>
       Dabei möchte ich nicht den ganzen Teil des Ausdurcks erhalten sondern nur den Namen des Bildes, z.B.
       "cc-by-sa.png".
-      Dafür kannst du Klammernverwenden.
+      Dafür kannst du Klammern verwenden.
     </p>
     <footer>
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="cc-by-sa.png" /></a><br />
-      <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> von <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+      <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> von <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>. Bilder, die eine andere Lizenz haben, können angeklickt werden, um zu dem Erklärungstext zu gelangen.
     </footer>
   </body>
 </html>

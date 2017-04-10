@@ -24,16 +24,16 @@
 .nomatch {
 }
 .nomatch.ok {
-  background-color: #ffcccc;
+  background-color: var(--fails);
 }
 .match.fail {
-  background-color: #ffcccc;
+  background-color: var(--fails);
 }
 .error {
-  background-color: #ffdddd;
+  background-color: var(--fails);
 }
 .success {
-  background-color: #ddffdd;
+  background-color: var(--works);
 }
 .success::before {
   content: "✓";
@@ -46,4 +46,15 @@
 }
 .text-nomatch {
   display: inline;
+}
+.experiment .content {
+  display: inline;
+}
+.experiment::before {
+  content: "";
+  padding-right: 0em;
+}
+
+.experiment.match {
+  
 }

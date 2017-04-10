@@ -47,15 +47,21 @@ function unmatchExample(example) {
 }
 
 function watchExpression(playfield, examples, regex, message) {
-  function check() {
-    playfield.classList.remove("success");
-    var exp = undefined;
+  function getExpression() {
     try {
-      exp = RegExp(regex.value);
+      return RegExp(regex.value);
     } catch (err){
       message.innerHTML = translateErrorMessage(err.message);
       regex.classList.add("error");
       message.classList.add("error");
+      return null;
+    }
+  }
+  function check() {
+    updateExperiment();
+    playfield.classList.remove("success");
+    var exp = getExpression();
+    if (!exp) {
       return;
     }
     message.innerHTML = "";
@@ -80,6 +86,38 @@ function watchExpression(playfield, examples, regex, message) {
     }
   }
   regex.onkeyup = check;
+  
+  var experiments = playfield.getElementsByClassName("experiment");
+  if (experiments.length == 1) {
+    var experiment = experiments[0];
+    var content = document.createElement("div");
+    content.classList.add("content");
+    var textField = document.createElement("input");
+    textField.type = "text";
+    experiment.appendChild(textField);
+    experiment.appendChild(content);
+    function updateExperiment() {
+      experiment.classList.remove("match");
+      experiment.classList.remove("nomatch");
+      var text = textField.value;
+      content.innerText = text;
+      var exp = getExpression();
+      if (!exp) {
+        return;
+      }
+      var match = exp.exec(text);
+      if (match) {
+        experiment.classList.add("match");
+        matchExample(match, content);
+      } else {
+        experiment.classList.add("nomatch");
+        unmatchExample(content);
+      }
+    }
+    experiment.onkeyup = updateExperiment;
+  } else {
+    function updateExperiment() {}
+  }
   check();
 }
 
