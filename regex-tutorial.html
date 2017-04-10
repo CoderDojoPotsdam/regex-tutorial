@@ -195,15 +195,127 @@
       </ul>
     </div>
     <p>
+      Du kannst auch Bereiche abkürzen, indem du statt aller Zeichen einen
+      Bindestrich (oder Minus) "-" zwischen sie machst.
+      Um alle Ziffern von 1 bis 5 zu finden, kannst du "[1-5]" verwenden.
+      Hier kannst du alle Ziffern von 0 bis 9 ausprobieren:
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">keine Zahl</li>
+        <li class="ok">0</li>
+        <li class="ok">1</li>
+        <li class="ok">2</li>
+        <li class="ok">3</li>
+        <li class="ok">4</li>
+        <li class="ok">5</li>
+        <li class="ok">6</li>
+        <li class="ok">7</li>
+        <li class="ok">8</li>
+        <li class="ok">9</li>
+      </ul>
+    </div>
+    <p>
+      Der nächste Ausdruck soll die Zahlen 20 bis 29 finden aber er tut es nicht.
+      Magst du ihn ändern, dass er nur die Zahlen zwischen 20 und 29 erkennt?
+    </p>
+    <div class="playfield">
+      <input type="text" value="[20-29]" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">12</li>
+        <li class="fail">16</li>
+        <li class="ok">20</li>
+        <li class="ok">24</li>
+        <li class="ok">28</li>
+        <li class="fail">32</li>
+        <li class="fail">36</li>
+      </ul>
+    </div>
+    <p>
+      "[20-29]" bedeutet "[20129]", weil es sich um Ziffern, nicht um Zahlen
+      handelt.
+      "[0-2]" wird hier zu "[012]" gemacht.
+    </p>
+    <p class="hint">
+      Ich habe eine "2" an den Anfang meines Ausdrucks geschrieben.
+    </p>
+    <p>
+      Bereiche von Mengen kannst du auch mit "-" für Buchstaben abkürzen.
+      Alle Früchte von "A-Z" kannst du mit "[A-Z]" finden.
+      Markiere alle rot unterlegten Speisen mit nur 5 Zeichen:
+    </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="fail">Apfel</li>
+        <li class="fail">Banane</li>
+        <li class="ok">Chiasamen</li>
+        <li class="ok">Datteln</li>
+        <li class="ok">Ekelfrucht</li>
+        <li class="ok">Erdbeeren</li>
+        <li class="ok">Fruchtfrucht</li>
+        <li class="ok">Gammelfrucht</li>
+        <li class="fail">Hopfen</li>
+        <li class="fail">Inger</li>
+        <li class="fail">Jasmintee</li>
+      </ul>
+    </div>
+    <p>
+      Du kannst die Menge umdrehen, in dem du ein "^" an den Anfang machst.
+      "[^a]" ist alles außer "a" und "[^0-9]" ist alles andere als Zahlen.
+      Im nächsten Beispiel kannst du deine Menge umdrehen, in dem du das
+      Hütchen hinter der ersten Klammer einfügst.
     </p>
     <p>
     </p>
+    <div class="playfield">
+      <input type="text" value="[C-G]" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Apfel</li>
+        <li class="ok">Banane</li>
+        <li class="ok">Chiasamen</li>
+        <li class="ok">Datteln</li>
+        <li class="ok">Ekelfrucht</li>
+        <li class="ok">Erdbeeren</li>
+        <li class="ok">Fruchtfrucht</li>
+        <li class="ok">Gammelfrucht</li>
+        <li class="ok">Hopfen</li>
+        <li class="ok">Inger</li>
+        <li class="ok">Jasmintee</li>
+      </ul>
+    </div>
     <p>
+      Siehst du die markierten Zeichen?
+      Die Menge "[^C-G]" ist die Menge "[^CDEFG]", was sowohl "A" und "J" mit
+      als auch "a" und "m" und "c" und "d" mit einschließt, weil die alle nicht
+      zwischen "C" und "G" sind.
     </p>
     <p>
+      Hier ist ein Beispiel mit Leerzeichen, wo das Umdrehen
+      funktionieren sollte. Füge ein "^" hinter der Klammer ein.
     </p>
-    <p>
-    </p>
+    <div class="playfield">
+      <input type="text" value=" [C-G]" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">ein Apfel</li>
+        <li class="ok">eine Banane</li>
+        <li class="fail">viele Chiasamen</li>
+        <li class="fail">und Datteln</li>
+        <li class="fail">keine Ekelfrucht</li>
+        <li class="fail">aber Erdbeeren</li>
+        <li class="fail">und Fruchtfrucht</li>
+        <li class="fail">ohne Gammelfrucht</li>
+        <li class="ok">bei Hopfen</li>
+        <li class="ok">und Inger</li>
+        <li class="ok">sind Jasmintee</li>
+      </ul>
+    </div>
     <p>
     </p>
     <p>
