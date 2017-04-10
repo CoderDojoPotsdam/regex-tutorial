@@ -151,10 +151,49 @@
         <li class="fail">otto: ogottogott</li>
       </ul>
     </div>
+    <h2>Mengen</h2>
     <p>
+      Manchmal stehen Worte am Satzanfang oder in der Mitte.
+      Groß- und Kleinschreibung verändert sich.
+      Solche Fälle kann man mit "Mengen" abdecken.
+      Zwischen die eckigen Klammern kommen alle Buchstaben, die an der Stelle
+      stehen sollen.
+      "[dD]" passt auf "d" und auf "D". Es ist das selbe wie "d|D".
+      Finde das Wort "die" in Groß- und Kleinschreibung, indem du "[dD]" benutzt.
     </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">Die eckigen</li>
+        <li class="fail">Klammern findest du auf 8</li>
+        <li class="ok">und 9, wenn du die Taste</li>
+        <li class="fail">"AltGr" benutzt.</li>
+        <li class="ok">Die ist rechts neben</li>
+        <li class="fail">der Leertaste.</li>
+      </ul>
+    </div>
     <p>
+      Die Ziffern "0" bin "9" kann man auch als Menge benutzen, um Zahlen zu finden.
+      "[0123456789]" passt auf alle Zahlen von 0 bis 9.
+      Was passt auf alle geraden Ziffern?
     </p>
+    <div class="playfield">
+      <input type="text" value="" class="regex">
+      <div class="message"></div>
+      <ul class="examples">
+        <li class="ok">0</li>
+        <li class="fail">1</li>
+        <li class="ok">2</li>
+        <li class="fail">3</li>
+        <li class="ok">4</li>
+        <li class="fail">5</li>
+        <li class="ok">6</li>
+        <li class="fail">7</li>
+        <li class="ok">8</li>
+        <li class="fail">9</li>
+      </ul>
+    </div>
     <p>
     </p>
     <p>
