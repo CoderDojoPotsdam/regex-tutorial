@@ -1,0 +1,54 @@
+
+/* ----- playfield ----- */
+.playfield { 
+}
+.playfield  .regex {
+  width: 100%;
+}
+.playfield  .message {
+}
+.playfield  .examples {
+}
+.playfield  .ok {
+}
+.playfield  .fail {
+}
+
+/* ----- playfield.js  ----- */
+.playfield  .match{
+}
+.playfield  .match::before {
+  content: "✓";
+  padding-right: 1em;
+}
+.playfield  .nomatch {
+}
+.playfield  .nomatch.ok {
+  background-color: var(--fails);
+}
+.playfield  .match.fail {
+  background-color: var(--fails);
+}
+.playfield  .error {
+  background-color: var(--fails);
+}
+
+
+.playfield  .text-match {
+  display: inline;
+  font-weight: bold;
+}
+.playfield  .text-nomatch {
+  display: inline;
+}
+.playfield  .experiment .content {
+  display: inline;
+}
+.playfield  .experiment::before {
+  content: "";
+  padding-right: 0em;
+}
+
+.playfield  .experiment.match {
+  
+}

@@ -1,0 +1,12 @@
+.hidden {
+  display: none;
+}
+
+.success {
+  background-color: var(--works);
+}
+.success::before {
+  content: "✓";
+  padding-right: 1em;
+}
+

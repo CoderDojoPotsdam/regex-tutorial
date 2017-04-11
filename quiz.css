@@ -1,0 +1,57 @@
+
+.quiz .expression {
+}
+.quiz .expression:before {
+  content: "Regulärer Ausdruck: ";
+}
+
+.quiz .choices {
+  
+}
+
+.quiz .choices li {
+  
+}
+.quiz .choices li.ok {
+  
+}
+.quiz .choices li.fail {
+  
+}
+
+.quiz .button-ok {
+  display: inline-block;
+  padding: 0.3em;
+}
+.quiz .button-ok:hover {
+  background-color: var(--works);
+}
+.chosen-button-ok .button-ok {
+  background-color: black;
+  color: white;
+}
+
+.quiz .button-fail {
+  display: inline;
+  padding: 0.3em;
+}
+.quiz .button-fail:hover {
+  background-color: var(--fails);
+}
+.chosen-button-fail .button-fail {
+  color: white;
+  background-color: black;
+}
+
+.chosen-button-fail.ok {
+  background-color: var(--fails);
+}
+.chosen-button-ok.fail {
+  background-color: var(--fails);
+}
+.chosen-button-ok.ok {
+  background-color: var(--works);
+}
+.chosen-button-fail.fail {
+  background-color: var(--works);
+}
