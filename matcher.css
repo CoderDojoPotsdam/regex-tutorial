@@ -1,9 +1,12 @@
-
+.hidden {
+  display: none;
+}
 
 /* ----- playfield ----- */
 .playfield { 
 }
 .regex {
+  width: 100%;
 }
 .message {
 }
