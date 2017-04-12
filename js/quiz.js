@@ -11,9 +11,15 @@ function prependChoice(choice, correctness, text) {
         }
       }
       choice.classList.add("chosen-" + correctness);
+      updateRequirements();
     }
 }
 
+function addChoiceRequirement(choice) {
+  required(function() {
+    return choice.classList.contains("ok") && choice.classList.contains("chosen-button-ok") || choice.classList.contains("fail") && choice.classList.contains("chosen-button-fail");
+  });
+}
 
 function watchQuiz(quiz, expression, choicesList, index) {
   var choices = choicesList.getElementsByTagName("li");
@@ -36,6 +42,7 @@ function watchQuiz(quiz, expression, choicesList, index) {
     }
     prependChoice(choice, "button-fail", "Nein");
     prependChoice(choice, "button-ok", "Ja");
+    addChoiceRequirement(choice);
   }
 }
 

@@ -8,5 +8,7 @@
   --progress-color: #bbbbbb;
   --header-color: #eeeeee;
   --next-page-color: #eeeeee;
-  --step-color: #111111;
+  --step-color: #333333;
+  --step-done-color: #ccffcc;
+  --step-done-border-color: #33cc33;
 }

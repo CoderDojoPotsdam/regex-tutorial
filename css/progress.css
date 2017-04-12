@@ -29,6 +29,11 @@
   clear: none;   
 }
 
+.progress .step.done span {
+  background-color: var(--step-done-color);
+  border-color: var(--step-done-border-color);
+}
+
 .progress .step.current span {
   background-color: var(--step-color);
 }

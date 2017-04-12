@@ -89,6 +89,6 @@ footer {
   color: black;
 }
 
-.next-page:hover {
-  
+.requirements-satisfied .next-page {
+  background-color: var(--works);
 }
