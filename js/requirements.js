@@ -26,11 +26,6 @@ function updateRequirements() {
     allTrue = allTrue || getCookie(getId());
     setCookie(getId(), allTrue);
   }
-  if (allTrue) {
-    document.body.classList.add("requirements-satisfied");
-  } else {
-    document.body.classList.remove("requirements-satisfied");
-  }
   updateLinks();
 }
 
@@ -46,6 +41,11 @@ function updateLinks() {
         link.classList.remove("done");
       }
     }
+  }
+  if (getCookie(getId())) {
+    document.body.classList.add("requirements-satisfied");
+  } else {
+    document.body.classList.remove("requirements-satisfied");
   }
 }
 
