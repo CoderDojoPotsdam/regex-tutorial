@@ -3,17 +3,31 @@ layout: exercise
 title: Gruppen
 ---
 <p>
-  Du kannst statt dem <span class="regex">*</span> das <span class="regex">+</span> verwenden, um mindestens einmal zu matchen. 
+  Du kannst Zeichen und Ausdrücke zu Gruppen zusammenfassen, indem du sie zwischen
+  Klammern <span class="regex">(</span> und <span class="regex">)</span> schreibst.
+  Wiederholungen, die gleich nach der Klammer <span class="regex">)</span> stehen,
+  beziehen sich dann auf alles, was in den Klammern steht.
+</p>
+<p>
+  Es gab das Beispiel, in dem das <span class="regex">a</span> zweimal oder viermal vorkommt.
+  Durch eine Klammerung kannst du dafür sorgen, dass alle geraden
+  Vorkommnisse von <span class="regex">a</span> gefunden werden.
 </p>
 <div class="playfield">
-  <input type="text" value="^a*$" class="regex">
+  <input type="text" value="^aa+$" class="regex">
   <div class="message"></div>
   <ul class="examples">
-    <li class="fail"></li>
-    <li class="ok">a</li>
+    <li class="fail">a</li>
     <li class="ok">aa</li>
-    <li class="ok">aaa</li>
+    <li class="fail">aaa</li>
     <li class="ok">aaaa</li>
-    <li class="ok">aaaaa</li>
+    <li class="fail">aaaaa</li>
+    <li class="ok">aaaaaa</li>
+    <li class="fail">aaaaaaaaaaaaaaaaaaaaa</li>
+    <li class="ok">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
   </ul>
 </div>
+<p class="hint">
+  Wenn du die Klammern um <span class="regex">aa</span> machst, dann wird nicht <span class="regex">a</span> wiederholt
+  sondern <span class="regex">aa</span>. Somit müssen alle Zeilen eine gerade Anzahl an <span class="regex">a</span> haben.
+</p>

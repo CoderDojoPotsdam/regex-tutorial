@@ -3,25 +3,33 @@ layout: exercise
 title: Gruppen
 ---
 <p>
-  Es gab das Beispiel, in dem das <span class="regex">a</span> zweimal oder viermal vorkommt.
-  Durch eine Klammerung kannst du dafür sorgen, dass alle geraden
-  Vorkommnisse von <span class="regex">a</span> gefunden werden.
+  Im Schachspielern bei der fehlerfreien Mitschrift ihrer Spiele zu helfen,
+  kannst du einen regulären Ausdruck entwickeln.
+  Die <a href="https://de.wikipedia.org/wiki/Schachnotation">Schachnotation</a>
+  entsteht aus der Nummerierung des Brettes.<br/>
+  <a href="../extern/schachbrett/README.md">
+    <img src="../extern/schachbrett/SCD_algebraic_notation.svg" />
+  </a>
+  <br/>
+  Schreibe einen regulären Ausdruck, um den Ort einzugrenzen:
 </p>
 <div class="playfield">
-  <input type="text" value="^aa+$" class="regex">
+  <input type="text" value="" class="regex">
   <div class="message"></div>
   <ul class="examples">
-    <li class="fail">a</li>
-    <li class="ok">aa</li>
-    <li class="fail">aaa</li>
-    <li class="ok">aaaa</li>
-    <li class="fail">aaaaa</li>
-    <li class="ok">aaaaaa</li>
-    <li class="fail">aaaaaaaaaaaaaaaaaaaaa</li>
-    <li class="ok">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+    <li class="ok">a1</li>
+    <li class="ok">b3</li>
+    <li class="ok">c8</li>
+    <li class="fail">C8</li>
+    <li class="fail">a0</li>
+    <li class="ok">f7</li>
+    <li class="fail">x</li>
+    <li class="fail"></li>
+    <li class="fail">a10</li>
+    <li class="fail">a10</li>
+    <li class="fail">ba1</li>
+    <li class="fail">a9</li>
+    <li class="ok">h6</li>
   </ul>
+  <div class="experiment">Hier kannst du eigene Schachfelder zum Testen deines regulären Ausdrucks eingeben:</div>
 </div>
-<p class="hint">
-  Wenn du die Klammern um die das <span class="regex">aa</span> machst, dann wird nicht <span class="regex">a</span> wiederholt
-  sondern <span class="regex">aa</span>. Somit müssen alle Zeilen eine gerade Anzahl an <span class="regex">a</span> haben.
-</p>
