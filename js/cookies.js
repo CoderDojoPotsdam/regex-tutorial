@@ -36,3 +36,9 @@ function getCookie(cname) {
     }
     return null;
 }
+
+function deleteCookies() {
+  // from http://stackoverflow.com/a/27374628/1320237
+  document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+  document.location =  document.location;
+}
