@@ -5,10 +5,6 @@
 .success {
   background-color: var(--works);
 }
-.success::before {
-  content: "✓";
-  padding-right: 1em;
-}
 
 body {
   background-color: var(--default-background-color);
@@ -46,4 +42,31 @@ body {
 
 p {
   line-height: 140%;
+}
+
+header {
+  background-color: var(--header-color);
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  border: 0px;
+}
+
+header h2 {
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  padding-right: 1em;
+  padding-left: 1em;
 }

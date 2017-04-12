@@ -3,8 +3,16 @@
 .playfield { 
 }
 .playfield  .regex {
-  width: 90%;
+  width: 100%;
 }
+
+.playfield.success .regex {
+  width: calc(100% - 2em);
+}
+.playfield.success:before {
+  content: "✓";
+}
+
 .playfield  .message {
 }
 .playfield  .examples {
@@ -43,8 +51,6 @@
 .playfield  .experiment .content {
 }
 .playfield  .experiment::before {
-  content: "";
-  padding-right: 0em;
 }
 
 .playfield  .experiment.match {

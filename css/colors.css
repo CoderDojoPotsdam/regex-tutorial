@@ -5,4 +5,7 @@
   --default-background-color: white;
   --regular-expression-text-backgound-color: #eeeeee;
   --regular-expression-text-border-color: #bbbbbb;
+  --progress-color: #bbbbbb;
+  --header-color: #eeeeee;
+  --step-color: #111111;
 }
