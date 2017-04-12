@@ -14,10 +14,14 @@
     <p>
       Mit regulären Ausdrücken kannst du Texte durchsuchen.
       Ein "regulärer Ausdruck" ist ein Muster, das in einem Text gefunden werden soll.
+      In vielen Prgrammiersprachen kannst du reguläre Ausdrücke verwenden,
+      um Zeichenketten zu durchsuchen.
+      Man kann mit regulären Ausdrücken auch testen, ob die Eingabe von Programmen korrekt ist und
+      ob Nutzer sich vertippen.
     </p>
     <h2>Buchstaben</h2>
     <p>
-      Du kannst Wörter nach durchsuchen, ob sie einen Buchstaben enthalten.
+      Du kannst Wörter nach Buchstaben durchsuchen, ob sie einen Buchstaben enthalten.
       Schreibe den Buchstaben "a" in das Feld unten drunter, 
       um alleWörter mit dem Buchstaben "a" zu finden.
     </p>
@@ -37,7 +41,7 @@
       regulären Ausdruck.
     </p>
     <p>
-      Nun versuche, den Vokal zu finden, der in allen rot markierten Wörten vorkommt.
+      Nun versuche, den Vokal zu finden, der in allen weißen aber nicht in den rot markierten Wörten vorkommt.
     </p>
     <div class="playfield">
       <input type="text" value="" class="regex">
@@ -71,6 +75,7 @@
       Buchstabenfolgen sind auch reguläre Audrücke.
       In den folgenden Zeilen sind Worte mit der Zeichenfolge "nan".
       Markiere die Zeilen.
+      Gib dazu die Zeichenfolge ein.
     </p>
     <div class="playfield">
       <input type="text" value="" class="regex">
@@ -101,11 +106,14 @@
     </div>
     <h2>Oder |</h2>
     <p>
-      Du kannst verschiedene Wörter matchen.
+      Du kannst verschiedene Wörter matchen, die unterscheidlcihe Inhalte haben.
+      In vielen Programmiersprachen ist das Wort "oder" ein Zeichen "|".
+    <p>
+    </p>
       In der folgenden Liste kannst du alle Dörfer rausfiltern,
       die "hausen" oder "roda" drin haben, indem du "hausen|roda" eingibst.
       "hausen|roda" lese ich wie "hausen oder roda".
-      Um "|" zu schreiben, brauchst du die Taste "AltGr" und die Taste unten links.
+      Um "|" zu schreiben, brauchst du die Taste "AltGr" und die Taste unten links mit "&lt;" drauf.
       Auf der englischen Tastatur ist das Zeichen auf der "#"-Taste, groß geschrieben.
     </p>
     <div class="playfield">
@@ -123,7 +131,7 @@
       </ul>
     </div>
     <p>
-      Und jetzt versuche, auch noch die Orte, die "bach" drin haben, zu finden.
+      Und jetzt versuche zusätzlich noch die Orte, die "bach" drin haben, zu finden.
     </p>
     <div class="playfield">
       <input type="text" value="" class="regex">

@@ -4,6 +4,9 @@
 .quiz .expression:before {
   content: "Regulärer Ausdruck: ";
 }
+.quiz .expression:after {
+  content: " In welchen Zeilen kommt er vor? Klicke auf \"Ja\" oder \"Nein\".";
+}
 
 .quiz .choices {
   
@@ -25,6 +28,7 @@
 }
 .quiz .button-ok:hover {
   background-color: var(--works);
+  color: black;
 }
 .chosen-button-ok .button-ok {
   background-color: black;
@@ -34,9 +38,11 @@
 .quiz .button-fail {
   display: inline;
   padding: 0.3em;
+  margin-right: 1em;
 }
 .quiz .button-fail:hover {
   background-color: var(--fails);
+  color: black;
 }
 .chosen-button-fail .button-fail {
   color: white;

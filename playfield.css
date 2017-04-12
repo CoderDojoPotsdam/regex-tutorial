@@ -3,7 +3,7 @@
 .playfield { 
 }
 .playfield  .regex {
-  width: 100%;
+  width: 90%;
 }
 .playfield  .message {
 }
@@ -17,9 +17,9 @@
 /* ----- playfield.js  ----- */
 .playfield  .match{
 }
-.playfield  .match::before {
+.playfield  .match::after {
   content: "✓";
-  padding-right: 1em;
+  padding-left: 1em;
 }
 .playfield  .nomatch {
 }
