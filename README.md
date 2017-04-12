@@ -3,6 +3,12 @@ Regex-Tutorial
 
 Das ist der Quelltext für das [interaktive Tutorial zu regulären Ausdrücken][site].
 
+Beitragen
+---------
+
+Gerne kannst du das Tutorial benutzen.
+Wenn du etwas hinzufügst oder Fehler findest, gibt es für dich auf jeder Seite einen Link zum Editieren und verbessern des HTML-Textes.
+Danach kannst du gerne eine [Pull-Request][pr] stellen.
 
 Weiterführende Literatur
 ------------------------
@@ -20,3 +26,4 @@ Bilder in dem Ordner "extern" stehen unter einer eigenen Lizenz.
 
 [site]: https://coderdojopotsdam.github.io/regex-tutorial
 [fett1]: https://www.danielfett.de/de/tutorials/tutorial-regulare-ausdrucke/
+[pr]: https://github.com/CoderDojoPotsdam/regex-tutorial/compare
