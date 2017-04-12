@@ -6,10 +6,6 @@
   background-color: var(--works);
 }
 
-body {
-  background-color: var(--default-background-color);
-}
-
 .regex {
   background-color: var(--regular-expression-text-backgound-color);
   padding-right: 0.3em;
@@ -64,11 +60,14 @@ header h2 {
 
 body {
   margin: 0px;
+  background-color: var(--default-background-color);
 }
 
 main {
   padding-right: 1em;
   padding-left: 1em;
+  max-width: 40em;
+  margin-left: calc(50% - 20em);
 }
 
 footer {
@@ -76,6 +75,10 @@ footer {
   margin-top: 1em;
   background-color: var(--header-color);
   text-align: center;
+}
+
+footer img {
+  vertical-align: middle;
 }
 
 .next-page {
