@@ -1,0 +1,31 @@
+
+.hint {
+  margin: 1em;
+  padding: 1em;
+  padding-bottom: 0em;
+}
+.clicked .hint {
+}
+.secret .hint {
+  display: none;
+}
+
+.hint-wrap {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  background-color: var(--hint-background-color);
+}
+
+.toggle-hint {
+}
+
+.clicked .toggle-hint:before {
+  content: "Hinweis verstecken?";
+}
+.secret .toggle-hint:before {
+  content: "Hinweis anzeigen?";
+}
+
+
+

@@ -1,4 +1,6 @@
 :root {
-  --fails:#ffcccc;
-  --works:#ccffcc;
+  --fails: #ffcccc;
+  --works: #ccffcc;
+  --hint-background-color: #ffffcc;
+  --default-background-color: white;
 }
