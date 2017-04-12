@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../css/progress.css" media="screen"/>
     <link type="text/css" rel="stylesheet" href="../css/requirements.css" media="screen"/>
     <meta charset="utf-8">
-    <title>{{ page.title }} - Interaktive Einführung in Reguläre Ausdrücke</title>
+    <title>{{ page.title | escape }} - Interaktive Einführung in Reguläre Ausdrücke</title>
     <script type="text/javascript">
       var current_page_id = "page-" + {{ page.path | jsonify }};
     </script>
@@ -25,21 +25,21 @@
         {% assign should_assign_next = false %}
         {% assign has_next_page = false %}
         {% assign next_page = nil %}
-        {% for p in site.pages %}
+        {% for p in site.pages %}<!--
           {% assign tutorial = p.path | split: "/" | first %}
           {% assign file_name = p.path | split: "/" | first %}
           {% assign topic = page.path | split: "-" | first %}
           {% assign p_topic = p.path | split: "-" | first %}
           {% if tutorial == "tutorial" %}
             {% if p_topic == topic and same_topic_started == false %}
-              <div class="same-topic">
+              --><span class="same-topic"><!--
               {% assign same_topic_started = true %}
             {% endif %}
             {% if p_topic != topic and same_topic_started == true %}
-              </div>
-              {% assign same_topic_started = true %}
+              --></span><!--
+              {% assign same_topic_started = false %}
             {% endif %}
-            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}"><span></span></a>
+            --><a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}"><span></span></a><!--
             {% if should_assign_next %}
               {% assign should_assign_next = false %}
               {% assign has_next_page = true %}
@@ -49,12 +49,12 @@
               {% assign should_assign_next = true %}
             {% endif %}
           {% endif %}
-        {% endfor %}
+        -->{% endfor %}
         {% if same_topic_started %}
           </div>
         {% endif %}
       </div>
-      <h2>{{ page.title }}</h2>
+      <h2>{{ page.title | escape }}</h2>
     </header>
     <main>
       {{ content }}
