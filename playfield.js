@@ -11,16 +11,16 @@ function translateErrorMessage(message) {
 }
 
 function matchTextElement(string) {
-  var div = document.createElement('div');
-  div.innerText = string;
-  div.classList.add("text-match");
-  return div;
+  var span = document.createElement('span');
+  span.innerText = string;
+  span.classList.add("text-match");
+  return span;
 }
 function nomatchTextElement(string) {
-  var div = document.createElement('div');
-  div.innerText = string;
-  div.classList.add("text-nomatch");
-  return div;
+  var span = document.createElement('span');
+  span.innerText = string;
+  span.classList.add("text-nomatch");
+  return span;
 }
 
 function matchExample(match, example) {

@@ -17,7 +17,8 @@ function prependChoice(choice, correctness, text) {
 
 function watchQuiz(quiz, expression, choicesList, index) {
   var choices = choicesList.getElementsByTagName("li");
-  var regexText = expression.innerHTML;
+  var regexText = expression.innerText;
+  expression.innerHTML = "<span class='regex'>" + expression.innerHTML + "</span>";
   var exp = null;
   try {
     exp = RegExp(regexText);

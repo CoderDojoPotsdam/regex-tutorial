@@ -39,10 +39,8 @@
   font-weight: bold;
 }
 .playfield  .text-nomatch {
-  display: inline;
 }
 .playfield  .experiment .content {
-  display: inline;
 }
 .playfield  .experiment::before {
   content: "";
