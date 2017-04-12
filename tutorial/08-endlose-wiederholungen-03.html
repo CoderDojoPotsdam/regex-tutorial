@@ -1,0 +1,28 @@
+---
+layout: exercise
+title: Endlose Wiederholungen
+---
+<p>
+  Das Sternchen kann man auf Ausdrücke anwenden.
+  Ausdrücke sind auch auf Mengen.
+  Eine solche Menge kann z.B. die Menge <span class="regex">[a-z]</span> aller kleinen Buchstaben sein.
+</p>
+<p>
+  Markiere alle Wörter, die nur aus kleinen Buchstaben bestehen.
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex">
+  <div class="message"></div>
+  <ul class="examples">
+    <li class="fail">Ich</li>
+    <li class="ok">baue</li>
+    <li class="ok">einen</li>
+    <li class="ok">regulären</li>
+    <li class="fail">Ausdruck</li>
+    <li class="fail">laLaLa</li>
+  </ul>
+</div>
+<p class="hint">
+  Ich muss das <span class="regex">ä</span> mit in die Menge nehmen. <span class="regex">[a-zä]</span>
+  Das ist nicht im Alphabet vorhanden.
+</p>

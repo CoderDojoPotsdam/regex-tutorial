@@ -54,9 +54,18 @@
 }
 .playfield  .text-nomatch {
 }
-.playfield  .experiment .content {
+.playfield  .experiment {
+  margin-top: 1em;
 }
-.playfield  .experiment::before {
+.playfield  .experiment input {
+  width: 100%;
+  margin: 0.3em;
+}
+.playfield  .experiment .content {
+  padding-left: 1em;
+}
+.playfield  .experiment::after {
+  content: none;
 }
 
 .playfield  .experiment.match {
