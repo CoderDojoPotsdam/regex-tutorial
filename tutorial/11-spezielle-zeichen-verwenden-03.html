@@ -1,0 +1,19 @@
+---
+layout: exercise
+title: Spezielle Zeichen Verwenden
+---
+<p>
+  Auch das <span class="regex">?</span> kannst du mit dem Backslash <span class="regex">\</span> escapen.
+  Damit kannst du die Frage auch mit einem Fragezeichen versehen.
+  Hier brauchst du nur einen <span class="regex">\</span> hinzufügen, damit der Ausdruck stimmt:
+</p>
+<div class="playfield">
+  <input type="text" value="^(Ist das Kunst oder kann das weg?)?$" class="regex">
+  <div class="message"></div>
+  <ul class="examples">
+    <li class="ok"></li>
+    <li class="fail">Ist das Kunst oder kann das weg</li>
+    <li class="ok">Ist das Kunst oder kann das weg?</li>
+    <li class="fail">Ist das Kunst oder kann das we</li>
+  </ul>
+</div>

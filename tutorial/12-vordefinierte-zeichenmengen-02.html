@@ -1,0 +1,37 @@
+---
+layout: exercise
+title: Vordefinierte Zeichenmengen
+---
+<p>
+  HTML ist die Sprache, mit der Webseiten geschrieben werden.
+  In HTML werden Tags immer mit <span class="regex">&lt;</span> begonnen und mit <span class="regex">&gt;</span> beendet.
+  Dazwischen ist immer Text.
+  Hier kannst du überprüfen, ob die Zeilen invalide HTML-Tags enthalten.
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex">
+  <div class="message"></div>
+  <ul class="examples">
+    <li class="fail">&lt; &gt;</li>
+    <li class="ok">&lt;img /&gt;</li>
+    <li class="fail">&gt;&lt;kaputt&gt;</li>
+    <li class="ok">&lt;title&gt;Tutorial&lt;/title&gt;</li>
+    <li class="fail">Es&lt;braucht&gt;eine&lt;Klammer</li>
+    <li class="ok">Es&lt;braucht&gt;keine&lt;Klammer&gt;</li>
+    <li class="fail">Es&lt;braucht&gt;noch eine Klammer&gt;</li>
+    <li class="ok">&lt;a href="https://duckduckgo.com"&gt; Suchen&lt;/a&gt;</li>
+  </ul>
+</div>
+<p class="hint">
+  <span class="regex">[^&lt;&gt;]*</span> ist normaler Text.
+</p>
+<p class="hint">
+  <span class="regex">^[^&lt;&gt;]*(&lt;/?\w+[^&gt;]*&gt;[^&lt;&gt;]*)*$</span> habe ich verwendet.
+</p>
+<p>
+  Noam Chomsky hat eine <a href="https://de.wikipedia.org/wiki/Chomsky-Hierarchie">Hirarchie der Grammatiken</a>erstellt.
+  Auf der untersten Ebene sind die regulären Ausdrücke.
+  Die Sprache HTML selbst kann nicht durch einen regulären Ausdruck beschrieben werden.
+  Allerdings sind einzelne Teile der Sprache, wie die Tags, durch aus mit einem regulären
+  Ausdruck beschreibbar.
+</p>

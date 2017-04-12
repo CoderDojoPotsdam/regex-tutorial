@@ -1,0 +1,26 @@
+---
+layout: exercise
+title: Wiederholungen Zählen
+---
+<p>
+  Es gibt das Fragezeichen <span class="regex">?</span>, für 0 oder einmal.
+  Es gibt den Stern <span class="regex">*</span> für 0 bis unendlich und das Plus <span class="regex">+</span> für einmal bis
+  unendlich oft.
+  Für die IP-Adressen wäre es praktisch gewesen, den Ausdruck nicht so oft zu kopieren
+  sondern ihn eine bestimmte Anzahl zu wiederholen.
+  In den geschweiften Klammern kannst du die Anzahl festlegen, die ein
+  Ausdruck wiederholt wird.
+</p>
+<div class="playfield">
+  <input type="text" value="lo{3}l" class="regex">
+  <div class="message"></div>
+  <ul class="examples">
+    <li class="fail">loool</li>
+    <li class="ok">looooooool</li>
+    <li class="fail">loooooooooool</li>
+  </ul>
+</div>
+<p>
+  Mein regulärer Ausdruck für die IP-Adressen sieht mit Wiederholungen so aus:
+  <span class="regex">^(1?\d?\d|2[0-4]\d|25[0-5])(\.(1?\d?\d|2[0-4]\d|25[0-5])){3}$</span>
+</p>

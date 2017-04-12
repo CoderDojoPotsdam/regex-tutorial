@@ -1,0 +1,23 @@
+---
+layout: exercise
+title: Spezielle Zeichen Verwenden
+---
+<p>
+  Es gibt spezielle Zeichen wie <span class="regex">?</span>, <span class="regex">+</span>, <span class="regex">*</span>, <span class="regex">(</span>, <span class="regex">.</span>, <span class="regex">}</span> und <span class="regex">\</span>.
+  Diese Zeichen haben eine besondere Bedeutung im regulären Ausdruck.
+  Um Text mit diesen Zeichen zu finden, muss vorher ein <span class="regex">\</span> geschrieben werden.
+</p>
+<p>
+  Der <span class="regex">\</span> ist auf <span class="key">AltGr</span> und <span class="key">ß</span>.
+  Du kannst das ausprobieren, indem du den <span class="regex">\</span> vor das <span class="regex">*</span> setzt.
+</p>
+<div class="playfield">
+  <input type="text" value="a*" class="regex">
+  <div class="message"></div>
+  <ul class="examples">
+    <li class="fail"></li>
+    <li class="fail">a</li>
+    <li class="fail">aa</li>
+    <li class="ok">a*</li>
+  </ul>
+</div>
