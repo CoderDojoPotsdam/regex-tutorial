@@ -18,5 +18,5 @@ Lizenz
 Bilder in dem Ordner "extern" stehen unter einer eigenen Lizenz.
 
 
-[site]: https://coderdojopotsdam.github.io/regex-tutorial/regex-tutorial.html
+[site]: https://coderdojopotsdam.github.io/regex-tutorial
 [fett1]: https://www.danielfett.de/de/tutorials/tutorial-regulare-ausdrucke/
