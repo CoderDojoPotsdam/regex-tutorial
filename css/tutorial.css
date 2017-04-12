@@ -70,3 +70,25 @@ main {
   padding-right: 1em;
   padding-left: 1em;
 }
+
+footer {
+  padding: 1em;
+  margin-top: 1em;
+  background-color: var(--header-color);
+  text-align: center;
+}
+
+.next-page {
+  text-align: center;
+  display: block;
+  margin: 1em;
+  padding: 1em;
+  background-color: var(--next-page-color);
+  border-radius: 1em;
+  text-decoration: none;
+  color: black;
+}
+
+.next-page:hover {
+  
+}

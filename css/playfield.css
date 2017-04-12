@@ -1,13 +1,15 @@
 
 /* ----- playfield ----- */
-.playfield { 
+.playfield {
+  padding: 1em;
+  border-radius: 1em;
 }
 .playfield  .regex {
   width: 100%;
 }
 
 .playfield.success .regex {
-  width: calc(100% - 2em);
+  width: calc(100% - 1.5em);
 }
 .playfield.success:before {
   content: "✓";
@@ -39,6 +41,10 @@
 }
 .playfield  .error {
   background-color: var(--fails);
+}
+
+.playfield ul {
+  margin-bottom: 0em;
 }
 
 

@@ -19,6 +19,9 @@
     <header>
       <div class="progress">
         {% assign same_topic_started = false %}
+        {% assign should_assign_next = false %}
+        {% assign has_next_page = false %}
+        {% assign next_page = nil %}
         {% for p in site.pages %}
           {% assign tutorial = p.path | split: "/" | first %}
           {% assign file_name = p.path | split: "/" | first %}
@@ -34,13 +37,27 @@
               {% assign same_topic_started = true %}
             {% endif %}
             <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}"><span></span></a>
+            {% if should_assign_next %}
+              {% assign should_assign_next = false %}
+              {% assign has_next_page = true %}
+              {% assign next_page = p %}
+            {% endif %}
+            {% if page == p %}
+              {% assign should_assign_next = true %}
+            {% endif %}
           {% endif %}
         {% endfor %}
+        {% if same_topic_started %}
+          </div>
+        {% endif %}
       </div>
       <h2>{{ page.title }}</h2>
     </header>
     <main>
       {{ content }}
+      {% if has_next_page %}
+        <a href="{{ next_page.url }}" class="next-page">Nächster Schritt</a>
+      {% endif %}
     </main>
     <footer>
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="../assets/cc-by-sa.png" /></a><br />

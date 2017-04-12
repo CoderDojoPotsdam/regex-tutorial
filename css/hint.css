@@ -5,6 +5,8 @@
   padding-bottom: 0em;
 }
 .clicked .hint {
+  margin-bottom: 0em;
+  margin-top: 0em;
 }
 .secret .hint {
   display: none;
@@ -15,6 +17,7 @@
   margin: 1em;
   border-radius: 1em;
   background-color: var(--hint-background-color);
+  cursor: pointer;
 }
 
 .toggle-hint {

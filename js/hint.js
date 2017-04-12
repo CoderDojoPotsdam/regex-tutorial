@@ -15,7 +15,7 @@ function watchHint(hint) {
     added = 1 - added;
     wrap.classList.add(hintClasses[added]);
   }
-  button.onclick = click;
+  wrap.onclick = click;
   click();
 }
 
