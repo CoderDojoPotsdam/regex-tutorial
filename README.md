@@ -1,6 +1,8 @@
 Regex-Tutorial
 ==============
 
+[![Build Status](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial.svg?branch=master)](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial)
+
 Das ist der Quelltext für das [interaktive Tutorial zu regulären Ausdrücken][site].
 
 Beitragen
