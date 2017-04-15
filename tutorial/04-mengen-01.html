@@ -3,16 +3,22 @@ layout: exercise
 title: "Mengen"
 ---
 <p>
-  Manchmal stehen Worte am Satzanfang oder in der Mitte.
-  Groß- und Kleinschreibung verändert sich.
-  Solche Fälle kann man mit "Mengen" abdecken.
-  Zwischen die eckigen Klammern kommen alle Buchstaben, die an der Stelle
-  stehen sollen.
-  <span class="regex">[dD]</span> passt auf <span class="regex">d</span> und auf <span class="regex">D</span>.
-  Es ist das selbe wie <span class="regex">d|D</span>.
+  Manchmal ändern sich Teile von Worten, z.B. Groß- und Kleinschreibung.
+  Der veränderliche Teil kommt in die eckigen Klammern.
+  Der feste Teil steht außerhalb der Klammern.
+  So kannst du verschiedene Schreibweisen mit Mengen abdecken.
 </p>
 <p>
-  Finde das Wort <span class="regex">die</span> in Groß- und Kleinschreibung, indem du <span class="regex">[dD]</span> benutzt.
+  Ein Beispiel: <span class="regex">[dD]er</span> passt auf 
+  <span class="regex">der</span> und auf <span class="regex">Der</span>.
+  Zwischen die eckigen Klammern kommt das große und kleine D, 
+  um Groß- und Kleinschreibung zu finden.
+  Jetzt finde das Wort <span class="regex">die</span> in Groß- und Kleinschreibung, 
+  indem du <span class="regex">[dD]</span> benutzt.
+</p>
+<p class="hint">
+  Die eckigend Klammern findest du auf <span class="key">8</span> und <span class="key">9</span>,
+  wenn du die Taste <span class="key">AltGr</span> zeitglich drückst.
 </p>
 <div class="playfield">
   <input type="text" value="" class="regex">
