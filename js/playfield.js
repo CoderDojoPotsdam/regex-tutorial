@@ -5,7 +5,7 @@ var errorMessages = {
   "nothing to repeat": "Nichts zu wiederholen. Das \"+\" oder \"*\" oder andere Wiederholungen beziehen sich nicht auf etwas, das wiederholt werden kann."
 }
 
-var playfields_loaded = false;
+var playfieldsLoaded = false;
 
 function translateErrorMessage(message) {
   var translation = (errorMessages[message] || "Bitte übersetzen.");
@@ -87,7 +87,7 @@ function watchExpression(playfield, examples, regex, message) {
     if (allCorrect) {
       playfield.classList.add("success");
     }
-    if (playfields_loaded) {
+    if (playfieldsLoaded) {
       updateRequirements();
     }
   }
@@ -147,8 +147,11 @@ window.addEventListener("load", function(){
     var message = getPlayfieldElement(playfield, i, "message");
     
     watchExpression(playfield, examples, regex, message);
+    if (i == 0) {
+      regex.focus();
+    }
   }
-  playfields_loaded = true;
+  playfieldsLoaded = true;
 });
 
 
