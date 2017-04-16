@@ -3,33 +3,16 @@ layout: exercise
 title: Gruppen
 ---
 <p>
-  Um Schachspielern bei der fehlerfreien Mitschrift ihrer Spiele zu helfen,
-  kannst du einen regulären Ausdruck entwickeln.
-  Die <a href="https://de.wikipedia.org/wiki/Schachnotation">Schachnotation</a>
-  entsteht aus der Nummerierung des Brettes.<br/>
-  <a href="../extern/schachbrett/README.md">
-    <img src="../extern/schachbrett/SCD_algebraic_notation.svg" />
-  </a>
-  <br/>
-  Schreibe einen regulären Ausdruck, um den Ort einzugrenzen:
+  Gruppen kannst du benutzen, um das Oder einzuschränken.
+  Es gilt dann nicht mehr für den ganzen Ausdruck sondern nur den Teil in den Klammern.
 </p>
-<div class="playfield">
-  <input type="text" value="" class="regex">
-  <div class="message"></div>
-  <ul class="examples">
-    <li class="ok">a1</li>
-    <li class="ok">b3</li>
-    <li class="ok">c8</li>
-    <li class="fail">C8</li>
-    <li class="fail">a0</li>
-    <li class="ok">f7</li>
-    <li class="fail">x</li>
-    <li class="fail"></li>
-    <li class="fail">a10</li>
-    <li class="fail">a10</li>
-    <li class="fail">ba1</li>
-    <li class="fail">a9</li>
-    <li class="ok">h6</li>
+<div class="quiz">
+  <div class="expression">Ein (Apfel|Birnen)baum</div>
+  <ul class="choices">
+    <li>Ein Apfelbaum</li>
+    <li>Ein ApfelBirnenbaum</li>
+    <li>Ein (Apfel</li>
+    <li>Ein Birnenbaum</li>
+    <li>Birnenbaum</li>
   </ul>
-  <div class="experiment">Hier kannst du eigene Schachfelder zum Testen deines regulären Ausdrucks eingeben:</div>
 </div>

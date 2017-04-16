@@ -1,0 +1,33 @@
+---
+layout: exercise
+title: Gruppen
+---
+<p>
+  Ein Zug besteht aus zwei Orten mit einem Bindestrich dazwischen und einem
+  Figurenzeichen: „B“ = Bauer, „S“ = Springer, „L“ = Läufer, „T“ = Turm, „D“ = Dame, „K“ = König
+  [<a target="_blank" href="https://de.wikipedia.org/wiki/Schachnotation">Quelle</a>].
+  Welcher reguläre Ausdruck passt auf die Züge?
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex">
+  <div class="message"></div>
+  <ul class="examples">
+    <li class="ok">Ta1-a4</li>
+    <li class="ok">Bb3-b4</li>
+    <li class="ok">Dc8-d8</li>
+    <li class="ok">Ke1-f2</li>
+    <li class="ok">Sa1-b3</li>
+    <li class="fail">f7</li>
+    <li class="fail">x</li>
+    <li class="fail"></li>
+    <li class="fail">KA1-b2</li>
+    <li class="fail">Db2-c</li>
+    <li class="fail">Db2c5</li>
+  </ul>
+  <div class="experiment">Eigene Züge zum Test:</div>
+</div>
+<p class="hint">
+  Ich habe <span class="regex">[BSLTDK][a-h][1-8]-[a-h][1-8]</span> verwendet.
+  Am Anfang stehen die Figuren, danach kommen die Felder, verbunden mit <span class="regex">-</span>.
+</p>
+
