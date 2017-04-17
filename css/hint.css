@@ -1,3 +1,5 @@
+---
+---
 
 .hint {
   margin: 1em;
@@ -16,7 +18,7 @@
   padding: 1em;
   margin: 1em;
   border-radius: 1em;
-  background-color: var(--hint-background-color);
+  background-color: {{ site.data.colors.hint-background-color }};
   cursor: pointer;
 }
 
