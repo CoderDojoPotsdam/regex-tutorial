@@ -46,6 +46,7 @@
 }
 .playfield  .match::after {
   content: "✓";
+  padding-left: 2em;
 }
 
 .playfield  .nomatch {
