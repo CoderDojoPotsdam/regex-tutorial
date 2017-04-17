@@ -1,3 +1,5 @@
+---
+---
 
 .quiz .expression {
 }
@@ -27,7 +29,7 @@
   padding: 0.3em;
 }
 .quiz .button-ok:hover {
-  background-color: var(--works);
+  background-color: {{ site.data.colors.works }};
   color: black;
 }
 .chosen-button-ok .button-ok {
@@ -41,7 +43,7 @@
   margin-right: 1em;
 }
 .quiz .button-fail:hover {
-  background-color: var(--fails);
+  background-color: {{ site.data.colors.fails }};
   color: black;
 }
 .chosen-button-fail .button-fail {
@@ -50,14 +52,14 @@
 }
 
 .chosen-button-fail.ok {
-  background-color: var(--fails);
+  background-color: {{ site.data.colors.fails }};
 }
 .chosen-button-ok.fail {
-  background-color: var(--fails);
+  background-color: {{ site.data.colors.fails }};
 }
 .chosen-button-ok.ok {
-  background-color: var(--works);
+  background-color: {{ site.data.colors.works }};
 }
 .chosen-button-fail.fail {
-  background-color: var(--works);
+  background-color: {{ site.data.colors.works }};
 }

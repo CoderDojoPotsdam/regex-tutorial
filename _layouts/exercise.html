@@ -7,7 +7,6 @@
     <script type="text/javascript" async="" src="../js/cookies.js"></script>
     <script type="text/javascript" async="" src="../js/requirements.js"></script>
     <script type="text/javascript" async="" src="../js/compatibility.js"></script>
-    <link type="text/css" rel="stylesheet" href="../css/colors.css" media="screen"/>
     <link type="text/css" rel="stylesheet" href="../css/tutorial.css" media="screen"/>
     <link type="text/css" rel="stylesheet" href="../css/playfield.css" media="screen"/>
     <link type="text/css" rel="stylesheet" href="../css/quiz.css" media="screen"/>
@@ -58,12 +57,12 @@
       </div>
       <h2>{{ page.title | escape }}</h2>
     </header>
-    <main>
+    <div class="main">
       {{ content }}
       {% if has_next_page %}
         <a href="..{{ next_page.url }}" class="next-page">Nächster Schritt</a>
       {% endif %}
-    </main>
+    </div>
     <footer>
       <a href="{{ site.sourcecode.view }}/{{ page.path }}">Quelltext</a>
       <a href="{{ site.sourcecode.edit }}/{{ page.path }}">Verbessern</a>

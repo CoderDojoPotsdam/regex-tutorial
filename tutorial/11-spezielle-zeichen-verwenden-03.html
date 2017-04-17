@@ -8,12 +8,12 @@ title: Spezielle Zeichen Verwenden
   Hier brauchst du nur einen <span class="regex">\</span> hinzufügen, damit der Ausdruck stimmt:
 </p>
 <div class="playfield">
-  <input type="text" value="^(Ist das Kunst oder kann das weg?)?$" class="regex">
+  <input type="text" value="^(Ist das Kunst oder kann das weg?)?$" class="regex" reference="^(Ist das Kunst oder kann das weg\?)?$">
   <div class="message"></div>
   <ul class="examples">
-    <li class="ok"></li>
-    <li class="fail">Ist das Kunst oder kann das weg</li>
-    <li class="ok">Ist das Kunst oder kann das weg?</li>
-    <li class="fail">Ist das Kunst oder kann das we</li>
+    <li></li>
+    <li>Ist das Kunst oder kann das weg</li>
+    <li>Ist das Kunst oder kann das weg?</li>
+    <li>Ist das Kunst oder kann das we</li>
   </ul>
 </div>

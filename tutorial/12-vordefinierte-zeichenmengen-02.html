@@ -9,17 +9,17 @@ title: Vordefinierte Zeichenmengen
   Hier kannst du überprüfen, ob die Zeilen invalide HTML-Tags enthalten.
 </p>
 <div class="playfield">
-  <input type="text" value="" class="regex">
+  <input type="text" value="" class="regex" reference="^[^<>]*(<\S[^>]+>[^<>]*)*$">
   <div class="message"></div>
   <ul class="examples">
-    <li class="fail">&lt; &gt;</li>
-    <li class="ok">&lt;img /&gt;</li>
-    <li class="fail">&gt;&lt;kaputt&gt;</li>
-    <li class="ok">&lt;title&gt;Tutorial&lt;/title&gt;</li>
-    <li class="fail">Es&lt;braucht&gt;eine&lt;Klammer</li>
-    <li class="ok">Es&lt;braucht&gt;keine&lt;Klammer&gt;</li>
-    <li class="fail">Es&lt;braucht&gt;noch eine Klammer&gt;</li>
-    <li class="ok">&lt;a href="https://duckduckgo.com"&gt; Suchen&lt;/a&gt;</li>
+    <li>&lt; &gt;</li>
+    <li>&lt;img /&gt;</li>
+    <li>&gt;&lt;kaputt&gt;</li>
+    <li>&lt;title&gt;Tutorial&lt;/title&gt;</li>
+    <li>Es&lt;braucht&gt;eine&lt;Klammer</li>
+    <li>Es&lt;braucht&gt;keine&lt;Klammer&gt;</li>
+    <li>Es&lt;braucht&gt;noch eine Klammer&gt;</li>
+    <li>&lt;a href="https://duckduckgo.com"&gt; Suchen&lt;/a&gt;</li>
   </ul>
 </div>
 <p class="hint">

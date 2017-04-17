@@ -4,6 +4,7 @@ var errorMessages = {
   "unmatched ) in regular expression": "Es gibt eine schließende Klammer aber dazu gibt es keine geöffnete Klammer. Schreibe eine geöffnete Klammer \"(\" vor die schließende Klammer \")\", um den Fehler zu beheben.",
   "nothing to repeat": "Nichts zu wiederholen. Das \"+\" oder \"*\" oder andere Wiederholungen beziehen sich nicht auf etwas, das wiederholt werden kann."
 }
+var errorReferenceWrong = "<br/>Die Webseite wurde falsch programmiert. In dem Quelltext ist ein Fehler: die Referenzimplementierung des regulären Ausdrucks kann nicht benutzt werden. Bitte klicke unten auf \"Verbessern\" oder <a href='https://github.com/CoderDojoPotsdam/regex-tutorial/issues/new'>melde den Fehler</a>.";
 
 var playfieldsLoaded = false;
 
@@ -60,11 +61,21 @@ function watchExpression(playfield, examples, regex, message) {
       return null;
     }
   }
+  function getReferenceRegex() {
+    var reference = regex.getAttribute("reference");
+    try {
+      return RegExp(reference);
+    } catch (err) {
+      message.innerHTML = translateErrorMessage(err.message) + errorReferenceWrong;
+      return null;
+    }
+  }
   function check() {
     updateExperiment();
     playfield.classList.remove("success");
+    var reference = getReferenceRegex();
     var exp = getExpression();
-    if (!exp) {
+    if (!exp || !reference) {
       return;
     }
     message.innerHTML = "";
@@ -75,7 +86,16 @@ function watchExpression(playfield, examples, regex, message) {
     for (var i = 0; i < example_list.length; i += 1) {
       var example = example_list[i];
       var text = example.innerText;
-      var shouldNotMatch = example.classList.contains("fail");
+      // determine if it should match
+      var shouldNotMatch = reference.exec(text) ? false : true;
+      if (shouldNotMatch) {
+        example.classList.add("fail");
+        example.classList.remove("ok");
+      } else {
+        example.classList.remove("fail");
+        example.classList.add("ok");
+      }
+      // check the match
       var match = exp.exec(text);
       if (match) {
         matchExample(match, example);

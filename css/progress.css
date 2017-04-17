@@ -1,9 +1,11 @@
+---
+---
 
 .progress {
   text-align: center;
   width: 100%;
   padding-top: 0.25em;
-  background-color: var(--progress-color);
+  background-color: {{ site.data.colors.progress-color }};
   display: block;
 }
 
@@ -14,7 +16,7 @@
   border-radius: 0.7em;
   border-width: 0.2em;
   border-style: solid;
-  border-color: var(--step-color);
+  border-color: {{ site.data.colors.step-color }};
 }
 .progress .step {
   display: inline-block; /* http://stackoverflow.com/questions/2491068/ddg#2491072 */
@@ -27,16 +29,16 @@
 }
 
 .progress .step.done span {
-  background-color: var(--step-done-color);
-  border-color: var(--step-done-border-color);
+  background-color: {{ site.data.colors.step-done-color }};
+  border-color: {{ site.data.colors.step-done-border-color }};
 }
 
 .progress .step.current span {
-  background-color: var(--step-color);
+  background-color: {{ site.data.colors.step-color }};
 }
 
 .progress .same-topic {
-  background-color: var(--header-color);
+  background-color: {{ site.data.colors.header-color }};
   clear: none; 
   padding-left: 0.35em;
   padding-right: 0.35em;
