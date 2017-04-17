@@ -11,7 +11,7 @@
 }
 
 .playfield.success .regex {
-  width: calc(100% - 1.5em);
+  width: calc(100% - 2em);
 }
 .playfield.success:before {
   content: "✓";

@@ -1,6 +1,7 @@
 function prependChoice(choice, correctness, text) {
-    var div = document.createElement("div");
+    var div = document.createElement("span");
     div.innerText = text;
+    div.classList.add("button");
     div.classList.add(correctness);
     choice.prepend(div);
     div.onclick = function() {

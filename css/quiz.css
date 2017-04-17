@@ -15,7 +15,8 @@
 }
 
 .quiz .choices li {
-  
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 .quiz .choices li.ok {
   
@@ -24,9 +25,11 @@
   
 }
 
-.quiz .button-ok {
-  display: inline-block;
+.quiz .button {
   padding: 0.3em;
+}
+
+.quiz .button-ok {
 }
 .quiz .button-ok:hover {
   background-color: {{ site.data.colors.works }};
@@ -38,8 +41,6 @@
 }
 
 .quiz .button-fail {
-  display: inline;
-  padding: 0.3em;
   margin-right: 1em;
 }
 .quiz .button-fail:hover {
