@@ -66,12 +66,12 @@ body {
   background-color: {{ site.data.colors.default-background-color }};
 }
 
-main {
+.main {
   padding-right: 1em;
   padding-left: 1em;
 }
 @media (min-width: 40em) {
-  main {
+  .main {
     max-width: 40em;
     margin-left: calc(50% - 20em);
   }

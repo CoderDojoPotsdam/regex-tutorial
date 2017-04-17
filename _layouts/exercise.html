@@ -57,12 +57,12 @@
       </div>
       <h2>{{ page.title | escape }}</h2>
     </header>
-    <main>
+    <div class="main">
       {{ content }}
       {% if has_next_page %}
         <a href="..{{ next_page.url }}" class="next-page">Nächster Schritt</a>
       {% endif %}
-    </main>
+    </div>
     <footer>
       <a href="{{ site.sourcecode.view }}/{{ page.path }}">Quelltext</a>
       <a href="{{ site.sourcecode.edit }}/{{ page.path }}">Verbessern</a>
