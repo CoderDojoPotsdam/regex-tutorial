@@ -87,6 +87,19 @@ footer img {
   vertical-align: middle;
 }
 
+footer .links { 
+  padding-bottom: 0.5em;
+}
+footer .links a { 
+  margin-left: 1em;
+  margin-right: 1em;
+  white-space: nowrap;
+}
+
+footer a {
+  color: black;
+}
+
 .next-page {
   text-align: center;
   display: block;
