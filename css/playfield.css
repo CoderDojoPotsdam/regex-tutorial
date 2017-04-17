@@ -39,23 +39,6 @@
 }
 .playfield  .text-nomatch {
 }
-.playfield  .experiment {
-  margin-top: 1em;
-}
-.playfield  .experiment input {
-  width: 100%;
-  margin: 0.3em;
-}
-.playfield  .experiment .content {
-  padding-left: 1em;
-}
-.playfield  .experiment::after {
-  content: none;
-}
-
-.playfield  .experiment.match {
-  
-}
 
 /* --- feedback if matches or not --- */
 .playfield  li:after {
@@ -89,4 +72,22 @@
 }
 .playfield.verbose .nomatch.fail:after {
   content: "ok, nicht gefunden";
+}
+
+/* --- experiment --- */
+.playfield  .experiment {
+  margin-top: 1em;
+}
+.playfield  .experiment input {
+  width: 100%;
+  margin: 0.3em;
+}
+.playfield  .experiment .content {
+  padding-left: 1em;
+}
+.playfield  .experiment::after {
+  content: none;
+}
+
+.playfield  .experiment.match {
 }
