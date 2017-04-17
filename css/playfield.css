@@ -27,23 +27,6 @@
 }
 
 /* ----- playfield.js  ----- */
-.playfield  .match{
-}
-.playfield  .match::after {
-  content: "✓";
-  padding-left: 1em;
-}
-.playfield  .nomatch {
-}
-.playfield  .nomatch.ok {
-  background-color: {{ site.data.colors.fails }};
-}
-.playfield  .match.fail {
-  background-color: {{ site.data.colors.fails }};
-}
-.playfield  .error {
-  background-color: {{ site.data.colors.fails }};
-}
 
 .playfield ul {
   margin-bottom: 0em;
@@ -72,4 +55,38 @@
 
 .playfield  .experiment.match {
   
+}
+
+/* --- feedback if matches or not --- */
+.playfield  li:after {
+  padding-left: 2em;
+}
+.playfield  .match::after {
+  content: "✓";
+}
+
+.playfield  .nomatch {
+}
+.playfield  .nomatch.ok {
+  background-color: {{ site.data.colors.fails }};
+}
+.playfield  .match.fail {
+  background-color: {{ site.data.colors.fails }};
+}
+.playfield  .error {
+  background-color: {{ site.data.colors.fails }};
+}
+
+/* --- more description --- */
+.playfield.verbose .match.ok:after {
+  content: "✓ gefunden";
+}
+.playfield.verbose .match.fail:after {
+  content: "✓ gefunden, soll nicht passen";
+}
+.playfield.verbose .nomatch.ok:after {
+  content: "soll gefunden werden";
+}
+.playfield.verbose .nomatch.fail:after {
+  content: "ok, nicht gefunden";
 }
