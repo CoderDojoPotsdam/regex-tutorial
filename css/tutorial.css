@@ -101,3 +101,7 @@ footer img {
 .requirements-satisfied .next-page {
   background-color: {{ site.data.colors.works }};
 }
+
+img {
+  max-width: 100%;
+}
