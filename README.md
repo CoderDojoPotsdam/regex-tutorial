@@ -11,6 +11,9 @@ Beitragen
 Gerne kannst du das Tutorial benutzen.
 Wenn du etwas hinzufügst oder Fehler findest, gibt es für dich auf jeder Seite einen Link zum Editieren und verbessern des HTML-Textes.
 Danach kannst du gerne eine [Pull-Request][pr] stellen.
+To setup a development enviroment `gem install jekyll` 
+Then run `jekyll serve --trace` 
+Type in `localhost:4000` 
 
 Weiterführende Literatur
 ------------------------
