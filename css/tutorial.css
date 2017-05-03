@@ -21,22 +21,18 @@
   border-style: solid;
 }
 
-.key {
+.key {  
   background-color: {{ site.data.colors.regular-expression-text-backgound-color }};
-  padding-right: 0.3em;
-  padding-left: 0.3em;
-  padding-bottom: 0.1em;
-  padding-top: 0.1em;
-  border-radius: 0.3em;
-  border-width: 0em;
-  border-right-width: 0.1em;
-  border-bottom-width: 0.15em;
-  border-bottom-right-radius: 0em;
-  border-top-left-radius: 0em;
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  border: solid 1px #c6cbd1;
   border-color: {{ site.data.colors.regular-expression-text-border-color }};
-  border-style: solid;
-  /*box-shadow: 0em 0em 0.1em 0em rgba(50,50,50,1);*/
-  font-weight: bold;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
 }
 
 p {
