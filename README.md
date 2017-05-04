@@ -11,9 +11,18 @@ Beitragen
 Gerne kannst du das Tutorial benutzen.
 Wenn du etwas hinzufügst oder Fehler findest, gibt es für dich auf jeder Seite einen Link zum Editieren und verbessern des HTML-Textes.
 Danach kannst du gerne eine [Pull-Request][pr] stellen.
+
+Setup
+-----
+
 To setup a development enviroment `gem install jekyll` 
 Then run `jekyll serve --trace` 
 Type in `localhost:4000` 
+
+### Github Pages
+1. [Fork](https://github.com/CoderDojoPotsdam/regex-tutorial/fork)
+2. Go to your settings at https://github.com/YOUR_USERNAME/regex-tutorial/settings, you can make a live view of your code.
+   ![grafik](https://cloud.githubusercontent.com/assets/564768/25693552/351efdcc-30aa-11e7-87a6-56ad0c3b99c7.png)
 
 Weiterführende Literatur
 ------------------------
