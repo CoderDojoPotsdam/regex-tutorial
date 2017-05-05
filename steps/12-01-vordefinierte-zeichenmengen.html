@@ -1,0 +1,52 @@
+---
+layout: step
+title: Vordefinierte Zeichenmengen
+lang: de
+---
+<p>
+  Oben konntest du die Menge der Ziffern mit <span class="regex">[0-9]</span> beschreiben.
+  Weil man das so oft braucht, gibt es Abkürzungen für bestimmte Mengen.
+  <ul>
+    <li>
+      <span class="regex">\d</span> ist die Menge aller Ziffern.
+      "d" steht für "digit" gleich "Ziffer".
+    </li>
+    <li>
+      <span class="regex">\s</span> ist die Menge aller Leerzeichen, z.B. <span class="regex"> </span> oder Zeilen-<br/>umbruch.
+      "s" steht für "space" was auch Leerzeichen heißt.
+    </li>
+    <li>
+      <span class="regex">.</span> steht für alle Zeichen außer den Zeilenumbrüchen.
+      <span class="regex">.*</span> kann man also irgendwo dazwischen tun, wenn egal ist, was kommt.
+    </li>
+    <li>
+      <span class="regex">\w</span> ist für Buchstaben von Wörtern gedacht.
+      <span class="regex">\w</span> ist das selbe wie <span class="regex">[0-9a-zA-Z]_</span>.
+    </li>
+    <li>
+      <span class="regex">\\</span> ist der Backslash <span class="regex">\</span>.
+    </li>
+  </ul>
+  Es gilt auch, dass wenn du statt <span class="regex">\s</span> ein <span class="regex">\S</span> schreibst, wird die Menge
+  umgekehrt und bedeutet genau das Gegenteil.
+</p>
+<p>
+  Der folgende Text ist aus "Die Zwölf Weihnachtsfeiertage" von Gerhard Schone
+  [<a target="_blank" href="http://www.sing365.com/music/lyric.nsf/Die-Zw%C3%B6lf-Weihnachtsfeiertage-lyrics-Gerhard-Schone/D41B005B291D4040482578D4001AB755">Quelle</a>].
+  Hier werden Tiere gezählt.
+  Finde alle Zeilen, in denen eine Zahl gefolgt von Leerzeichen gefolgt von einem Wort sind.
+</p>
+<!-- TODO: und für Birnbaum 1 Spatz -->
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="\d\s\w">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>Am 5. Weihnachtstag</li>
+    <li>schenkte mir mein lieber Schatz</li>
+    <li>5 Füllhörner</li>
+    <li>4 Pfirsiche</li>
+    <li>3 Drosselchen</li>
+    <li>2 Zwiebelchen  </li>
+    <li>und für’n Birnenbaum 1 Spatz.</li>
+  </ul>
+</div>

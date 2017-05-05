@@ -1,0 +1,30 @@
+---
+layout: step
+title: Anfang und Ende
+lang: de
+---
+<p>
+  Hütchen und Mengen können kombiniert werden.
+  Setze das Hütchen, um alle Früchte, zu finden, die nicht mit
+  <span class="regex">C</span> bis <span class="regex">G</span> anfangen.
+</p>
+<div class="playfield">
+  <input type="text" value="[^C-G]" class="regex" reference="^[^C-G]">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>Apfel</li>
+    <li>Banane</li>
+    <li>Chiasamen</li>
+    <li>Datteln</li>
+    <li>Ekelfrucht</li>
+    <li>Erdbeeren</li>
+    <li>Fruchtfrucht</li>
+    <li>Gammelfrucht</li>
+    <li>Hopfen</li>
+    <li>Ingwer</li>
+    <li>Jasmintee</li>
+  </ul>
+</div>
+<p class="hint">
+  Mit <span class="regex">^[^C-G]</span> suchen wir alle Zeilen, die kein <span class="regex">C</span>, <span class="regex">D</span>, <span class="regex">E</span>, <span class="regex">F</span> oder <span class="regex">G</span> am Anfang haben.
+</p>

@@ -1,0 +1,25 @@
+---
+layout: step
+title: Vordefinierte Zeichenmengen
+lang: de
+---
+<p>
+  Hier kannst du einen regulären Ausdruck testen, der IP-Adressen erkennt.
+  Dazu kannst dazu den Ausdruck für Zahlen von vorher nehmen.
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="^(1?\d?\d|2[0-4]\d|25[0-5])\.(1?\d?\d|2[0-4]\d|25[0-5])\.(1?\d?\d|2[0-4]\d|25[0-5])\.(1?\d?\d|2[0-4]\d|25[0-5])$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>6</li>
+    <li>399.0.0.0</li>
+    <li>0...1</li>
+    <li>0.0.0.0</li>
+    <li>0.0.0.0.</li>
+    <li>.0.0.0.0</li>
+    <li>192.168.0.1</li>
+    <li>10.255.255.255</li>
+    <li>192-168-0-1</li>
+    <li>10.255.255.255.255</li>
+  </ul>
+</div>

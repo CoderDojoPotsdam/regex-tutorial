@@ -1,0 +1,7 @@
+
+- Foto von XKCD kopieren
+- Englisch übersetzen
+- English as a fallback if language is not found
+  - add link "translate with google" to google translate
+  - add link "add translation"
+- make a menu to switch between languages.
