@@ -1,0 +1,33 @@
+---
+layout: step
+title: sets
+lang: en
+---
+<p>
+  Sometimes parts of words change, for example capital letters at the beginning of sentences.
+  The changing part is put into braces.
+  The fix part is outside of the braces.
+  This way, you can cover several spellings with sets.
+</p>
+<p>
+  An example: <span class="regex">[tT]he</span> matches
+  <span class="regex">the</span> and <span class="regex">The</span>.
+  The capital and the small T are between the braces to find upper and lower case spelling.
+  Now, find the word <span class="regex">you</span> at the beginning and middle of the sentence
+  by using <span class="regex">[yY]</span>.
+</p>
+<p class="hint">
+  You can find the braces next to the Enter key on the right side of the keyboard.
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="[yY]ou">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>You can find the</li>
+    <li>braces if you</li>
+    <li>click through the keys</li>
+    <li>next to the</li>
+    <li>"Enter" key on</li>
+    <li>the right side of the keyboard.</li>
+  </ul>
+</div>
