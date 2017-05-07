@@ -1,0 +1,20 @@
+---
+layout: step
+title: Using Special Characters
+lang: en
+---
+<p>
+  You can escape the <span class="regex">?</span> using the backslash <span class="regex">\</span>.
+  Thereby, you can add a question mark to the matched question.
+  Here, you only need to add a <span class="regex">\</span> to make the expression work:
+</p>
+<div class="playfield">
+  <input type="text" value="^(Is this for the gallery or the pidgeons?)?$" class="regex" reference="^(Is this for the gallery or the pidgeons\?)?$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li></li>
+    <li>Is this for the gallery or the pidgeons</li>
+    <li>Is this for the gallery or the pidgeons?</li>
+    <li>Is this for the gallery or the pidgeon</li>
+  </ul>
+</div>
