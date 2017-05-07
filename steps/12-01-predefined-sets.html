@@ -1,0 +1,49 @@
+---
+layout: step
+title: Predefined Character Sets
+lang: en
+---
+<p>
+  Before, you could describe the set of all digits using <span class="regex">[0-9]</span>.
+  Because some sets are used regularly, there are short notations for them.
+  <ul>
+    <li>
+      <span class="regex">\d</span> is the set of add <strong>d</strong>igits.
+    </li>
+    <li>
+      <span class="regex">\s</span> is the set of all <strong>s</strong>paces, e.g. <span class="regex"> </span> or the line<br/>break.
+    </li>
+    <li>
+      <span class="regex">.</span> matches all characters except the line break.
+      <span class="regex">.*</span> can be used if you do not care about some content.
+    </li>
+    <li>
+      <span class="regex">\w</span> is for letters in <strong>w</strong>ords. 
+      <span class="regex">\w</span> is the same as <span class="regex">[0-9a-zA-Z]_</span>.
+    </li>
+    <li>
+      <span class="regex">\\</span> matches the backslash <span class="regex">\</span>.
+    </li>
+  </ul>
+  Additionally, if you want to invert a set like <span class="regex">\s</span>,
+  you can use the capital letter  e.g. <span class="regex">\S</span>.
+</p>
+<p>
+  The following text is from "Die Zwölf Weihnachtsfeiertage" by Gerhard Schone
+  [<a target="_blank" href="http://www.sing365.com/music/lyric.nsf/Die-Zw%C3%B6lf-Weihnachtsfeiertage-lyrics-Gerhard-Schone/D41B005B291D4040482578D4001AB755">source</a>].
+  Here, animals are counted.
+  Find all lines in which a number is followed by space followed by a word.
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="\d\s\w">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>Am 5. Weihnachtstag</li>
+    <li>schenkte mir mein lieber Schatz</li>
+    <li>5 Füllhörner</li>
+    <li>4 Pfirsiche</li>
+    <li>3 Drosselchen</li>
+    <li>2 Zwiebelchen  </li>
+    <li>und für’n Birnenbaum 1 Spatz.</li>
+  </ul>
+</div>
