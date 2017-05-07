@@ -1,0 +1,24 @@
+---
+layout: step
+title: Gruppen
+lang: de
+---
+<p>
+  Gruppen können auch verschachtelt genutzt werden.
+  Schreibe einen regulären Ausdruck, der auf alle Liedzeilen passt, die nur aus
+  <span class="regex">trololo</span>[<a target="_blank" href="https://www.youtube.com/watch?v=dnLjr8TaE1Q">Quelle</a>]
+  bestehen und mit Ausrufezeichen enden.
+  
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="^Tro((lo)+| )+!$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>Trolo lolo lo!</li>
+    <li>Trololololo lololo lololo!</li>
+    <li>Tro!</li>
+    <li>Tro trololo!</li>
+    <li>Hohoho!</li>
+    <li>Troloooo!</li>
+  </ul>
+</div>

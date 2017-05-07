@@ -1,0 +1,21 @@
+---
+layout: step
+title: Anfang und Ende
+lang: de
+---
+<p>
+  Du kannst ganze Zeilen herausfiltern, indem du <span class="regex">^</span> und <span class="regex">$</span> zusammen benutzt.
+</p>
+<p>
+  Probiere es aus und finde die Zeile, in der nur <span class="regex">Wort</span> steht und nichts anderes.
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="^Wort$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>kein</li>
+    <li>Wort</li>
+    <li>Worte</li>
+    <li>ein Wort</li>
+  </ul>
+</div>

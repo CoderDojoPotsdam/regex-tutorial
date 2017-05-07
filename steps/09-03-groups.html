@@ -1,0 +1,23 @@
+---
+layout: step
+title: Groups
+lang: en
+---
+<p>
+  Groups can be used within each other.
+  Write a regular expression which matches all lines of the song containing
+  <span class="regex">trololo</span>[<a target="_blank" href="https://www.youtube.com/watch?v=dnLjr8TaE1Q">source</a>],
+  ending with an exclamation mark.
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="^Tro((lo)+| )+!$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>Trolo lolo lo!</li>
+    <li>Trololololo lololo lololo!</li>
+    <li>Tro!</li>
+    <li>Tro trololo!</li>
+    <li>Hohoho!</li>
+    <li>Troloooo!</li>
+  </ul>
+</div>

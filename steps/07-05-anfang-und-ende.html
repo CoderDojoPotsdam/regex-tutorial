@@ -1,0 +1,25 @@
+---
+layout: step
+title: Anfang und Ende
+lang: de
+---
+<p>
+  Du kannst alle Zeilen finden, in denen das <span class="regex">a</span> zweimal oder viermal vorkommt.
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="^aa$|^aaaa$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>a</li>
+    <li>aa</li>
+    <li>aaa</li>
+    <li>aaaa</li>
+    <li>aaaaa</li>
+  </ul>
+</div>
+<p class="hint">
+  <span class="regex">^aa|aaaa$</span> funktioniert nicht, weil <span class="regex">^aa</span> auch auf <span class="regex">aaa</span> passt.
+  <span class="regex">aaa</span> fängt auch mit <span class="regex">aa</span> an.
+  Deswegen muss <span class="regex">^</span> und <span class="regex">$</span> zweimal verwendet werden.
+</p>
+
