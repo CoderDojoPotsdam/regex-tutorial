@@ -1,31 +1,31 @@
 ---
 layout: step
-title: Wiederholungen Zählen
-lang: de
+title: Counted Repetitions
+lang: en
 ---
 <p>
-  Worte bestehen aus Silben.
-  Jede Silbe hat einen Vokal.
-  Finde alle Wörter mit zwei Silben.
+  Words consist of syllables.
+  Every syllable contains a vocal.
+  Find all words with two syllables.
 </p>
 <div class="playfield">
   <input type="text" value="^$" class="regex" reference="^[^aeiou]*([aeiou]+([^aeiou]+|$)){2}$">
   <div class="message"></div>
   <ul class="examples">
-    <li>treppenstufe</li>
-    <li>traum</li>
+    <li>circumflex</li>
+    <li>dream</li>
     <li>angel</li>
     <li>angst</li>
-    <li>baumhaus</li>
-    <li>vermengen</li>
-    <li>hunderte</li>
-    <li>blume</li>
-    <li>plaumen</li>
+    <li>honey</li>
+    <li>mix</li>
+    <li>hundrets</li>
+    <li>flowers</li>
+    <li>pineapple</li>
     <li>anemone</li>
     <li>yoga</li>
   </ul>
 </div>
 <p class="hint">
-  Erstelle den regulären Ausdruck für die Vokale, dann für die Konsonanten.
-  Das U und die Vokale am Ende müssen gesondert behandelt werden.
+  Create a regular expression for vocals, then for consonants.
+  The a and the vocals at the end need to be handled separately.
 </p>
