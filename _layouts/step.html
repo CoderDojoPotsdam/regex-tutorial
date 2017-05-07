@@ -67,17 +67,25 @@
     </div>
     <footer>
       <div class="links">
-        <a href="{{ site.sourcecode.view }}/{{ page.path }}">Quelltext anzeigen</a>
         <a href="{{ site.sourcecode.edit }}/{{ page.path }}">Seite verbessern</a>
         <a href="{{ site.sourcecode.newissue }}">Problem melden</a>
         <a href="javascript:deleteCookies()">Zustand löschen</a>
+        <a href="{{ site.sourcecode.view }}/{{ page.path }}">Quelltext anzeigen</a>
       </div>
       <div class="license">
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="../assets/cc-by-sa.png" /></a>
-        <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> von <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+        {% if page.lang == "de" %}
+          <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> von <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+        {% else  %}
+          <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Regex Tutorial</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        {% endif %}
         {% assign lowercase_content = content | downcase %}
         {% if lowercase_content contains "<img" %}
-          Bilder, die eine andere Lizenz haben, können angeklickt werden, um zu dem Erklärungstext zu gelangen.
+          {% if page.lang == "de" %}
+            Bilder, die eine andere Lizenz haben, können angeklickt werden, um zu dem Erklärungstext oder der Quelle zu gelangen.
+          {% else  %}
+            Pictures with a different license can be clicked to reach the source or an explanation.
+          {% endif %}
         {% endif %}
       </div>
     </footer>
