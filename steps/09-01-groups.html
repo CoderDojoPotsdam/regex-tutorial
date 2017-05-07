@@ -1,0 +1,34 @@
+---
+layout: step
+title: Groups
+lang: en
+---
+<p>
+  You can combine characters and expressions to one expression by writing them between 
+  round brackets <span class="regex">(</span> and <span class="regex">)</span>.
+  Repetitions which are located right behind the bracket <span class="regex">)</span>
+  refer to the whole expression inside the brackets.
+</p>
+<p>
+  There was an example where <span class="regex">a</span> appears twice of four times.
+  Using brackets, you can match all even appearances of <span class="regex">a</span>.
+</p>
+<div class="playfield">
+  <input type="text" value="^aa+$" class="regex" reference="^(aa)+$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>a</li>
+    <li>aa</li>
+    <li>aaa</li>
+    <li>aaaa</li>
+    <li>aaaaa</li>
+    <li>aaaaaa</li>
+    <li>aaaaaaaaaaaaaaaaaaaaa</li>
+    <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+  </ul>
+</div>
+<p class="hint">
+  If you add brackets around <span class="regex">aa</span>,
+  not <span class="regex">a</span> is repeated but <span class="regex">aa</span>.
+  Thus, all lines mus contain an even number of <span class="regex">a</span>.
+</p>
