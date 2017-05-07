@@ -1,5 +1,6 @@
 /**
  * These are the requirements to successfully leave a page
+ * and the links on the top, marked or unmarked.
  */
 
 var requirements = [];
@@ -9,11 +10,18 @@ function required(callable) {
 }
 
 function getId() {
-  return "requirements.js-" + current_page_id;
+  return getCookieId(current_page_id);
 }
 
 function getLinkId(link) {
-  return "requirements.js-" + link.id
+  return getCookieId(link.id);
+}
+
+function getCookieId(page_id) {
+  /* The id of pages for the cookies */
+  var numbering_regex = /\d+-\d+/;
+  var numbering = numbering_regex.exec(page_id);
+  return "requirements.js-step-" + numbering[0];
 }
 
 function updateRequirements() {
