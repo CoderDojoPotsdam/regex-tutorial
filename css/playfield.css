@@ -61,20 +61,6 @@
   background-color: {{ site.data.colors.fails }};
 }
 
-/* --- more description --- */
-.playfield.verbose .match.ok:after {
-  content: "✓ gefunden";
-}
-.playfield.verbose .match.fail:after {
-  content: "✓ gefunden, soll nicht passen";
-}
-.playfield.verbose .nomatch.ok:after {
-  content: "soll gefunden werden";
-}
-.playfield.verbose .nomatch.fail:after {
-  content: "ok, nicht gefunden";
-}
-
 /* --- experiment --- */
 .playfield  .experiment {
   margin-top: 1em;

@@ -3,12 +3,7 @@
 
 .quiz .expression {
 }
-.quiz .expression:before {
-  content: "Regulärer Ausdruck: ";
-}
-.quiz .expression:after {
-  content: " In welchen Zeilen kommt er vor? Klicke auf \"Ja\" oder \"Nein\".";
-}
+
 
 .quiz .choices {
   

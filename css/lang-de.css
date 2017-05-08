@@ -1,1 +1,30 @@
 
+/* --- hints --- */
+.clicked .toggle-hint:before {
+  content: "Hinweis verstecken!";
+}
+.secret .toggle-hint:before {
+  content: "Hinweis anzeigen?";
+}
+
+/* --- more description --- */
+.playfield.verbose .match.ok:after {
+  content: "✓ gefunden";
+}
+.playfield.verbose .match.fail:after {
+  content: "✓ gefunden, soll nicht passen";
+}
+.playfield.verbose .nomatch.ok:after {
+  content: "soll gefunden werden";
+}
+.playfield.verbose .nomatch.fail:after {
+  content: "ok, nicht gefunden";
+}
+
+/* --- quiz --- */
+.quiz .expression:before {
+  content: "Regulärer Ausdruck: ";
+}
+.quiz .expression:after {
+  content: " In welchen Zeilen kommt er vor? Klicke auf \"Ja\" oder \"Nein\".";
+}

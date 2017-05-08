@@ -25,12 +25,6 @@
 .toggle-hint {
 }
 
-.clicked .toggle-hint:before {
-  content: "Hinweis verstecken!";
-}
-.secret .toggle-hint:before {
-  content: "Hinweis anzeigen?";
-}
 
 
 
