@@ -41,8 +41,8 @@ function watchQuiz(quiz, expression, choicesList, index) {
     } else {
       choice.classList.add("fail");
     }
-    prependChoice(choice, "button-fail", "Nein");
-    prependChoice(choice, "button-ok", "Ja");
+    prependChoice(choice, "button-fail", NO);
+    prependChoice(choice, "button-ok", YES);
     addChoiceRequirement(choice);
   }
 }
