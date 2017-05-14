@@ -2,6 +2,7 @@ Regex-Tutorial
 ==============
 
 [![Build Status](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial.svg?branch=master)](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial)
+[![First Timers](https://firsttimers.quelltext.eu/repository/coderdojopotsdam/regex-tutorial.svg)](https://firsttimers.quelltext.eu/repository/coderdojopotsdam/regex-tutorial.html)
 
 Das ist der Quelltext für das [interaktive Tutorial zu regulären Ausdrücken][site].
 
