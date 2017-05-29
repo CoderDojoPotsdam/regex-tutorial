@@ -1,3 +1,5 @@
+# Internet Explorer and older browsers do not support CSS variables.
+# Thus, we use Jekyll variables to provide the source code without CSS-variables.
 fails: "#ffcccc"
 works: "#ccffcc"
 hint-background-color: "#ffffcc"
