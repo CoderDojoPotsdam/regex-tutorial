@@ -26,5 +26,5 @@
   content: "Regular Expression: ";
 }
 .quiz .expression:after {
-  content: " In which lines does i appear? Click on \"Yes\" oder \"No\".";
+  content: " appears in which lines? Click on \"Yes\" or \"No\".";
 }
