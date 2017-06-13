@@ -4,14 +4,14 @@ Regex-Tutorial
 [![Build Status](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial.svg?branch=master)](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial)
 [![First Timers](https://firsttimers.quelltext.eu/repository/coderdojopotsdam/regex-tutorial.svg)](https://firsttimers.quelltext.eu/repository/coderdojopotsdam/regex-tutorial.html)
 
-Das ist der Quelltext für das [interaktive Tutorial zu regulären Ausdrücken][site].
+This is the source code for the [Regular Expressions Interactive Tutorial][site].
 
-Beitragen
+Contribute
 ---------
 
-Gerne kannst du das Tutorial benutzen.
-Wenn du etwas hinzufügst oder Fehler findest, gibt es für dich auf jeder Seite einen Link zum Editieren und verbessern des HTML-Textes.
-Danach kannst du gerne eine [Pull-Request][pr] stellen.
+Please use the tutorial.
+If you have something to add or find a mistake, there is a link on each page to edit and improve the HTML file.
+Then you can make a [pull request][pr].
 
 Setup
 -----
@@ -25,18 +25,18 @@ Type in `localhost:4000`
 2. Go to your settings at https://github.com/YOUR_USERNAME/regex-tutorial/settings, you can make a live view of your code.
    ![grafik](https://cloud.githubusercontent.com/assets/564768/25693552/351efdcc-30aa-11e7-87a6-56ad0c3b99c7.png)
 
-Weiterführende Literatur
+Further Reading
 ------------------------
+- This tutorial is inspired by [Daniel Fett's tutorial on regular expressions][fett1].
 
-- Dieses Tutorial ist inspiriert durch [das Tutorial zu regulären Ausdrücken von Daniel Fett][fett1]
-
-Lizenz
+License
 ------
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="assets/cc-by-sa.png" /></a><br />
-<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> von <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span>  is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License.</a>.
 
-Bilder in dem Ordner "extern" stehen unter einer eigenen Lizenz.
+
+Images in the "extern" folder are under a separate license.
 
 
 [site]: https://coderdojopotsdam.github.io/regex-tutorial
