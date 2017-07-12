@@ -1,6 +1,6 @@
 var errorMessages = {
-  "unterminated character class" : "Unprocessable regular expresstion: A bracket was not closed! Please close the bracket again so that the regular expression can be used.",
-  "unterminated parenthetical": "A parenthesis was not closed. PLease add a parenthesis to the regular expression.",
+  "unterminated character class" : "Unprocessable regular expression: A bracket was not closed! Please close the bracket again so that the regular expression can be used.",
+  "unterminated parenthetical": "A parenthesis was not closed. Please add a parenthesis to the regular expression.",
   "unmatched ) in regular expression": "There is a closing parenthesis but no opening parenthesis. Please add a \"(\" to the regular expression to remove this error.",
   "nothing to repeat": "Nothing to repeat. The \"+\" or \"*\" or other repetitions do not refer to something that can be repeated."
 }
