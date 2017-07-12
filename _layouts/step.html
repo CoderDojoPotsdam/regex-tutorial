@@ -23,7 +23,15 @@
     <link type="text/css" rel="stylesheet" href="../css/lang-{{ language }}.css" media="screen"/>
     <link rel="shortcut icon" href="../favicon.ico?v=2" type="image/x-icon">
     <meta charset="utf-8">
-    <title>{{ page.title | escape }} - Interaktive Einführung in Reguläre Ausdrücke</title>
+    <title>{{ page.title | escape }} -
+      {% if language == "de" %}
+        Interaktive Einführung in Reguläre Ausdrücke
+      {% elsif language == "en" %}
+        Interactive Introduction to Regular Expressions
+      {% elsif language == "sv" %}
+        Interaktiv Introduktion till Reguljära Uttryck
+      {% endif %}
+    </title>
     <script type="text/javascript">
       var current_page_id = "page-" + {{ page.path | jsonify }};
     </script>
@@ -86,6 +94,8 @@
           <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> von <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
         {% elsif language == "en" %}
           <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Regex Tutorial</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        {% elsif language == "sv" %}
+          <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Regex Tutorial</span> av <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span> är licensed under en <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Erkännande 4.0 Internationell Licens</a>.
         {% endif %}
         {% assign lowercase_content = content | downcase %}
         {% if lowercase_content contains "<img" %}
@@ -93,6 +103,8 @@
             Bilder, die eine andere Lizenz haben, können angeklickt werden, um zu dem Erklärungstext oder der Quelle zu gelangen.
           {% elsif language == "en" %}
             Pictures with a different license can be clicked to reach the source or an explanation.
+          {% elsif language == "sv" %}
+            Bilder med en annan licens går att klicka på för att komma till källan eller få en förklaring.
           {% endif %}
         {% endif %}
       </div>
