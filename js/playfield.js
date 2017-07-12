@@ -167,9 +167,13 @@ window.addEventListener("load", function(){
   playfieldsLoaded = true;
 });
 
-window.addEventListener("keypress", function(){
-  var next = document.getElementsByClassName("next-page")[0].href;
-  if (!(undefined === next | !next | next.length === 0)) {
-    window.location.href = next;
+window.addEventListener("keypress", function(event){
+  if (event.which === 13 || event.keyCode === 13) {
+    var next = document.getElementsByClassName("next-page")[0].href;
+    if (!(undefined === next || !next || next.length === 0)) {
+      window.location.href = next;
+    }
+    return false;
   }
+  return true;
 });
