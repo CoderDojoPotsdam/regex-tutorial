@@ -1,0 +1,32 @@
+
+---
+layout: step
+title: Wiederholungen Zählen
+lang: de
+---
+<p>
+  Worte bestehen aus Silben.
+  Jede Silbe hat einen Vokal.
+  Finde alle Wörter mit zwei Silben.
+</p>
+<div class="playfield">
+  <input type="text" value="^$" class="regex" reference="^[^aeiou]*([aeiou]+([^aeiou]+|$)){2}$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>treppenstufe</li>
+    <li>traum</li>
+    <li>angel</li>
+    <li>angst</li>
+    <li>baumhaus</li>
+    <li>vermengen</li>
+    <li>hunderte</li>
+    <li>blume</li>
+    <li>plaumen</li>
+    <li>anemone</li>
+    <li>yoga</li>
+  </ul>
+</div>
+<p class="hint">
+  Erstelle den regulären Ausdruck für die Vokale, dann für die Konsonanten.
+  Das U und die Vokale am Ende müssen gesondert behandelt werden.
+</p>
