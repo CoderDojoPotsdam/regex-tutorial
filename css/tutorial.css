@@ -21,7 +21,7 @@
   border-style: solid;
 }
 
-.key {  
+.key {
   background-color: {{ site.data.colors.regular-expression-text-backgound-color }};
   display: inline-block;
   padding: 3px 5px;
@@ -58,6 +58,9 @@ header h2 {
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   margin: 0px;
   background-color: {{ site.data.colors.default-background-color }};
 }
@@ -65,6 +68,7 @@ body {
 .main {
   padding-right: 1em;
   padding-left: 1em;
+  flex: 1;
 }
 @media (min-width: 40em) {
   .main {
@@ -83,10 +87,10 @@ footer img {
   vertical-align: middle;
 }
 
-footer .links { 
+footer .links {
   padding-bottom: 0.5em;
 }
-footer .links a { 
+footer .links a {
   margin-left: 1em;
   margin-right: 1em;
   white-space: nowrap;

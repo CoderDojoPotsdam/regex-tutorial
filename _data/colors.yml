@@ -3,7 +3,7 @@
 fails: "#ffcccc"
 works: "#ccffcc"
 hint-background-color: "#ffffcc"
-default-background-color: white"
+default-background-color: "white"
 regular-expression-text-backgound-color: "#eeeeee"
 regular-expression-text-border-color: "#bbbbbb"
 progress-color: "#bbbbbb"
