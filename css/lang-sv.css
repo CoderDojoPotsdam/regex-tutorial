@@ -1,0 +1,30 @@
+
+/* --- hints --- */
+.clicked .toggle-hint:before {
+  content: "Göm ledtråden!";
+}
+.secret .toggle-hint:before {
+  content: "Visa en ledtråd?";
+}
+
+/* --- more description --- */
+.playfield.verbose .match.ok:after {
+  content: "✓ matchade";
+}
+.playfield.verbose .match.fail:after {
+  content: "✓ matchade, men borde inte matcha";
+}
+.playfield.verbose .nomatch.ok:after {
+  content: "borde matcha";
+}
+.playfield.verbose .nomatch.fail:after {
+  content: "ok, ingen matchning";
+}
+
+/* --- quiz --- */
+.quiz .expression:before {
+  content: "Reguljärt uttryck: ";
+}
+.quiz .expression:after {
+  content: " visas på vilka rader? Klicka på \"Ja\" eller \"Nej\".";
+}
