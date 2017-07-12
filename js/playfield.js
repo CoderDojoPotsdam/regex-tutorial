@@ -26,7 +26,7 @@ function matchExample(match, example) {
   var textBefore = text.slice(0, start);
   var textMatch = text.slice(start, stop);
   var textAfter = text.slice(stop, text.length);
-  
+
   example.innerHTML = "";
   example.appendChild(nomatchTextElement(textBefore));
   example.appendChild(matchTextElement(textMatch));
@@ -105,7 +105,7 @@ function watchExpression(playfield, examples, regex, message) {
     }
   }
   regex.onkeyup = check;
-  
+
   var experiments = playfield.getElementsByClassName("experiment");
   if (experiments.length == 1) {
     var experiment = experiments[0];
@@ -158,7 +158,7 @@ window.addEventListener("load", function(){
     var regex = getPlayfieldElement(playfield, i, "regex");
     var examples = getPlayfieldElement(playfield, i, "examples");
     var message = getPlayfieldElement(playfield, i, "message");
-    
+
     watchExpression(playfield, examples, regex, message);
     if (i == 0) {
       regex.focus();
@@ -167,4 +167,9 @@ window.addEventListener("load", function(){
   playfieldsLoaded = true;
 });
 
-
+window.addEventListener("keypress", function(){
+  var next = document.getElementsByClassName("next-page").href;
+  if (!(!next | next.length === 0)) {
+    window.location.href = next;
+  }
+});
