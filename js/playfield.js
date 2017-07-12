@@ -168,8 +168,8 @@ window.addEventListener("load", function(){
 });
 
 window.addEventListener("keypress", function(){
-  var next = document.getElementsByClassName("next-page").href;
-  if (!(!next | next.length === 0)) {
+  var next = document.getElementsByClassName("next-page")[0].href;
+  if (!(undefined === next | !next | next.length === 0)) {
     window.location.href = next;
   }
 });
