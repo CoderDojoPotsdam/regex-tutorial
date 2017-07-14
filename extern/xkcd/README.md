@@ -1,4 +1,4 @@
-These images has been copied from xkcd.com
+This image has been copied from xkcd.com
 
 - https://imgs.xkcd.com/comics/regular_expressions.png
 - https://www.xkcd.com/208/
