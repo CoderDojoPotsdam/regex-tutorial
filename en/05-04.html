@@ -1,0 +1,33 @@
+---
+title: Sets with Ranges
+---
+<p>
+  In chess, a turn consists of two places connected with a minus and a
+  character for the figure:
+  K for king, Q for queen, R for rook, B for bishop, and N for knight (since K is already used)
+  [<a target="_blank" href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)">Source</a>], P for Pawn.
+  Which regular expression matches these turns?
+</p>
+<div class="playfield">
+  <input type="text" value="" class="regex" reference="[KQRBNP][a-h][1-8]-[a-h][1-8]">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>Ta1-a4</li>
+    <li>Pb3-b4</li>
+    <li>Qc8-d8</li>
+    <li>Ne-d1</li>
+    <li>Ne1-f2</li>
+    <li>Ka1-b3</li>
+    <li>f7</li>
+    <li>x</li>
+    <li></li>
+    <li>KA1-b2</li>
+    <li>Qb2-c</li>
+    <li>Qb2c5</li>
+  </ul>
+  <div class="experiment">Own turns to test:</div>
+</div>
+<p class="hint">
+  I used <span class="regex">[KQRBNP][a-h][1-8]-[a-h][1-8]</span>.
+  At the beginning, you can find all pieces, then the locations connected by <span class="regex">-</span>.
+</p>

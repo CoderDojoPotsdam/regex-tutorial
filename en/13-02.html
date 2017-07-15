@@ -1,0 +1,29 @@
+---
+title: Counted Repetitions
+---
+<p>
+  Words consist of syllables.
+  Every syllable contains a vocal.
+  Find all words with two syllables.
+</p>
+<div class="playfield">
+  <input type="text" value="^$" class="regex" reference="^[^aeiou]*([aeiou]+([^aeiou]+|$)){2}$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>circumflex</li>
+    <li>dream</li>
+    <li>angel</li>
+    <li>angst</li>
+    <li>honey</li>
+    <li>mix</li>
+    <li>hundrets</li>
+    <li>flowers</li>
+    <li>pineapple</li>
+    <li>anemone</li>
+    <li>yoga</li>
+  </ul>
+</div>
+<p class="hint">
+  Create a regular expression for vocals, then for consonants.
+  The a and the vocals at the end need to be handled separately.
+</p>

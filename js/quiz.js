@@ -1,6 +1,5 @@
-function prependChoice(choice, correctness, text) {
+function prependChoice(choice, correctness) {
     var div = document.createElement("span");
-    div.innerText = text;
     div.classList.add("button");
     div.classList.add(correctness);
     choice.prepend(div);
@@ -41,8 +40,8 @@ function watchQuiz(quiz, expression, choicesList, index) {
     } else {
       choice.classList.add("fail");
     }
-    prependChoice(choice, "button-fail", NO);
-    prependChoice(choice, "button-ok", YES);
+    prependChoice(choice, "button-fail");
+    prependChoice(choice, "button-ok");
     addChoiceRequirement(choice);
   }
 }
@@ -61,9 +60,7 @@ window.addEventListener("load", function(){
     var quiz = quizzes[i];
     var expression = getQuizElement(quiz, i, "expression");
     var choices = getQuizElement(quiz, i, "choices");
-    
+
     watchQuiz(quiz, expression, choices, i);
   }
 });
-
-

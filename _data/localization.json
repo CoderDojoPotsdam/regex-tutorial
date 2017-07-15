@@ -1,0 +1,118 @@
+{
+  "github": {
+    "view": "https://github.com/CoderDojoPotsdam/regex-tutorial/tree/master",
+    "edit": "https://github.com/CoderDojoPotsdam/regex-tutorial/edit/master",
+    "pullRequest": "https://github.com/CoderDojoPotsdam/regex-tutorial/compare",
+    "newIssue": "https://github.com/CoderDojoPotsdam/regex-tutorial/issues/new"
+  },
+  "title": {
+    "en": "Interactive Introduction to Regular Expressions",
+    "de": "Interaktive Einführung in Reguläre Ausdrücke",
+    "sv": "Interaktiv Introduktion till Reguljära Uttryck"
+  },
+  "footer": {
+    "edit": {
+      "en": "improve page",
+      "de": "Seite verbessern",
+      "sv": "förbättra sidan"
+    },
+    "newIssue": {
+      "en": "report problem",
+      "de": "Problem melden",
+      "sv": "rapportera problem"
+    },
+    "deleteCookies": {
+      "en": "delete state",
+      "de": "Zustand löschen",
+      "sv": "radera tillstånd"
+    },
+    "view": {
+      "en": "view source",
+      "de": "Quelltext anzeigen",
+      "sv": "visa källa"
+    },
+    "nextStep": {
+      "en": "Next Step",
+      "de": "Nächster Schritt",
+      "sv": "Nästa steg"
+    }
+  },
+  "hint": {
+    "shown": {
+      "en": "Hide the hint!",
+      "de": "Hinweis verstecken!",
+      "sv": "Göm ledtråden!"
+    },
+    "hidden": {
+      "en": "Show a hint?",
+      "de": "Hinweis anzeigen?",
+      "sv": "Visa en ledtråd?"
+    }
+  },
+  "quiz": {
+    "before": {
+      "en": "Regular Expression: ",
+      "de": "Regulärer Ausdruck: ",
+      "sv": "Reguljärt uttryck: "
+    },
+    "after": {
+      "en": " appears in which lines? Click on 'Yes' or 'No'.",
+      "de": " In welchen Zeilen kommt er vor? Klicke auf 'Ja' oder 'Nein'.",
+      "sv": " visas på vilka rader? Klicka på 'Ja' eller 'Nej'."
+    },
+    "yes": {
+      "en": "Yes",
+      "de": "Ja",
+      "sv": "Ja"
+    },
+    "no": {
+      "en": "No",
+      "de": "Nein",
+      "sv": "Nej"
+    }
+  },
+  "match": {
+    "matched": {
+      "en": "✓ matched",
+      "de": "✓ gefunden",
+      "sv": "✓ matchade"
+    },
+    "shouldNotMatch": {
+      "en": "✓ matched, but should not match",
+      "de": "✓ gefunden, soll nicht passen",
+      "sv": "✓ matchade, men borde inte matcha"
+    },
+    "shouldMatch": {
+      "en": "should match",
+      "de": "soll gefunden werden",
+      "sv": "borde matcha"
+    },
+    "noMatch": {
+      "en": "ok, no match",
+      "de": "ok, nicht gefunden",
+      "sv": "ok, ingen matchning"
+    }
+  },
+  "error": {
+    "message": {
+      "en": "Make sure that you have closed all of your parentheses, square brackets and braces, and that there are no other errors in your regular expression.",
+      "de": "",
+      "sv": "Kolla så att du har stängt alla parenteser, hakparenteser och klammerparenteser, och att det inte är några andra problem med ditt reguljära uttryck."
+    },
+    "reference": {
+      "en": "There is an error in the source code: the reference implementation of the regular expression cannot be used. Please click on 'improve page' below to fix the problem yourself, or click on 'report problem' to submit an error report so we can take a look at it. ",
+      "de": "",
+      "sv": "Det är ett fel i källkoden: referensmplementeringen av det reguljära uttrycket kan inte användas. Vänligen klicka på 'förbättra sidan' nedan för att fixa problemet själv, eller klicka på 'rapportera problem' får att skriva en felrapport så att vi kan kolla på problemet. "
+    }
+  },
+  "license": {
+    "en": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> by <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>.",
+    "de": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex-Tutorial</span> von <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> ist lizenziert unter einer <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.",
+    "sv": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> av <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> är licenserad under en <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Erkännande 4.0 Internationell Licens</a>."
+  },
+  "licenseImage": {
+    "en": "Pictures with a different license can be clicked to reach the source or an explanation.",
+    "de": "Bilder, die eine andere Lizenz haben, können angeklickt werden, um zu dem Erklärungstext oder der Quelle zu gelangen.",
+    "sv": "Bilder med en annan licens går att klicka på för att komma till källan eller få en förklaring."
+  }
+}
