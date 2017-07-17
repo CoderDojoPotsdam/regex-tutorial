@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" async="" src="../js/playfield.js"></script>
+    <script type="text/javascript" async="" src="../js/quiz.js"></script>
+    <script type="text/javascript" async="" src="../js/hint.js"></script>
+    <script type="text/javascript" async="" src="../js/cookies.js"></script>
+    <script type="text/javascript" async="" src="../js/requirements.js"></script>
+    <script type="text/javascript" async="" src="../js/compatibility.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/tutorial.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/playfield.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/quiz.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/hint.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/progress.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/requirements.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/Ubuntu.css" media="screen"/>
+    <link rel="shortcut icon" href="../favicon.ico?v=2" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>{{ page.title | escape }} - {{ site.data.localization.title[page.lang] }}</title>
+    <script type="text/javascript">
+      var current_page_id = "page-" + {{ page.path | jsonify }};
+    </script>
+    <style>
+    .clicked .toggle-hint:before {
+      content: "{{ site.data.localization.hint.shown[page.lang] }}";
+    }
+
+    .secret .toggle-hint:before {
+      content: "{{ site.data.localization.hint.hidden[page.lang] }}";
+    }
+
+    .playfield.verbose .match.ok:after {
+      content: "{{ site.data.localization.match.matched[page.lang] }}";
+    }
+
+    .playfield.verbose .match.fail:after {
+      content: "{{ site.data.localization.match.shouldNotMatch[page.lang] }}";
+    }
+
+    .playfield.verbose .nomatch.ok:after {
+      content: "{{ site.data.localization.match.shouldMatch[page.lang] }}";
+    }
+
+    .playfield.verbose .nomatch.fail:after {
+      content: "{{ site.data.localization.match.noMatch[page.lang] }}";
+    }
+
+    .quiz .expression:before {
+      content: "{{ site.data.localization.quiz.before[page.lang] }}";
+    }
+
+    .quiz .expression:after {
+      content: "{{ site.data.localization.quiz.after[page.lang] }}";
+    }
+
+    .quiz .button-ok:before {
+      content: "{{ site.data.localization.quiz.yes[page.lang] }}";
+    }
+
+    .quiz .button-fail:before {
+      content: "{{ site.data.localization.quiz.no[page.lang] }}";
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="progress">
+        {% assign same_topic_started = false %}
+        {% assign should_assign_next = false %}
+        {% assign has_next_page = false %}
+        {% assign next_page = nil %}
+        {% for p in site.pages %}
+          {% assign p_language = p.path | split: "/" | first %}
+          {% assign file_name = p.path | split: "/" %}
+          {% assign file_name = file_name[1] %}
+          {% assign topic = page.path | split: "-" | first %}
+          {% assign p_topic = p.path | split: "-" | first %}
+
+          {% if p_language == page.lang %}
+            {% if p_topic == topic and same_topic_started == false %}
+              <span class="same-topic">
+              {% assign same_topic_started = true %}
+            {% endif %}
+            {% if p_topic != topic and same_topic_started == true %}
+              </span>
+              {% assign same_topic_started = false %}
+            {% endif %}
+            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}"><span></span></a>
+            {% if should_assign_next %}
+              {% assign should_assign_next = false %}
+              {% assign has_next_page = true %}
+              {% assign next_page = p %}
+            {% endif %}
+            {% if page == p %}
+              {% assign should_assign_next = true %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if same_topic_started %}
+          </div>
+        {% endif %}
+      </div>
+      <h2>{{ page.title | escape }}</h2>
+    </header>
+    <div class="main">
+      {{ content }}
+      {% if has_next_page %}
+        <a href="..{{ next_page.url }}" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
+      {% endif %}
+    </div>
+    <footer>
+      <div class="links">
+        <a href="{{ site.data.localization.github.edit }}/{{ page.path }}">{{ site.data.localization.footer.edit[page.lang] }}</a>
+        <a href="{{ site.data.localization.github.newIssue }}">{{ site.data.localization.footer.newIssue[page.lang] }}</a>
+        <a href="javascript:deleteCookies()">{{ site.data.localization.footer.deleteCookies[page.lang] }}</a>
+        <a href="{{ site.data.localization.github.view }}/{{ page.path }}">{{ site.data.localization.footer.view[page.lang] }}</a>
+      </div>
+      <div class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="../img/cc-by-sa.png" />
+        </a>
+        {{ site.data.localization.license[page.lang] }}
+        {% assign lowercase_content = content | downcase %}
+        {% if lowercase_content contains "<img" %}
+          {{ site.data.localization.licenseImage[page.lang] }}
+        {% endif %}
+      </div>
+    </footer>
+  </body>
+</html>

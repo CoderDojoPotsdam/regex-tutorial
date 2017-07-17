@@ -1,0 +1,32 @@
+---
+title: Gruppen
+---
+<p>
+  Du kannst Zeichen und Ausdrücke zu Gruppen zusammenfassen, indem du sie zwischen
+  Klammern <span class="regex">(</span> und <span class="regex">)</span> schreibst.
+  Wiederholungen, die gleich nach der Klammer <span class="regex">)</span> stehen,
+  beziehen sich dann auf alles, was in den Klammern steht.
+</p>
+<p>
+  Es gab das Beispiel, in dem das <span class="regex">a</span> zweimal oder viermal vorkommt.
+  Durch eine Klammerung kannst du dafür sorgen, dass alle geraden
+  Vorkommnisse von <span class="regex">a</span> gefunden werden.
+</p>
+<div class="playfield">
+  <input type="text" value="^aa+$" class="regex" reference="^(aa)+$">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>a</li>
+    <li>aa</li>
+    <li>aaa</li>
+    <li>aaaa</li>
+    <li>aaaaa</li>
+    <li>aaaaaa</li>
+    <li>aaaaaaaaaaaaaaaaaaaaa</li>
+    <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+  </ul>
+</div>
+<p class="hint">
+  Wenn du die Klammern um <span class="regex">aa</span> machst, dann wird nicht <span class="regex">a</span> wiederholt
+  sondern <span class="regex">aa</span>. Somit müssen alle Zeilen eine gerade Anzahl an <span class="regex">a</span> haben.
+</p>

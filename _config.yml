@@ -1,5 +1,19 @@
-sourcecode:
-  view: "https://github.com/CoderDojoPotsdam/regex-tutorial/tree/master"
-  edit: "https://github.com/CoderDojoPotsdam/regex-tutorial/edit/master"
-  pullrequest: "https://github.com/CoderDojoPotsdam/regex-tutorial/compare"
-  newissue: "https://github.com/CoderDojoPotsdam/regex-tutorial/issues/new"
+defaults:
+  -
+    scope:
+      path: "en"
+    values:
+      layout: "tutorial"
+      lang: "en"
+  -
+    scope:
+      path: "de"
+    values:
+      layout: "tutorial"
+      lang: "de"
+  -
+    scope:
+      path: "sv"
+    values:
+      layout: "tutorial"
+      lang: "sv"

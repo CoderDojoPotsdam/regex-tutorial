@@ -16,9 +16,9 @@ Then you can make a [pull request][pr].
 Setup
 -----
 
-To setup a development enviroment `gem install jekyll` 
-Then run `jekyll serve --trace` 
-Type in `localhost:4000` 
+To setup a development enviroment `gem install jekyll`
+Then run `jekyll serve --trace`
+Type in `localhost:4000`
 
 ### Github Pages
 1. [Fork](https://github.com/CoderDojoPotsdam/regex-tutorial/fork)
@@ -32,7 +32,7 @@ Further Reading
 License
 ------
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="assets/cc-by-sa.png" /></a><br />
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="img/cc-by-sa.png" /></a><br />
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span>  is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License.</a>.
 
 

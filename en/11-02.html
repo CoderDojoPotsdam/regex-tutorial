@@ -1,0 +1,19 @@
+---
+title: Using Special Characters
+---
+<p>
+  Unclosed parenthesis are errors.
+  If you want to find emojis, you need to use the <span class="regex">\</span>.
+  Do not let the error message distract you since it does not know what you are up to.
+</p>
+<div class="playfield">
+  <input type="text" value=":)+|:(+" class="regex" reference=":\)+|:\(+">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>:((((</li>
+    <li>:))))</li>
+    <li>:(</li>
+    <li>:P</li>
+    <li></li>
+  </ul>
+</div>
