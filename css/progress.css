@@ -4,44 +4,40 @@
 .progress {
   text-align: center;
   width: 100%;
-  padding-top: 0.25em;
+  padding: 5px;
   background-color: {{ site.data.colors.progress-color }};
   display: block;
 }
 
-.progress .step span {
-  display: inline-block; /* http://stackoverflow.com/questions/2491068/ddg#2491072 */
-  height: 0.7em;
-  width: 0.7em;
-  border-radius: 0.7em;
-  border-width: 0.2em;
-  border-style: solid;
-  border-color: {{ site.data.colors.step-color }};
-}
 .progress .step {
-  display: inline-block; /* http://stackoverflow.com/questions/2491068/ddg#2491072 */
-  padding-left: 0.1em;
-  padding-right: 0.1em;
-  padding-top: 0.7em;
-  padding-bottom: 1em;
-  clear: none;
+  width: 10px;
+  height: 10px;
+  border: 3px solid {{ site.data.colors.step-color }};
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.progress .step.done span {
+.progress > .step {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.progress .step.done {
   background-color: {{ site.data.colors.step-done-color }};
   border-color: {{ site.data.colors.step-done-border-color }};
 }
 
-.progress .step.current span {
+.progress .step.current {
   background-color: {{ site.data.colors.step-color }};
 }
 
 .progress .same-topic {
   background-color: {{ site.data.colors.header-color }};
   clear: none;
-  padding-left: 0.35em;
-  padding-right: 0.35em;
-  border-radius: 1.05em;
-  padding-top: 0.75em;
-  padding-bottom: 0.3em;
+  padding: 5px;
+  border-radius: 20px;
+  display: inline-block;
+  line-height: 10px;
 }
