@@ -78,14 +78,14 @@
 
           {% if p_language == page.lang %}
             {% if p_topic == topic and same_topic_started == false %}
-              <span class="same-topic">
+              <div class="same-topic">
               {% assign same_topic_started = true %}
             {% endif %}
             {% if p_topic != topic and same_topic_started == true %}
-              </span>
+              </div>
               {% assign same_topic_started = false %}
             {% endif %}
-            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}"><span></span></a>
+            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}"></a>
             {% if should_assign_next %}
               {% assign should_assign_next = false %}
               {% assign has_next_page = true %}
