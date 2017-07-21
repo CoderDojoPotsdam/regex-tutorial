@@ -20,11 +20,12 @@
 }
 .progress .step {
   display: inline-block; /* http://stackoverflow.com/questions/2491068/ddg#2491072 */
-  padding-left: 0.1em;
-  padding-right: 0.1em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
   padding-top: 0.7em;
   padding-bottom: 1em;
-  clear: none;
+  float: middle;
+  clear: none;   
 }
 
 .progress .step.done span {
@@ -38,10 +39,10 @@
 
 .progress .same-topic {
   background-color: {{ site.data.colors.header-color }};
-  clear: none;
+  clear: none; 
   padding-left: 0.35em;
   padding-right: 0.35em;
-  border-radius: 1.05em;
+  border-radius: 1.05em; /*  */
   padding-top: 0.75em;
   padding-bottom: 0.3em;
 }
