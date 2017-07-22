@@ -15,3 +15,9 @@ Website-link:
 
 ## Hints
 <!-- Weitere Hinweise -->
+
+## Languages
+<!-- Welche Sprachen -->
+- [X] English (en)
+- [X] German (de)
+- [X] Swedish (sv)
