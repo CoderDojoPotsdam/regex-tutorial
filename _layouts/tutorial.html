@@ -70,13 +70,20 @@
         {% assign has_next_page = false %}
         {% assign next_page = nil %}
         {% for p in site.pages %}
-          {% assign p_language = p.path | split: "/" | first %}
-          {% assign file_name = p.path | split: "/" %}
+          {% assign file_name = page.path | split: "/" %}
           {% assign file_name = file_name[1] %}
-          {% assign topic = page.path | split: "-" | first %}
-          {% assign p_topic = p.path | split: "-" | first %}
 
-          {% if p_language == page.lang %}
+          {% assign p_file_name = p.path | split: "/" %}
+          {% assign p_file_name = p_file_name[1] %}
+
+          {% assign topic = file_name | split: "-" | first %}
+          {% assign p_topic = p_file_name | split: "-" | first %}
+
+          {% assign step = file_name | split: "-" %}
+          {% assign step = step[1] %}
+          {% assign step = step | split: "." | first %}
+
+          {% if p.lang == page.lang %}
             {% if p_topic == topic and same_topic_started == false %}
               <div class="same-topic">
               {% assign same_topic_started = true %}
@@ -85,7 +92,7 @@
               </div>
               {% assign same_topic_started = false %}
             {% endif %}
-            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}"></a>
+            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{% if page == p %}<script>document.write(parseInt("{{ step }}", 10));</script>{% endif %}</a>
             {% if should_assign_next %}
               {% assign should_assign_next = false %}
               {% assign has_next_page = true %}
