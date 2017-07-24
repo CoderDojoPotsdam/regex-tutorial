@@ -2,7 +2,7 @@ Regex-Tutorial
 ==============
 
 [![Build Status](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial.svg?branch=master)](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial)
-[![First Timers](https://firsttimers.quelltext.eu/repository/coderdojopotsdam/regex-tutorial.svg)](https://firsttimers.quelltext.eu/repository/coderdojopotsdam/regex-tutorial.html)
+[![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
 
 This is the source code for the [Regular Expressions Interactive Tutorial][site].
 
@@ -13,12 +13,25 @@ Please use the tutorial.
 If you have something to add or find a mistake, there is a link on each page to edit and improve the HTML file.
 Then you can make a [pull request][pr].
 
+Translate
+-------
+
+Do you want to translate the tutorial into your own language? Great!
+To do that, start by creating translations of the strings in [localization.json](https://github.com/CoderDojoPotsdam/regex-tutorial/blob/master/_data/localization.json).
+Then you can create a folder in the root directory for your language and start translating!
+When you have translated the first file, make sure to link to it in the [index file](https://github.com/CoderDojoPotsdam/regex-tutorial/blob/master/index.html).
+
 Setup
 -----
 
-To setup a development enviroment `gem install jekyll`
-Then run `jekyll serve --trace`
-Type in `localhost:4000`
+There are two ways to run this website, either by downloading Jekyll on your computer or by using GitHub Pages.
+
+### Install Jekyll
+
+1. Launch a terminal and run `gem install jekyll` to install Jekyll
+2. Then run `jekyll serve --trace` in your forked repository to run Jekyll from there.
+3. Type in `localhost:4000` to visit the website.
+You can read more about installing Jekyll [here](https://jekyllrb.com/docs/installation/).
 
 ### Github Pages
 1. [Fork](https://github.com/CoderDojoPotsdam/regex-tutorial/fork)
@@ -36,7 +49,7 @@ License
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Regex-Tutorial</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nicco Kunzmann</span>  is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License.</a>.
 
 
-Images in the "extern" folder are under a separate license.
+Images in the [img](https://github.com/CoderDojoPotsdam/regex-tutorial/tree/master/img) folder are under a separate license.
 
 
 [site]: https://coderdojopotsdam.github.io/regex-tutorial
