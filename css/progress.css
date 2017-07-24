@@ -9,7 +9,7 @@
   display: block;
 }
 
-.progress .step {
+.step {
   width: 10px;
   height: 10px;
   border: 3px solid {{ site.data.colors.step-color }};
@@ -24,16 +24,24 @@
   display: inline-block;
 }
 
-.progress .step.done {
+.step.done {
   background-color: {{ site.data.colors.step-done-color }};
   border-color: {{ site.data.colors.step-done-border-color }};
 }
 
-.progress .step.current {
+.step.current {
   background-color: {{ site.data.colors.step-color }};
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 20px;
+  border-width: 4px;
 }
 
-.progress .same-topic {
+.same-topic {
   background-color: {{ site.data.colors.header-color }};
   clear: none;
   padding: 5px;
