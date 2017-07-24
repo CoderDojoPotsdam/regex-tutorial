@@ -96,12 +96,12 @@
   "error": {
     "message": {
       "en": "Make sure that you have closed all of your parentheses, square brackets and braces, and that there are no other errors in your regular expression.",
-      "de": "",
+      "de": "Stelle sicher, dass Du alle Klammern geschlossen hast, seien sie rund eckig oder geschweift. Es könnten auch noch andere Fehler im Ausdruck sein.",
       "sv": "Kolla så att du har stängt alla parenteser, hakparenteser och klammerparenteser, och att det inte är några andra problem med ditt reguljära uttryck."
     },
     "reference": {
       "en": "There is an error in the source code: the reference implementation of the regular expression cannot be used. Please click on 'improve page' below to fix the problem yourself, or click on 'report problem' to submit an error report so we can take a look at it. ",
-      "de": "",
+      "de": "Es gibt einen Fehler im Quelltext: Die Referenzimplementierung kann nciht benutzt werden. Klicke bitte auf 'Seite verbessern' um das Problem selbst zu lösen oder erstelle einen Fehlerbericht mit 'Fehler melden', sodass wir uns den Fehler ansehen können.",
       "sv": "Det är ett fel i källkoden: referensmplementeringen av det reguljära uttrycket kan inte användas. Vänligen klicka på 'förbättra sidan' nedan för att fixa problemet själv, eller klicka på 'rapportera problem' får att skriva en felrapport så att vi kan kolla på problemet. "
     }
   },
