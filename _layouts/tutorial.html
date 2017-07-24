@@ -68,6 +68,7 @@
         {% assign same_topic_started = false %}
         {% assign should_assign_next = false %}
         {% assign has_next_page = false %}
+        {% assign step_index = 0 %}
         {% assign next_page = nil %}
         {% for p in site.pages %}
           {% assign file_name = page.path | split: "/" %}
@@ -79,11 +80,8 @@
           {% assign topic = file_name | split: "-" | first %}
           {% assign p_topic = p_file_name | split: "-" | first %}
 
-          {% assign step = file_name | split: "-" %}
-          {% assign step = step[1] %}
-          {% assign step = step | split: "." | first %}
-
           {% if p.lang == page.lang %}
+            {% assign step_index = step_index | plus: 1 %}
             {% if p_topic == topic and same_topic_started == false %}
               <div class="same-topic">
               {% assign same_topic_started = true %}
@@ -92,7 +90,7 @@
               </div>
               {% assign same_topic_started = false %}
             {% endif %}
-            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{% if page == p %}<script>document.write(parseInt("{{ step }}", 10));</script>{% endif %}</a>
+            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{% if page == p %}{{ step_index }}{% endif %}</a>
             {% if should_assign_next %}
               {% assign should_assign_next = false %}
               {% assign has_next_page = true %}
