@@ -1,3 +1,6 @@
+
+var quizzesLoaded = false;
+
 function prependChoice(choice, correctness) {
     var div = document.createElement("span");
     div.classList.add("button");
@@ -54,7 +57,10 @@ function getQuizElement(quiz, index, name) {
   return playfieldElements[0];
 }
 
-window.addEventListener("load", function(){
+function loadQuizzes(){
+  if (quizzesLoaded) {
+    return;
+  }
   var quizzes = document.getElementsByClassName("quiz");
   for (var i = 0; i < quizzes.length; i += 1) {
     var quiz = quizzes[i];
@@ -63,4 +69,6 @@ window.addEventListener("load", function(){
 
     watchQuiz(quiz, expression, choices, i);
   }
-});
+  quizzesLoaded = true;
+}
+window.addEventListener("load", loadQuizzes);
