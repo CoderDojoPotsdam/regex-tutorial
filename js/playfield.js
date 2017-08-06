@@ -151,7 +151,10 @@ function getPlayfieldElement(playfield, index, name) {
   return playfieldElements[0];
 }
 
-window.addEventListener("load", function(){
+function loadPlayfields(){
+  if (playfieldsLoaded) {
+    return;
+  }
   var playfields = document.getElementsByClassName("playfield");
   for (var i = 0; i < playfields.length; i += 1) {
     var playfield = playfields[i];
@@ -165,7 +168,8 @@ window.addEventListener("load", function(){
     }
   }
   playfieldsLoaded = true;
-});
+}
+window.addEventListener("load", loadPlayfields);
 
 window.addEventListener("keypress", function(event){
   if (event.which === 13 || event.keyCode === 13) {

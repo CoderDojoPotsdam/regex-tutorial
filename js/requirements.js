@@ -57,8 +57,9 @@ function updateLinks() {
   }
 }
 
-window.addEventListener("load", function(){
-  updateLinks();
-});
-
-
+function loadRequirements(){
+  loadPlayfields();
+  loadQuizzes();
+  updateRequirements(); // turn pages green if they are not interactive
+};
+window.addEventListener("load", loadRequirements);
