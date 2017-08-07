@@ -17,7 +17,7 @@ deploy:
   file_glob: true
   file: "$zip_file"
   skip_cleanup: true
-  #on:
-  # skip for testing
-  #  branch: master
-  #repo: CoderDojoPotsdam/regex-tutorial
+  on:
+   skip for testing
+    branch: master
+  repo: CoderDojoPotsdam/regex-tutorial
