@@ -5,6 +5,7 @@ Regex-Tutorial
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
 
 This is the source code for the [Regular Expressions Interactive Tutorial][site].
+You can [download the tutorial][download].
 
 Contribute
 ---------
@@ -55,3 +56,4 @@ Images in the [img](https://github.com/CoderDojoPotsdam/regex-tutorial/tree/mast
 [site]: https://coderdojopotsdam.github.io/regex-tutorial
 [fett1]: https://www.danielfett.de/de/tutorials/tutorial-regulare-ausdrucke/
 [pr]: https://github.com/CoderDojoPotsdam/regex-tutorial/compare
+[download]: https://niccokunzmann.github.io/download_latest/regex-tutorial.zip
