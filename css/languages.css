@@ -1,0 +1,25 @@
+---
+---
+
+/* ----- language ----- */
+.language {
+  padding: 1em;
+  border-radius: 1em;
+}
+.language  .regex {
+  width: 100%;
+}
+.language  .text {
+  width: 100%;
+}
+
+/* ----- language.js  ----- */
+
+.language h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.language  textarea {
+  width: 100%;
+}
