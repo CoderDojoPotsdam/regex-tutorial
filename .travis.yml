@@ -20,4 +20,4 @@ deploy:
   #on:
   # skip for testing
   #  branch: master
-  repo: CoderDojoPotsdam/regex-tutorial
+  #repo: CoderDojoPotsdam/regex-tutorial
