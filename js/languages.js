@@ -13,9 +13,16 @@ function updateLanguageJavaScript(regularExpression, text) {
   return "regex = " + regex + ";\ntext = " + text + ";\nalert(RegExp(regex).exec(text))";
 }
 
+function updateLanguageGrep(regularExpression, text) {
+  var regex = regularExpression.replace(/'/g, '\'"\'"\'');
+  var text = text.replace(/'/g, '\'"\'"\'');
+  return "regex='" + regex + "'\ntext='" + text + "'\necho \"$text\" | grep -E \"$text\"";
+}
+
 updateLanguages = [
   {"name": "Python", "update": updateLanguagePython},
   {"name": "JavaScript", "update": updateLanguageJavaScript},
+  {"name": "Grep in Linux Shell", "update": updateLanguageGrep},
 ]
 
 function watchLanguageField(languageField, textElement, regex) {
@@ -36,7 +43,10 @@ function watchLanguageField(languageField, textElement, regex) {
     for (var i = 0; i < updateLanguages.length; i++) {
       var textarea = textareas[i];
       var programUpdate = updateLanguages[i].update;
-      textarea.value = programUpdate(regex.value, textElement.value);
+      var text = programUpdate(regex.value, textElement.value);
+      textarea.value = text;
+      var lines = (text.match(/\n/g) || []).length + 1;
+      textarea.rows = lines;
     }
   }
   regex.onkeyup = update;
