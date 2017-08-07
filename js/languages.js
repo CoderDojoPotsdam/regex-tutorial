@@ -10,7 +10,7 @@ function updateLanguagePython(regularExpression, text) {
 function updateLanguageJavaScript(regularExpression, text) {
   var regex = JSON.stringify(regularExpression);
   var text = JSON.stringify(text);
-  return "regex = " + regex + ";\ntext = " + text + ";\nalert(RegExp(regex).exec(text))";
+  return "var regex = " + regex + ";\nvar text = " + text + ";\nalert(RegExp(regex).exec(text))";
 }
 
 function updateLanguageGrep(regularExpression, text) {
