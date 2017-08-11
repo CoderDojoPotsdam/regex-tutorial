@@ -19,10 +19,38 @@ function updateLanguageGrep(regularExpression, text) {
   return "regex='" + regex + "'\ntext='" + text + "'\necho \"$text\" | grep -E \"$text\"";
 }
 
+function updateLanguageGo(regularExpression, text) {
+  var regex = regularExpression.replace(/"/g, '\"');
+  var text = text.replace(/"/g, '\"');
+  return  'package main\n\n' +
+          'import "fmt"\n' +
+          'import "regexp"\n\n' +
+          'func main() {\n' +
+          '    regex := "' + regex + '"\n' +
+          '    text := "' + text + '"\n\n' +
+          '    r, _ := regexp.Compile(regex)\n\n' +
+          '    fmt.Println(r.FindAllString(text, -1))\n' +
+          '}';
+}
+
 updateLanguages = [
-  {"name": "Python", "update": updateLanguagePython},
-  {"name": "JavaScript", "update": updateLanguageJavaScript},
-  {"name": "Grep in Linux Shell", "update": updateLanguageGrep},
+  {
+    "name": "Python",
+    "update": updateLanguagePython,
+    "online": "http://pythontutor.com/visualize.html#mode=edit",
+  }, {
+    "name": "JavaScript",
+    "update": updateLanguageJavaScript,
+    "online": "https://jsfiddle.net/",
+  }, {
+    "name": "Grep in Linux Shell",
+    "update": updateLanguageGrep,
+    "online": "http://www.tutorialspoint.com/execute_bash_online.php",
+  }, {
+    "name": "Go",
+    "update": updateLanguageGo,
+    "online": "https://play.golang.org/",
+  },
 ]
 
 function watchLanguageField(languageField, textElement, regex) {
@@ -34,7 +62,11 @@ function watchLanguageField(languageField, textElement, regex) {
     div.classList.add("programming-language")
     var heading = document.createElement("h2");
     heading.innerText = lang.name;
-    div.appendChild(heading);
+    var link = document.createElement("a");
+    link.href = lang.online;
+    link.appendChild(heading)
+    link.target = "_blank";
+    div.appendChild(link);
     var textarea = document.createElement("textarea");
     div.appendChild(textarea);
     textareas.push(textarea);
