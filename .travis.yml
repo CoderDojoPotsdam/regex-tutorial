@@ -4,4 +4,19 @@ rvm:
 install: 
   - gem install jekyll
 script:
-- jekyll build
+  - build_folder="regex-tutorial-$TRAVIS_BUILD_NUMBER"
+  - zip_file="/tmp/regex-tutorial.zip"
+  - jekyll build --destination "$build_folder"
+before_deploy:
+  # https://unix.stackexchange.com/a/6599/27328
+  - zip -r9 "$zip_file" "$build_folder"
+deploy:
+  provider: releases
+  api-key:
+      secure: "eNoHCVt2RIX3ATTYGSTxzYPOJ5m3rPYMVgapYhhvKGpM6rfOhsEKT7kZ7hHYzitvJSRFuogHagVWh/i6e1fzTNxs+3nta8/F+jmQ2IQvjAJ0lARk6QV47AFFAk91ZPv5sky99eN0cifuRtIDkgX6dNNwF4aW4FkwQkpo4/90F0+mDzzJBl2DgjAp+xT4m8ZRAQDjOqDZplLyCmE7mzQ5jcPc6hUtWgiGAihV+43ZNkDR+XlPSGnC93D1CR5e1KGbi/SmgADpjCeTitFQaSkCcrqs4XfX/BfxHt8rGXmzV7oY+Gzh8iXY8TYUuyauxJJQIcPkoRZPvErmlKBVZsy4zvJBO9VssvV8swkfujBiSufZ5UdKhgakoFm36jw2vnnFhbeyhugM5qGk90Eenmi8VjDD3leSpP29+CdMXG+T8KE8iP6sgnWzOYX4eFpmwb00GswgW0X6w6LfX8XLVpWhxvSt1Xwv1BvdmZp7lz9jN8fAljsFsz0G68Q/NYkpSgufM7wRAB7KFkJ/acd2mJflc19l616Z1dDyf8EJ5tqnWpFc02s4lNm55Mszu40ds9cx4VowPZ6uqQLSSVJ7RaNbYoFOlVdMSZE/pSr/uTfplGu9tv+KxHPXpVSt/Bc8guXz7TjJD+OWizHLRW6uRpVFqKuvOc9jaB01DedI4v4boM4="
+  file_glob: true
+  file: "$zip_file"
+  skip_cleanup: true
+  on:
+    branch: master
+  repo: CoderDojoPotsdam/regex-tutorial
