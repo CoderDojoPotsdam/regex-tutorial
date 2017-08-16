@@ -2,7 +2,8 @@ language: ruby
 rvm:
   - 2.1
 install: 
-  - gem install jekyll
+  - gem update bundler
+  - bundle install
 script:
   - build_folder="regex-tutorial-$TRAVIS_BUILD_NUMBER"
   - zip_file="/tmp/regex-tutorial.zip"
