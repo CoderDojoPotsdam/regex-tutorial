@@ -61,7 +61,7 @@
     "before": {
       "en": "Regular Expression: ",
       "de": "Regulärer Ausdruck: ",
-      "sv": "Reguljärt uttryck: ".
+      "sv": "Reguljärt uttryck: ",
       "pt-br": "Expressão Regular: "
     },
     "after": {
@@ -128,7 +128,7 @@
     "en": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> by <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>.",
     "de": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex-Tutorial</span> von <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> ist lizenziert unter einer <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.",
     "sv": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> av <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> är licenserad under en <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Erkännande 4.0 Internationell Licens</a>.",
-    "pt-br": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> por <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> está licenciado sob a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Atribuições 4.0 Licença Internacional </a>."
+    "pt-br": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> por <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann e traduzido por Otacilio Maia</span> está licenciado sob a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Atribuições 4.0 Licença Internacional </a>."
   },
   "licenseImage": {
     "en": "Pictures with a different license can be clicked to reach the source or an explanation.",
