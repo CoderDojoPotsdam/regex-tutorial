@@ -8,111 +8,132 @@
   "title": {
     "en": "Interactive Introduction to Regular Expressions",
     "de": "Interaktive Einführung in Reguläre Ausdrücke",
-    "sv": "Interaktiv Introduktion till Reguljära Uttryck"
+    "sv": "Interaktiv Introduktion till Reguljära Uttryck",
+    "pt-br": "Introdução Interativa para Expressões Regulares"
   },
   "footer": {
     "edit": {
       "en": "improve page",
       "de": "Seite verbessern",
-      "sv": "förbättra sidan"
+      "sv": "förbättra sidan",
+      "pt-br": "melhore a página"
     },
     "newIssue": {
       "en": "report problem",
       "de": "Problem melden",
-      "sv": "rapportera problem"
+      "sv": "rapportera problem",
+      "pt-br": "reporte um problema"
     },
     "deleteCookies": {
       "en": "delete state",
       "de": "Zustand löschen",
-      "sv": "radera tillstånd"
+      "sv": "radera tillstånd",
+      "pt-br": "excluir estado"
     },
     "view": {
       "en": "view source",
       "de": "Quelltext anzeigen",
-      "sv": "visa källa"
+      "sv": "visa källa",
+      "pt-br": "ver código fonte"
     },
     "nextStep": {
       "en": "Next Step",
       "de": "Nächster Schritt",
-      "sv": "Nästa steg"
+      "sv": "Nästa steg",
+      "pt-br": "Próximo passo"
     }
   },
   "hint": {
     "shown": {
       "en": "Hide the hint!",
       "de": "Hinweis verstecken!",
-      "sv": "Göm ledtråden!"
+      "sv": "Göm ledtråden!",
+      "pt-br": "Esconder a dica!"
     },
     "hidden": {
       "en": "Show a hint?",
       "de": "Hinweis anzeigen?",
-      "sv": "Visa en ledtråd?"
+      "sv": "Visa en ledtråd?",
+      "pt-br": "Mostrar uma dica?"
     }
   },
   "quiz": {
     "before": {
       "en": "Regular Expression: ",
       "de": "Regulärer Ausdruck: ",
-      "sv": "Reguljärt uttryck: "
+      "sv": "Reguljärt uttryck: ",
+      "pt-br": "Expressão Regular: "
     },
     "after": {
       "en": " appears in which lines? Click on 'Yes' or 'No'.",
       "de": " In welchen Zeilen kommt er vor? Klicke auf 'Ja' oder 'Nein'.",
-      "sv": " visas på vilka rader? Klicka på 'Ja' eller 'Nej'."
+      "sv": " visas på vilka rader? Klicka på 'Ja' eller 'Nej'.",
+      "pt-br": "aparece em quais linhas? Clique em 'Sim' ou 'Não'."
     },
     "yes": {
       "en": "Yes",
       "de": "Ja",
-      "sv": "Ja"
+      "sv": "Ja",
+      "pt-br": "Sim"
     },
     "no": {
       "en": "No",
       "de": "Nein",
-      "sv": "Nej"
+      "sv": "Nej",
+      "pt-br": "Não"
     }
   },
   "match": {
     "matched": {
       "en": "✓ matched",
       "de": "✓ gefunden",
-      "sv": "✓ matchade"
+      "sv": "✓ matchade",
+      "pt-br": "✓ corresponde"
+      
     },
     "shouldNotMatch": {
       "en": "✓ matched, but should not match",
       "de": "✓ gefunden, soll nicht passen",
-      "sv": "✓ matchade, men borde inte matcha"
+      "sv": "✓ matchade, men borde inte matcha",
+      "pt-br": "✓ corresponde, mas não deveria corresponder"
     },
     "shouldMatch": {
       "en": "should match",
       "de": "soll gefunden werden",
-      "sv": "borde matcha"
+      "sv": "borde matcha",
+      "pt-br": "Deveria corresponder"
     },
     "noMatch": {
       "en": "ok, no match",
       "de": "ok, nicht gefunden",
-      "sv": "ok, ingen matchning"
+      "sv": "ok, ingen matchning",
+      "pt-br": "ok, não corresponde"
     }
   },
   "error": {
     "message": {
       "en": "Make sure that you have closed all of your parentheses, square brackets and braces, and that there are no other errors in your regular expression.",
       "de": "Stelle sicher, dass Du alle Klammern geschlossen hast, seien sie rund eckig oder geschweift. Es könnten auch noch andere Fehler im Ausdruck sein.",
-      "sv": "Kolla så att du har stängt alla parenteser, hakparenteser och klammerparenteser, och att det inte är några andra problem med ditt reguljära uttryck."
+      "sv": "Kolla så att du har stängt alla parenteser, hakparenteser och klammerparenteser, och att det inte är några andra problem med ditt reguljära uttryck.",
+      "pt-br": "Tenha certeza de ter fechado todos os parênteses, colchetes e chaves, e se não têm nenhum outro erro na sua expressão regular"
     },
     "reference": {
       "en": "There is an error in the source code: the reference implementation of the regular expression cannot be used. Please click on 'improve page' below to fix the problem yourself, or click on 'report problem' to submit an error report so we can take a look at it. ",
       "de": "Es gibt einen Fehler im Quelltext: Die Referenzimplementierung kann nciht benutzt werden. Klicke bitte auf 'Seite verbessern' um das Problem selbst zu lösen oder erstelle einen Fehlerbericht mit 'Fehler melden', sodass wir uns den Fehler ansehen können.",
-      "sv": "Det är ett fel i källkoden: referensmplementeringen av det reguljära uttrycket kan inte användas. Vänligen klicka på 'förbättra sidan' nedan för att fixa problemet själv, eller klicka på 'rapportera problem' får att skriva en felrapport så att vi kan kolla på problemet. "
+      "sv": "Det är ett fel i källkoden: referensmplementeringen av det reguljära uttrycket kan inte användas. Vänligen klicka på 'förbättra sidan' nedan för att fixa problemet själv, eller klicka på 'rapportera problem' får att skriva en felrapport så att vi kan kolla på problemet. ",
+      "pt-br": "Existe um erro no código fonte: a referência de implementação da expressão regular não pode ser usada. Por favor clique em 'melhore a página' para resolver esse problema você mesmo, ou então clique em 'reporte um problema' para submeter um reporte de erro então nós iremos olhar isto. "
     }
   },
   "license": {
     "en": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> by <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>.",
     "de": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex-Tutorial</span> von <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> ist lizenziert unter einer <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.",
-    "sv": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> av <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> är licenserad under en <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Erkännande 4.0 Internationell Licens</a>."
+    "sv": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> av <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> är licenserad under en <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Erkännande 4.0 Internationell Licens</a>.",
+    "pt-br": "<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> por <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann e traduzido por Otacilio Maia</span> está licenciado sob a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Atribuições 4.0 Licença Internacional </a>."
   },
   "licenseImage": {
     "en": "Pictures with a different license can be clicked to reach the source or an explanation.",
     "de": "Bilder, die eine andere Lizenz haben, können angeklickt werden, um zu dem Erklärungstext oder der Quelle zu gelangen.",
-    "sv": "Bilder med en annan licens går att klicka på för att komma till källan eller få en förklaring."
+    "sv": "Bilder med en annan licens går att klicka på för att komma till källan eller få en förklaring.",
+    "pt-br": "Figuras com diferentes licenças podem ser clicadas para obter-se o código ou mais explicações."
   }
 }
