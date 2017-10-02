@@ -1,6 +1,8 @@
 Regex-Tutorial
 ==============
 
+[![Join the chat at https://gitter.im/CoderDojoPotsdam/regex-tutorial](https://badges.gitter.im/CoderDojoPotsdam/regex-tutorial.svg)](https://gitter.im/CoderDojoPotsdam/regex-tutorial?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial.svg?branch=master)](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial)
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
 
