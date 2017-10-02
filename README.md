@@ -1,8 +1,7 @@
 Regex-Tutorial
 ==============
 
-[![Join the chat at https://gitter.im/CoderDojoPotsdam/regex-tutorial](https://badges.gitter.im/CoderDojoPotsdam/regex-tutorial.svg)](https://gitter.im/CoderDojoPotsdam/regex-tutorial?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
+[![Join the chat at https://gitter.im/CoderDojoPotsdam/regex-tutorial](https://badges.gitter.im/CoderDojoPotsdam/regex-tutorial.svg)][gitter]
 [![Build Status](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial.svg?branch=master)](https://travis-ci.org/CoderDojoPotsdam/regex-tutorial)
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
 
@@ -15,6 +14,7 @@ Contribute
 Please use the tutorial.
 If you have something to add or find a mistake, there is a link on each page to edit and improve the HTML file.
 Then you can make a [pull request][pr].
+If you have any questions or like to get in touch, you can [chat on gitter][gitter] or ping @niccokunzmann.
 
 Translate
 -------
@@ -59,3 +59,4 @@ Images in the [img](https://github.com/CoderDojoPotsdam/regex-tutorial/tree/mast
 [fett1]: https://www.danielfett.de/de/tutorials/tutorial-regulare-ausdrucke/
 [pr]: https://github.com/CoderDojoPotsdam/regex-tutorial/compare
 [download]: https://niccokunzmann.github.io/download_latest/regex-tutorial.zip
+[gitter]: https://gitter.im/CoderDojoPotsdam/regex-tutorial?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
