@@ -17,3 +17,21 @@ title: What can we use regular expressions for?
   You can always go back and forth between the steps of the tutorial using the
   circles on the top of the page.
 </p>
+
+
+<select id="languageMenu" onchange="changeLanguage()">
+
+ <option id = "English" selected href="en\00-01.html" value="EN_00_01">English</option>
+ <option id = "Deutsch" href="de\00-01.html" value="DE_00_01" >Deutsch</option>
+ <option id = "Svenska" href="sv\00-01.html" value="SV_00_01">Svenska</option>
+
+</select>
+
+<script>
+function changeLanguage() {
+ var getLanguageMenu = document.getElementById('languageMenu');
+ var getLanguageHref = x.options[x.selectedIndex].getAttribute('href');
+ //window.location.assign(getHref);
+ console.log(getLanguageHref)
+}
+</script>
