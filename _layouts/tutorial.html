@@ -116,6 +116,41 @@
       {% endif %}
     </div>
     <footer>
+      <div class = "languageFooterMenu" >
+        <select id="languageMenu" onchange="changeLanguage()">
+
+         {% assign languagesArray = 'English,Deutsch,Svenska' | split: ',' %}
+
+         {% for language in languagesArray %}
+         {% assign lang = language | slice: 0, 2 | downcase %}
+         {{ lang }}
+         {{ page.lang }}
+         {% if lang  == page.lang %}
+         <option id = page.lang selected href="..{{page.url}}" value="{{ page.url | remove: ".html"}}">{{language}}</option>
+         {% endif %}
+         {% if lang  != page.lang %}
+         <option id = "{{lang}}" href="..{{page.url | replace: page.lang, lang}}" value="{{ page.url | remove: ".html" | replace: page.lang, lang}}" >{{language}}</option>
+         {% endif %}
+         {% endfor %}
+        </select>
+
+        <script>
+        function changeLanguage() {
+         var getLanguageMenu = document.getElementById('languageMenu');
+         var getLanguageHref = getLanguageMenu.options[getLanguageMenu.selectedIndex].getAttribute('href');
+         window.location.assign(getLanguageHref);
+
+        }
+        </script>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("select").each(function(){
+                $(this).val($(this).find('option[selected]').val());
+            });
+        });
+        </script>
+      </div>
       <div class="links">
         <a href="{{ site.data.localization.github.edit }}/{{ page.path }}">{{ site.data.localization.footer.edit[page.lang] }}</a>
         <a href="{{ site.data.localization.github.newIssue }}">{{ site.data.localization.footer.newIssue[page.lang] }}</a>
