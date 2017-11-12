@@ -18,126 +18,120 @@
     <link type="text/css" rel="stylesheet" href="../css/Ubuntu.css" media="screen"/>
     <link rel="shortcut icon" href="../favicon.ico?v=2" type="image/x-icon">
     <meta charset="utf-8">
-    <title>{{- page.title | escape -}} - {{- site.data.localization.title[page.lang] -}}</title>
+    <title>{{ page.title | escape }} - {{ site.data.localization.title[page.lang] }}</title>
     <script type="text/javascript">
-      var current_page_id = "page-" + {{- page.path | jsonify -}};
+      var current_page_id = "page-" + {{ page.path | jsonify }};
     </script>
     <style>
     .clicked .toggle-hint:before {
-      content: "{{- site.data.localization.hint.shown[page.lang] -}}";
+      content: "{{ site.data.localization.hint.shown[page.lang] }}";
     }
 
     .secret .toggle-hint:before {
-      content: "{{- site.data.localization.hint.hidden[page.lang] -}}";
+      content: "{{ site.data.localization.hint.hidden[page.lang] }}";
     }
 
     .playfield.verbose .match.ok:after {
-      content: "{{- site.data.localization.match.matched[page.lang] -}}";
+      content: "{{ site.data.localization.match.matched[page.lang] }}";
     }
 
     .playfield.verbose .match.fail:after {
-      content: "{{- site.data.localization.match.shouldNotMatch[page.lang] -}}";
+      content: "{{ site.data.localization.match.shouldNotMatch[page.lang] }}";
     }
 
     .playfield.verbose .nomatch.ok:after {
-      content: "{{- site.data.localization.match.shouldMatch[page.lang] -}}";
+      content: "{{ site.data.localization.match.shouldMatch[page.lang] }}";
     }
 
     .playfield.verbose .nomatch.fail:after {
-      content: "{{- site.data.localization.match.noMatch[page.lang] -}}";
+      content: "{{ site.data.localization.match.noMatch[page.lang] }}";
     }
 
     .quiz .expression:before {
-      content: "{{- site.data.localization.quiz.before[page.lang] -}}";
+      content: "{{ site.data.localization.quiz.before[page.lang] }}";
     }
 
     .quiz .expression:after {
-      content: "{{- site.data.localization.quiz.after[page.lang] -}}";
+      content: "{{ site.data.localization.quiz.after[page.lang] }}";
     }
 
     .quiz .button-ok:before {
-      content: "{{- site.data.localization.quiz.yes[page.lang] -}}";
+      content: "{{ site.data.localization.quiz.yes[page.lang] }}";
     }
 
     .quiz .button-fail:before {
-      content: "{{- site.data.localization.quiz.no[page.lang] -}}";
+      content: "{{ site.data.localization.quiz.no[page.lang] }}";
     }
     </style>
   </head>
   <body>
     <header>
       <div class="progress">
-        {% comment %}{% endcomment %}
-        {%- assign same_topic_started = false -%}
-        {%- assign should_assign_next = false -%}
-        {%- assign has_next_page = false -%}
-        {%- assign step_index = 0 -%}
-        {%- assign next_page = nil -%}
-        {%- for p in site.pages -%}
-          {%- assign file_name = page.path | split: "/" -%}
-          {%- assign file_name = file_name[1] -%}
+        {% assign same_topic_started = false %}
+        {% assign should_assign_next = false %}
+        {% assign has_next_page = false %}
+        {% assign step_index = 0 %}
+        {% assign next_page = nil %}
+        {% for p in site.pages %}
+          {% assign file_name = page.path | split: "/" %}
+          {% assign file_name = file_name[1] %}
 
-          {%- assign p_file_name = p.path | split: "/" -%}
-          {%- assign p_file_name = p_file_name[1] -%}
+          {% assign p_file_name = p.path | split: "/" %}
+          {% assign p_file_name = p_file_name[1] %}
 
-          {%- assign topic = file_name | split: "-" | first -%}
-          {%- assign p_topic = p_file_name | split: "-" | first -%}
+          {% assign topic = file_name | split: "-" | first %}
+          {% assign p_topic = p_file_name | split: "-" | first %}
 
-          {%- if p.lang == page.lang -%}
-            {%- assign step_index = step_index | plus: 1 -%}
-            {%- if p_topic == topic and same_topic_started == false -%}
+          {% if p.lang == page.lang %}
+            {% assign step_index = step_index | plus: 1 %}
+            {% if p_topic == topic and same_topic_started == false %}
               <div class="same-topic">
-                {% comment %}{% endcomment %}
-              {%- assign same_topic_started = true -%}
-            {%- endif -%}
-            {%- if p_topic != topic and same_topic_started == true -%}
+              {% assign same_topic_started = true %}
+            {% endif %}
+            {% if p_topic != topic and same_topic_started == true %}
               </div>
-              {% comment %}{% endcomment %}
-              {%- assign same_topic_started = false -%}
-            {%- endif -%}
-            <a id="page-{{- p.path -}}" class="step {%- if page == p -%}current{%- endif -%}" href="..{{- p.url -}}">{%- if page == p -%}{{- step_index -}}{%- endif -%}</a>
-            {% comment %}{% endcomment %}
-            {%- if should_assign_next -%}
-              {%- assign should_assign_next = false -%}
-              {%- assign has_next_page = true -%}
-              {%- assign next_page = p -%}
-            {%- endif -%}
-            {%- if page == p -%}
-              {%- assign should_assign_next = true -%}
-            {%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
-        {%- if same_topic_started -%}
+              {% assign same_topic_started = false %}
+            {% endif %}
+            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{% if page == p %}{{ step_index }}{% endif %}</a>
+            {% if should_assign_next %}
+              {% assign should_assign_next = false %}
+              {% assign has_next_page = true %}
+              {% assign next_page = p %}
+            {% endif %}
+            {% if page == p %}
+              {% assign should_assign_next = true %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if same_topic_started %}
           </div>
-          {% comment %}{% endcomment %}
-        {%- endif -%}
+        {% endif %}
       </div>
-      {% comment %}{% endcomment %}
-      <h2>{{- page.title | escape -}}</h2>
+      <h2>{{ page.title | escape }}</h2>
     </header>
     <div class="main">
-      {{- content -}}
-      {%- if has_next_page -%}
-        <a href="..{{- next_page.url -}}" class="next-page">{{- site.data.localization.footer.nextStep[page.lang] -}}</a>
-      {%- endif -%}
+      {{ content }}
+      {% if has_next_page %}
+        <a href="..{{ next_page.url }}" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
+      {% endif %}
     </div>
     <footer>
       <div class = "languageFooterMenu" >
         <select id="languageMenu" onchange="changeLanguage()">
 
-         {%- assign languagesArray = 'English,Deutsch,Svenska' | split: ',' -%}
+         {% assign languagesArray = 'English,Deutsch,Svenska' | split: ',' %}
 
-         {%- for language in languagesArray -%}
-         {%- assign lang = language | slice: 0, 2 | downcase -%}
-         {{- lang -}}
-         {{- page.lang -}}
-         {%- if lang  == page.lang -%}
-         <option id = page.lang selected href="..{{page.url}}" value="{{- page.url | remove: ".html"}}">{{language}}</option>
-         {%- endif -%}
-         {%- if lang  != page.lang -%}
-         <option id = "{{lang}}" href="..{{page.url | replace: page.lang, lang}}" value="{{- page.url | remove: ".html" | replace: page.lang, lang}}" >{{language}}</option>
-         {%- endif -%}
-         {%- endfor -%}
+         {% for language in languagesArray %}
+         {% assign lang = language | slice: 0, 2 | downcase %}
+         {{ lang }}
+         {{ page.lang }}
+         {% if lang  == page.lang %}
+         <option id = page.lang selected href="..{{page.url}}" value="{{ page.url | remove: ".html"}}">{{language}}</option>
+         {% endif %}
+         {% if lang  != page.lang %}
+         <option id = "{{lang}}" href="..{{page.url | replace: page.lang, lang}}" value="{{ page.url | remove: ".html" | replace: page.lang, lang}}" >{{language}}</option>
+         {% endif %}
+         {% endfor %}
         </select>
 
         <script>
@@ -158,20 +152,20 @@
         </script>
       </div>
       <div class="links">
-        <a href="{{- site.data.localization.github.edit -}}/{{- page.path -}}">{{- site.data.localization.footer.edit[page.lang] -}}</a>
-        <a href="{{- site.data.localization.github.newIssue -}}">{{- site.data.localization.footer.newIssue[page.lang] -}}</a>
-        <a href="javascript:deleteCookies()">{{- site.data.localization.footer.deleteCookies[page.lang] -}}</a>
-        <a href="{{- site.data.localization.github.view -}}/{{- page.path -}}">{{- site.data.localization.footer.view[page.lang] -}}</a>
+        <a href="{{ site.data.localization.github.edit }}/{{ page.path }}">{{ site.data.localization.footer.edit[page.lang] }}</a>
+        <a href="{{ site.data.localization.github.newIssue }}">{{ site.data.localization.footer.newIssue[page.lang] }}</a>
+        <a href="javascript:deleteCookies()">{{ site.data.localization.footer.deleteCookies[page.lang] }}</a>
+        <a href="{{ site.data.localization.github.view }}/{{ page.path }}">{{ site.data.localization.footer.view[page.lang] }}</a>
       </div>
       <div class="license">
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
           <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="../img/cc-by-sa.png" />
         </a>
-        {{- site.data.localization.license[page.lang] -}}
-        {%- assign lowercase_content = content | downcase -%}
-        {%- if lowercase_content contains "<img" -%}
-          {{- site.data.localization.licenseImage[page.lang] -}}
-        {%- endif -%}
+        {{ site.data.localization.license[page.lang] }}
+        {% assign lowercase_content = content | downcase %}
+        {% if lowercase_content contains "<img" %}
+          {{ site.data.localization.licenseImage[page.lang] }}
+        {% endif %}
       </div>
     </footer>
   </body>
