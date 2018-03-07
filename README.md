@@ -8,6 +8,8 @@ Regex-Tutorial
 This is the source code for the [Regular Expressions Interactive Tutorial][site].
 You can [download the tutorial][download].
 
+![](regex-tutorial.png)
+
 Contribute
 ---------
 
