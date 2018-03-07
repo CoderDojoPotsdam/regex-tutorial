@@ -8,6 +8,7 @@
     <script type="text/javascript" async="" src="../js/requirements.js"></script>
     <script type="text/javascript" async="" src="../js/compatibility.js"></script>
     <script type="text/javascript" async="" src="../js/languages.js"></script>
+    <script type="text/javascript" async="" src="../js/switch-language.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/tutorial.css" media="screen"/>
     <link type="text/css" rel="stylesheet" href="../css/playfield.css" media="screen"/>
     <link type="text/css" rel="stylesheet" href="../css/quiz.css" media="screen"/>
@@ -67,88 +68,70 @@
   <body>
     <header>
       <div class="progress">
-        {% assign same_topic_started = false %}
-        {% assign should_assign_next = false %}
-        {% assign has_next_page = false %}
-        {% assign step_index = 0 %}
-        {% assign next_page = nil %}
-        {% for p in site.pages %}
-          {% assign file_name = page.path | split: "/" %}
-          {% assign file_name = file_name[1] %}
+        {%- assign same_topic_started = false %}
+        {%- assign should_assign_next = false %}
+        {%- assign has_next_page = false %}
+        {%- assign step_index = 0 %}
+        {%- assign next_page = nil %}
+        {%- for p in site.pages %}
+          {%- assign file_name = page.path | split: "/" %}
+          {%- assign file_name = file_name[1] %}
 
-          {% assign p_file_name = p.path | split: "/" %}
-          {% assign p_file_name = p_file_name[1] %}
+          {%- assign p_file_name = p.path | split: "/" %}
+          {%- assign p_file_name = p_file_name[1] %}
 
-          {% assign topic = file_name | split: "-" | first %}
-          {% assign p_topic = p_file_name | split: "-" | first %}
+          {%- assign topic = file_name | split: "-" | first %}
+          {%- assign p_topic = p_file_name | split: "-" | first %}
 
-          {% if p.lang == page.lang %}
-            {% assign step_index = step_index | plus: 1 %}
-            {% if p_topic == topic and same_topic_started == false %}
+          {%- if p.lang == page.lang %}
+            {%- assign step_index = step_index | plus: 1 %}
+            {%- if p_topic == topic and same_topic_started == false %}
               <div class="same-topic">
-              {% assign same_topic_started = true %}
-            {% endif %}
-            {% if p_topic != topic and same_topic_started == true %}
+              {%- assign same_topic_started = true %}
+            {%- endif %}
+            {%- if p_topic != topic and same_topic_started == true %}
               </div>
-              {% assign same_topic_started = false %}
-            {% endif %}
-            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{% if page == p %}{{ step_index }}{% endif %}</a>
-            {% if should_assign_next %}
-              {% assign should_assign_next = false %}
-              {% assign has_next_page = true %}
-              {% assign next_page = p %}
-            {% endif %}
-            {% if page == p %}
-              {% assign should_assign_next = true %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        {% if same_topic_started %}
+              {%- assign same_topic_started = false %}
+            {%- endif %}
+            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>
+            {%- if should_assign_next %}
+              {%- assign should_assign_next = false %}
+              {%- assign has_next_page = true %}
+              {%- assign next_page = p %}
+            {%- endif %}
+            {%- if page == p %}
+              {%- assign should_assign_next = true %}
+            {%- endif %}
+          {%- endif %}
+        {%- endfor %}
+        {%- if same_topic_started %}
           </div>
-        {% endif %}
+        {%- endif %}
       </div>
       <h2>{{ page.title | escape }}</h2>
     </header>
     <div class="main">
       {{ content }}
-      {% if has_next_page %}
+      {%- if has_next_page %}
         <a href="..{{ next_page.url }}" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
-      {% endif %}
+      {%- endif %}
     </div>
     <footer>
-      <div class = "languageFooterMenu" >
+      <div class="languageFooterMenu" >
         <select id="languageMenu" onchange="changeLanguage()">
-
-         {% assign languagesArray = 'English,Deutsch,Svenska' | split: ',' %}
-
-         {% for language in languagesArray %}
-         {% assign lang = language | slice: 0, 2 | downcase %}
-         {{ lang }}
-         {{ page.lang }}
-         {% if lang  == page.lang %}
-         <option id = page.lang selected href="..{{page.url}}" value="{{ page.url | remove: ".html"}}">{{language}}</option>
-         {% endif %}
-         {% if lang  != page.lang %}
-         <option id = "{{lang}}" href="..{{page.url | replace: page.lang, lang}}" value="{{ page.url | remove: ".html" | replace: page.lang, lang}}" >{{language}}</option>
-         {% endif %}
-         {% endfor %}
+          {%- assign languagesArray = 'English,Deutsch,Svenska' | split: ',' %}
+          {%- for language in languagesArray %}
+          {%- assign lang = language | slice: 0, 2 | downcase %}
+          {%- if lang  == page.lang %}
+            <option id="{{lang}}" selected href="..{{page.url}}">{{language}}</option>
+          {%- endif %}
+          {%- if lang  != page.lang %}
+            <option id="{{lang}}" href="..{{page.url | replace: page.lang, lang}}">{{language}}</option>
+          {%- endif %}
+          {%- endfor %}
         </select>
-
         <script>
-        function changeLanguage() {
-         var getLanguageMenu = document.getElementById('languageMenu');
-         var getLanguageHref = getLanguageMenu.options[getLanguageMenu.selectedIndex].getAttribute('href');
-         window.location.assign(getLanguageHref);
 
-        }
-        </script>
-        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script>
-        $(document).ready(function(){
-            $("select").each(function(){
-                $(this).val($(this).find('option[selected]').val());
-            });
-        });
         </script>
       </div>
       <div class="links">
@@ -162,10 +145,10 @@
           <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="../img/cc-by-sa.png" />
         </a>
         {{ site.data.localization.license[page.lang] }}
-        {% assign lowercase_content = content | downcase %}
-        {% if lowercase_content contains "<img" %}
+        {%- assign lowercase_content = content | downcase %}
+        {%- if lowercase_content contains "<img" %}
           {{ site.data.localization.licenseImage[page.lang] }}
-        {% endif %}
+        {%- endif %}
       </div>
     </footer>
   </body>
