@@ -65,6 +65,8 @@
   <body>
     <header>
       <div class="progress">
+        <span>
+          
         {% assign same_topic_started = false %}
         {% assign should_assign_next = false %}
         {% assign has_next_page = false %}
@@ -85,6 +87,7 @@
               </div>
               {% assign same_topic_started = false %}
             {% endif %}
+        
             <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}"></a>
             {% if should_assign_next %}
               {% assign should_assign_next = false %}
@@ -107,6 +110,9 @@
       {% if has_next_page %}
         <a href="..{{ next_page.url }}" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
       {% endif %}
+      </span>
+    <div>I will show on hover</div>
+    
     </div>
     <footer>
       <div class="links">
