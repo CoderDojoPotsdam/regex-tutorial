@@ -9,6 +9,18 @@
   display: block;
 }
 
+<style>
+div {
+  background-color: yellow;
+  padding: 20px;
+  display: none;
+}
+  
+span:hover + div {
+  display: block;
+}
+</style>
+
 .progress .step {
   width: 10px;
   height: 10px;
