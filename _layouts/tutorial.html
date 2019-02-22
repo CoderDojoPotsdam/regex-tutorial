@@ -60,7 +60,11 @@
     .quiz .button-fail:before {
       content: "{{ site.data.localization.quiz.no[page.lang] }}";
     }
-    </style>
+      
+a:hover {
+  background-color: yellow;
+}
+
   </head>
   <body>
     <header>
@@ -107,11 +111,8 @@
     </header>
     <div class="main">
       
-            <style>
-a:hover {
-  background-color: yellow;
-}
-</style>
+
+
       
       {{ content }}
       {% if has_next_page %}
@@ -119,6 +120,7 @@ a:hover {
         <a href="..{{ next_page.url }}" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
       
       {% endif %}
+              </style>
       </span>
     <div>I will show on hover</div>
     
