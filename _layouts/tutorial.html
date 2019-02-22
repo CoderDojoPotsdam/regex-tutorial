@@ -108,7 +108,15 @@
     <div class="main">
       {{ content }}
       {% if has_next_page %}
+      
+      <style>
+a:hover {
+  background-color: yellow;
+}
+</style>
+      
         <a href="..{{ next_page.url }}" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
+      
       {% endif %}
       </span>
     <div>I will show on hover</div>
