@@ -27,39 +27,42 @@
     .clicked .toggle-hint:before {
       content: "{{ site.data.localization.hint.shown[page.lang] }}";
     }
+
     .secret .toggle-hint:before {
       content: "{{ site.data.localization.hint.hidden[page.lang] }}";
     }
+
     .playfield.verbose .match.ok:after {
       content: "{{ site.data.localization.match.matched[page.lang] }}";
     }
+
     .playfield.verbose .match.fail:after {
       content: "{{ site.data.localization.match.shouldNotMatch[page.lang] }}";
     }
+
     .playfield.verbose .nomatch.ok:after {
       content: "{{ site.data.localization.match.shouldMatch[page.lang] }}";
     }
+
     .playfield.verbose .nomatch.fail:after {
       content: "{{ site.data.localization.match.noMatch[page.lang] }}";
     }
+
     .quiz .expression:before {
       content: "{{ site.data.localization.quiz.before[page.lang] }}";
     }
+
     .quiz .expression:after {
       content: "{{ site.data.localization.quiz.after[page.lang] }}";
     }
+
     .quiz .button-ok:before {
       content: "{{ site.data.localization.quiz.yes[page.lang] }}";
     }
+
     .quiz .button-fail:before {
       content: "{{ site.data.localization.quiz.no[page.lang] }}";
     }
-
-p:hover, h1:hover, a:hover {
-  background-color: yellow;
-}
-
-      
     </style>
   </head>
   <body>
@@ -128,6 +131,7 @@ p:hover, h1:hover, a:hover {
           {%- endfor %}
         </select>
         <script>
+
         </script>
       </div>
       <div class="links">
