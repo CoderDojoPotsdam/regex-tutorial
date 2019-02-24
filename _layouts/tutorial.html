@@ -123,9 +123,10 @@
             {%- endif %}
           
         <div class="tooltip">
-            <span class="tooltiptext">Tooltip text</span>
+            <span class="tooltiptext">Tooltip text
             <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" ="tooltip" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
-        </div>
+        </span>
+              </div>
           
         {%- if should_assign_next %}
               {%- assign should_assign_next = false %}
