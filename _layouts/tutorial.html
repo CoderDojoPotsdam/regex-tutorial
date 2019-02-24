@@ -95,6 +95,7 @@
   <body>
     <header>
       <div class="progress">
+        <span class="tooltiptext">Tooltip text</span>
         {%- assign same_topic_started = false %}
         {%- assign should_assign_next = false %}
         {%- assign has_next_page = false %}
@@ -120,8 +121,7 @@
               </div>
               {%- assign same_topic_started = false %}
             {%- endif %}
-          <span class="tooltiptext">Tooltip text</span>
-
+          
             <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
         
         {%- if should_assign_next %}
