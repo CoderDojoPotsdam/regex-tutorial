@@ -63,8 +63,31 @@
     .quiz .button-fail:before {
       content: "{{ site.data.localization.quiz.no[page.lang] }}";
     }
-.step:hover{
-  background-color: yellow;
+      .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.step:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 } 
       
     </style>
@@ -98,7 +121,8 @@
               {%- assign same_topic_started = false %}
             {%- endif %}
             <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>
-            {%- if should_assign_next %}
+        <span class="tooltiptext">Tooltip text</span>    
+        {%- if should_assign_next %}
               {%- assign should_assign_next = false %}
               {%- assign has_next_page = true %}
               {%- assign next_page = p %}
