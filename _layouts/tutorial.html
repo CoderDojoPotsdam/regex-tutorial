@@ -95,7 +95,7 @@
   <body>
     <header>
       <div class="progress">
-        <span class="tooltiptext">Tooltip text
+        <span class="tooltiptext">Tooltip text</span>
         {%- assign same_topic_started = false %}
         {%- assign should_assign_next = false %}
         {%- assign has_next_page = false %}
@@ -118,7 +118,7 @@
               {%- assign same_topic_started = true %}
             {%- endif %}
             {%- if p_topic != topic and same_topic_started == true %}
-                </span>
+                
               </div>
               {%- assign same_topic_started = false %}
             {%- endif %}
