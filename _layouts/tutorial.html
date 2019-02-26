@@ -131,10 +131,14 @@
               </div>
               {%- assign same_topic_started = false %}
             {%- endif %}
-          
+        
+          <span id="page-{{ p.path }}" class="step">
+    <a href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}></a>                    
+    <span class="tooltip">Tooltip text</span>
+
 
             <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
-
+</span>
           
         {%- if should_assign_next %}
               {%- assign should_assign_next = false %}
