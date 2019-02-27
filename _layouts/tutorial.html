@@ -123,7 +123,11 @@ $(document).ready(function(){
     <div class="main">
       {{ content }}
       {%- if has_next_page %}
-        <a href="..{{ next_page.url }}" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
+      
+        <a href="..{{ next_page.url }}" data-toggle="tooltip" title="Hooray!" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
+      
+      
+      
       {%- endif %}
     </div>
     <footer>
