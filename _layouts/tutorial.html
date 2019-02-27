@@ -75,7 +75,7 @@ $(document).ready(function(){
   </head>
   <body>
     <header>
-      <div class="progress">
+      <div class="progress" data-toggle="tooltip" title="Hooray!">
         {%- assign same_topic_started = false %}
         {%- assign should_assign_next = false %}
         {%- assign has_next_page = false %}
@@ -102,7 +102,7 @@ $(document).ready(function(){
               {%- assign same_topic_started = false %}
             {%- endif %}
         
-            <a id="page-{{ p.path }}" data-toggle="tooltip" title="Hooray!" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>
+            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>
             
         {%- if should_assign_next %}
               {%- assign should_assign_next = false %}
@@ -124,7 +124,7 @@ $(document).ready(function(){
       {{ content }}
       {%- if has_next_page %}
       
-        <a href="..{{ next_page.url }}" data-toggle="tooltip" title="Hooray!" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
+        <a href="..{{ next_page.url }}" class="next-page">{{ site.data.localization.footer.nextStep[page.lang] }}</a>
       
       
       
