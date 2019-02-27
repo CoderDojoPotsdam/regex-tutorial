@@ -94,7 +94,7 @@ $(document).ready(function(){
           {%- if p.lang == page.lang %}
             {%- assign step_index = step_index | plus: 1 %}
             {%- if p_topic == topic and same_topic_started == false %}
-              <div class="same-topic">
+              <div class="same-topic" data-toggle="tooltip" title="Hooray!">
               {%- assign same_topic_started = true %}
             {%- endif %}
             {%- if p_topic != topic and same_topic_started == true %}
