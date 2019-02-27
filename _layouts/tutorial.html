@@ -10,7 +10,7 @@
 
     <script>
 $(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip(); 
+  $('[data-toggle="tooltip"]').tooltip({title: "Hooray", placement: "bottom"});
 });
 </script>
 
@@ -157,8 +157,7 @@ $(document).ready(function(){
 
         
         
-            <a id="page-{{ p.path }}" data-toggle="tooltip" title="Hooray!" placement="bottom"
-               class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
+            <a id="page-{{ p.path }}" data-toggle="tooltip" title="Hooray!" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
 
           
         {%- if should_assign_next %}
