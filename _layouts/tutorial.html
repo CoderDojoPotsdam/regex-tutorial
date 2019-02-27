@@ -63,13 +63,17 @@
     .quiz .button-fail:before {
       content: "{{ site.data.localization.quiz.no[page.lang] }}";
     }
-      .tooltip {
+      
+      .tooltiptext {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
 }
-
-.tooltip .tooltiptext {
+[tooltiptext]
+  position: absolute
+  z-index: 2
+      
+[tooltiptext]:before {
   visibility: hidden;
   width: 120px;
   background-color: #555;
@@ -85,7 +89,7 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
-      .tooltip .tooltiptext:after {
+      .tooltiptext:after {
   content: "";
   position: absolute;
   top: 100%;
@@ -95,25 +99,26 @@
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
-.step:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-} 
-      
-      [step]:tooltiptext,[step]:tooltiptext:after 
+
+      [tooltiptext]:before,[tooltiptext]:after 
   visibility: hidden
   opacity: 0
   pointer-events: none
-  
-.tooltiptext:hover [step]:.tooltiptext:hover [step]:after
+      
+      .tooltip:hover [tooltiptext]:before,.tooltip:hover [tooltiptext]:after
   visibility: visible
   opacity: 1
+      
       
     </style>
   </head>
   <body>
     <header>
       <div class="progress">
+        
+        .progress.progress-danger.tooltip style='width: 20%;'
+        span tooltiptext='tooltip text' 
+        
         {%- assign same_topic_started = false %}
         {%- assign should_assign_next = false %}
         {%- assign has_next_page = false %}
@@ -141,9 +146,6 @@
               {%- assign same_topic_started = false %}
             {%- endif %}
         
-                
-    <span class="tooltip">Tooltip text</span>
-
 
             <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
 
