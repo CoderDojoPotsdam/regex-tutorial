@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
-    
-    
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip({title: "Hooray", placement: "bottom"});
-});
-</script>
-
-    
-    
     <script type="text/javascript" async="" src="../js/playfield.js"></script>
     <script type="text/javascript" async="" src="../js/quiz.js"></script>
     <script type="text/javascript" async="" src="../js/hint.js"></script>
@@ -42,52 +27,38 @@ $(document).ready(function(){
     .clicked .toggle-hint:before {
       content: "{{ site.data.localization.hint.shown[page.lang] }}";
     }
-
     .secret .toggle-hint:before {
       content: "{{ site.data.localization.hint.hidden[page.lang] }}";
     }
-
     .playfield.verbose .match.ok:after {
       content: "{{ site.data.localization.match.matched[page.lang] }}";
     }
-
     .playfield.verbose .match.fail:after {
       content: "{{ site.data.localization.match.shouldNotMatch[page.lang] }}";
     }
-
     .playfield.verbose .nomatch.ok:after {
       content: "{{ site.data.localization.match.shouldMatch[page.lang] }}";
     }
-
     .playfield.verbose .nomatch.fail:after {
       content: "{{ site.data.localization.match.noMatch[page.lang] }}";
     }
-
     .quiz .expression:before {
       content: "{{ site.data.localization.quiz.before[page.lang] }}";
     }
-
     .quiz .expression:after {
       content: "{{ site.data.localization.quiz.after[page.lang] }}";
     }
-
     .quiz .button-ok:before {
       content: "{{ site.data.localization.quiz.yes[page.lang] }}";
     }
-
     .quiz .button-fail:before {
       content: "{{ site.data.localization.quiz.no[page.lang] }}";
     }
-      
-      
     </style>
   </head>
   <body>
     <header>
       <div class="progress">
-        
-
-        
         {%- assign same_topic_started = false %}
         {%- assign should_assign_next = false %}
         {%- assign has_next_page = false %}
@@ -110,18 +81,11 @@ $(document).ready(function(){
               {%- assign same_topic_started = true %}
             {%- endif %}
             {%- if p_topic != topic and same_topic_started == true %}
-                
               </div>
               {%- assign same_topic_started = false %}
             {%- endif %}
-        
-
-        
-        
-            <a id="page-{{ p.path }}" data-toggle="tooltip" title="Hooray!" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
-
-          
-        {%- if should_assign_next %}
+            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>
+            {%- if should_assign_next %}
               {%- assign should_assign_next = false %}
               {%- assign has_next_page = true %}
               {%- assign next_page = p %}
@@ -158,7 +122,6 @@ $(document).ready(function(){
           {%- endfor %}
         </select>
         <script>
-
         </script>
       </div>
       <div class="links">
