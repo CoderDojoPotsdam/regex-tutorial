@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
+        <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip
+
+({title: "Hooray", placement: "bottom"});
+});
+</script>
+
+    
     <script type="text/javascript" async="" src="../js/playfield.js"></script>
     <script type="text/javascript" async="" src="../js/quiz.js"></script>
     <script type="text/javascript" async="" src="../js/hint.js"></script>
@@ -19,6 +29,13 @@
     <link type="text/css" rel="stylesheet" href="../css/Ubuntu.css" media="screen"/>
     <link rel="shortcut icon" href="../favicon.ico?v=2" type="image/x-icon">
     <meta charset="utf-8">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    
     <title>{{ page.title | escape }} - {{ site.data.localization.title[page.lang] }}</title>
     <script type="text/javascript">
       var current_page_id = "page-" + {{ page.path | jsonify }};
@@ -84,8 +101,10 @@
               </div>
               {%- assign same_topic_started = false %}
             {%- endif %}
-            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>
-            {%- if should_assign_next %}
+        
+            <a id="page-{{ p.path }}" data-toggle="tooltip" title="Hooray!" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>
+            
+        {%- if should_assign_next %}
               {%- assign should_assign_next = false %}
               {%- assign has_next_page = true %}
               {%- assign next_page = p %}
