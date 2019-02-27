@@ -158,14 +158,13 @@ $(document).ready(function(){
             {%- endif %}
         
 
-        <div class="container">
 
   <a href="#" data-toggle="tooltipTEST" title="Hooray!">Hover over me</a>
 
         
         
             <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
-</div>
+
           
         {%- if should_assign_next %}
               {%- assign should_assign_next = false %}
