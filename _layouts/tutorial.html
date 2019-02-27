@@ -64,16 +64,12 @@
       content: "{{ site.data.localization.quiz.no[page.lang] }}";
     }
       
-      .tooltiptext {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+
 [tooltiptext]
   position: absolute
   z-index: 2
       
-[tooltiptext]:before {
+[tooltiptext]:before 
   visibility: hidden;
   width: 120px;
   background-color: #555;
@@ -88,8 +84,8 @@
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
-}
-      .tooltiptext:after {
+
+      [tooltiptext]:after 
   content: "";
   position: absolute;
   top: 100%;
@@ -98,14 +94,14 @@
   border-width: 5px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
-}
+
 
       [tooltiptext]:before,[tooltiptext]:after 
   visibility: hidden
   opacity: 0
   pointer-events: none
       
-      .tooltip:hover [tooltiptext]:before,.tooltip:hover [tooltiptext]:after
+      .tooltip:hover [tooltiptext]:before,.tooltip:hover[tooltiptext]:after
   visibility: visible
   opacity: 1
       
