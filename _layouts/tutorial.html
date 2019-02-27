@@ -155,12 +155,10 @@ $(document).ready(function(){
             {%- endif %}
         
 
-
-  <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
-
         
         
-            <a id="page-{{ p.path }}" class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
+            <a id="page-{{ p.path }}" data-toggle="tooltip" title="Hooray!"
+               class="step {% if page == p %}current{% endif %}" href="..{{ p.url }}">{%- if page == p %}{{ step_index }}{% endif %}</a>  
 
           
         {%- if should_assign_next %}
