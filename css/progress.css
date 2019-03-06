@@ -4,7 +4,7 @@
 .progress {
   text-align: center;
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   background-color: {{ site.data.colors.progress-color }};
   display: block;
 }
@@ -44,7 +44,7 @@
 .same-topic {
   background-color: {{ site.data.colors.header-color }};
   clear: none;
-  padding: 5px;
+  padding: 10px;
   border-radius: 20px;
   display: inline-block;
   line-height: 10px;
