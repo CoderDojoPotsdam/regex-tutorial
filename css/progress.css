@@ -13,7 +13,7 @@
   width: 10px;
   height: 30px;
   border: 3px solid {{ site.data.colors.step-color }};
-  border-radius: 10px;
+  border-radius: 5px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -33,11 +33,11 @@
   background-color: {{ site.data.colors.step-color }};
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 7px;
   width: 20px;
   height: 40px;
   line-height: 40px;
-  border-radius: 20px;
+  border-radius: 10px;
   border-width: 4px;
 }
 
@@ -45,7 +45,7 @@
   background-color: {{ site.data.colors.header-color }};
   clear: none;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   display: inline-block;
   line-height: 20px;
 }
