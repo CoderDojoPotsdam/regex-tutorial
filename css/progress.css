@@ -10,8 +10,8 @@
 }
 
 .step {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border: 3px solid {{ site.data.colors.step-color }};
   border-radius: 10px;
   display: inline-block;
@@ -19,8 +19,8 @@
 }
 
 .progress > .step {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
