@@ -2,8 +2,11 @@
 var playfieldsLoaded = false;
 
 function translateErrorMessage(message) {
-  var translation = (errorMessages[message] || PLEASE_TRANSLATE);
-  return ERROR_MESSAGE + ": \"" + message + "\": " + translation;
+  return errorMessage + ": \"" + message + "\"";
+}
+
+function translateReferenceWrongErrorMessage(message) {
+  return errorReferenceWrong + ": \"" + message + "\"";
 }
 
 function matchTextElement(string) {
@@ -59,7 +62,7 @@ function watchExpression(playfield, examples, regex, message) {
     try {
       return RegExp(reference);
     } catch (err) {
-      message.innerHTML = translateErrorMessage(err.message) + errorReferenceWrong;
+      message.innerHTML = translateReferenceWrongErrorMessage(err.message);
       return null;
     }
   }
