@@ -22,7 +22,7 @@ function nomatchTextElement(string) {
   return span;
 }
 
-function matchExample(match, example) {
+function matchExample(match, isIncomplete, text, example) {
   var text = example.innerText;
   var start = match.index;
   var stop = match.index + match[0].length;
@@ -34,7 +34,15 @@ function matchExample(match, example) {
   example.appendChild(nomatchTextElement(textBefore));
   example.appendChild(matchTextElement(textMatch));
   example.appendChild(nomatchTextElement(textAfter));
-  example.classList.add("match");
+
+  if (!isIncomplete) {
+    example.classList.remove("incompletematch");
+    example.classList.add("match");
+  } else {
+    example.classList.remove("match");
+    example.classList.add("incompletematch");
+  }
+
   example.classList.remove("nomatch");
 }
 
@@ -42,6 +50,7 @@ function unmatchExample(example) {
   var text = example.innerText;
   example.innerHTML = "";
   example.appendChild(nomatchTextElement(text));
+  example.classList.remove("incompletematch");
   example.classList.remove("match");
   example.classList.add("nomatch");
 }
@@ -57,10 +66,13 @@ function watchExpression(playfield, examples, regex, message) {
       return null;
     }
   }
-  function getReferenceRegex() {
+  function getReferenceInfo() {
     var reference = regex.getAttribute("reference");
     try {
-      return RegExp(reference);
+      return {
+        "shouldMatchWholeLine": reference.startsWith('^') && reference.endsWith('$'),
+        "regex": RegExp(reference)
+      };
     } catch (err) {
       message.innerHTML = translateReferenceWrongErrorMessage(err.message);
       return null;
@@ -69,9 +81,9 @@ function watchExpression(playfield, examples, regex, message) {
   function check() {
     updateExperiment();
     playfield.classList.remove("success");
-    var reference = getReferenceRegex();
+    var referenceInfo = getReferenceInfo();
     var exp = getExpression();
-    if (!exp || !reference) {
+    if (!exp || !referenceInfo) {
       return;
     }
     message.innerHTML = "";
@@ -83,7 +95,13 @@ function watchExpression(playfield, examples, regex, message) {
       var example = example_list[i];
       var text = example.innerText;
       // determine if it should match
-      var shouldNotMatch = reference.exec(text) ? false : true;
+      var shouldNotMatch;
+      if (!referenceInfo.shouldMatchWholeLine) {
+        shouldNotMatch = referenceInfo.regex.exec(text) ? false : true;
+      } else {
+        var matches = text.match(referenceInfo.regex);
+        shouldNotMatch =  matches?.length > 0 && matches[0] == text ? false : true;
+      }
       if (shouldNotMatch) {
         example.classList.add("fail");
         example.classList.remove("ok");
@@ -94,7 +112,15 @@ function watchExpression(playfield, examples, regex, message) {
       // check the match
       var match = exp.exec(text);
       if (match) {
-        matchExample(match, example);
+        var matches = text.match(exp);
+        var isIncomplete =
+          referenceInfo.shouldMatchWholeLine
+          && matches?.length > 0 && matches[0] != text;
+
+        matchExample(match, isIncomplete, text, example);
+
+        // enforce overall result to fail if any match is incomplete
+        match = !isIncomplete;
       } else {
         unmatchExample(example);
       }
@@ -130,7 +156,7 @@ function watchExpression(playfield, examples, regex, message) {
       var match = exp.exec(text);
       if (match) {
         experiment.classList.add("match");
-        matchExample(match, content);
+        matchExample(match, false, text, content);
       } else {
         experiment.classList.add("nomatch");
         unmatchExample(content);

@@ -89,7 +89,12 @@
       "de": "✓ gefunden",
       "sv": "✓ matchade",
       "pt-br": "✓ corresponde"
-      
+    },
+    "matchedIncompletely": {
+      "en": "(✓) matched, but whole line should match",
+      "de": "(✓) gefunden, aber die ganze Zeile soll passen",
+      "sv": "(✓) matchade, men hela raden ska matcha",
+      "pt-br": "(✓) corresponde, mas toda a linha deve corresponder"
     },
     "shouldNotMatch": {
       "en": "✓ matched, but should not match",

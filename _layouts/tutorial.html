@@ -35,6 +35,10 @@
       content: "{{ site.data.localization.hint.hidden[page.lang] }}";
     }
 
+    .playfield.verbose .incompletematch.ok:after {
+      content: "{{ site.data.localization.match.matchedIncompletely[page.lang] }}";
+    }
+
     .playfield.verbose .match.ok:after {
       content: "{{ site.data.localization.match.matched[page.lang] }}";
     }
