@@ -119,8 +119,9 @@ function watchExpression(playfield, examples, regex, message) {
 
         matchExample(match, isIncomplete, text, example);
 
-        // enforce overall result to fail if any match is incomplete
-        match = !isIncomplete;
+        // enforce overall result to fail if any expected match is incomplete
+        if (referenceInfo.shouldMatchWholeLine && !shouldNotMatch)
+          match = match && !isIncomplete;
       } else {
         unmatchExample(example);
       }
