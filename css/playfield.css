@@ -54,6 +54,9 @@
 .playfield  .incompletematch.ok {
   background-color: {{ site.data.colors.fails }};
 }
+.playfield  .incompletematch.fail {
+  background-color: {{ site.data.colors.fails }};
+}
 .playfield  .nomatch.ok {
   background-color: {{ site.data.colors.fails }};
 }

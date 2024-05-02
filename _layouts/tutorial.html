@@ -39,6 +39,10 @@
       content: "{{ site.data.localization.match.matchedIncompletely[page.lang] }}";
     }
 
+    .playfield.verbose .incompletematch.fail:after {
+      content: "{{ site.data.localization.match.shouldNotMatch[page.lang] }}";
+    }
+
     .playfield.verbose .match.ok:after {
       content: "{{ site.data.localization.match.matched[page.lang] }}";
     }
